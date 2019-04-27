@@ -1,0 +1,88 @@
+@mixin container {
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+
+  @media only screen and (min-width: $mobile) {
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  @media only screen and (min-width: $tablet) {
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  @media only screen and (min-width: $laptop-wide) {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@mixin checkbox-default {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+
+  position: relative;
+  padding-left: 20px;
+}
+
+@mixin custom-checkbox {
+  position: absolute;
+  content: "";
+  display: block;
+
+  width: 12px;
+  height: 12px;
+
+  bottom: 0;
+  left: 0;
+
+  background-color: #99999e;
+  border: 1px solid #919197;
+  border-radius: 2px;
+}
+
+@mixin checkbox-checked {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  display: block;
+  width: 8px;
+  height: 6px;
+
+  background-image: url('../img/tick.png');
+  background-size: 8px 6px;
+  background-repeat: no-repeat;
+}
+
+@mixin soft-animation {
+  transition-property: initial;
+  transition-duration: 0.2s;
+  transition-timing-function: initial;
+  transition-delay: initial;
+}
+
+@mixin animation {
+  @-moz-keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1 }
+  }
+  @-webkit-keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1 }
+  }
+  @keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1 }
+  }
+}
