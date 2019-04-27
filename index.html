@@ -16,20 +16,152 @@
 	<![endif]-->
 </head>
 
-<body class="body-index">
+<body class="body">
 	<!--Page header-->
 	<header class="header">
-
+		<nav class="header__nav header-nav">
+			<div class="header-nav__logo">
+				<a class="header-nav__link" href="index.html" target="_self">
+					<img class="header-nav__img" src="img/logo.svg" alt="День самоуправления - на главную страницу" />
+				</a>
+			</div>
+			<ul class="header-nav__list nav-list">
+				<li class="nav-list__item">
+					<a class="nav-list__btn nav-list__btn--howto" href="#" target="_self">
+						Как участвовать?
+					</a>
+				</li>
+				<li class="nav-list__item">
+					<a class="nav-list__btn nav-list__btn--prize" href="#" target="_self">
+						Призы
+					</a>
+				</li>
+			</ul>
+		</nav>
 	</header>
 	<!--Page main part-->
 	<main class="main">
-
+		<!--Left part for desktop-->
+		<div class="main__logo">
+			<a class="main__link" href="index.html" target="_self">
+				<img class="main__img" src="img/logo.svg" alt="День самоуправления - на главную страницу" />
+			</a>
+		</div>
+		<!--Right part for desktop and middle for mobile devices-->
+		<section class="main__rules main-rules">
+			<h1 class="main-rules__title">1 июня каналом рулишь ты!</h1>
+			<p class="main-rules__text">Участвуй в Дне Самоуправления: выбирай любимые шоу и составляй программу на весь день. А ещё, не забудь про творческий конкурс – за самую крутую идею мультфильма ты сможешь получить планшет для рисования!</p>
+			<p class="main-rules__text">Почувствуй себя программным директором Nickelodeon!</p>
+			<a class="main-rules__submit" href="#" target="_self">Участвовать!</a>
+		</section>
 	</main>
 	<!--Page footer-->
 	<footer class="footer">
-
+		<div class="footer__wrapper">
+			<ul class="footer__rules footer-rules">
+				<li class="footer-rules__item">
+					<a class="footer-rules__link footer-rules__link--conditions" href="#" target="_blank">Правила проведения конкурсов</a>
+				</li>
+				<li class="footer-rules__item">
+					<a class="footer-rules__link footer-rules__link--policy" href="#" target="_blank">Политика конфиденциальности</a>
+				</li>
+			</ul>
+			<!--Social media block-->
+			<ul class="footer__social social-list">
+				<li class="social-list__item">
+					<a class="social-list__link social-list__link--yt" href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+				</li>
+				<li class="social-list__item">
+					<a class="social-list__link social-list__link--in" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+				</li>
+				<li class="social-list__item">
+					<a class="social-list__link social-list__link--fb" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+				</li>
+				<li class="social-list__item">
+					<a class="social-list__link social-list__link--ok" href="#" target="_blank"><i class="fab fa-odnoklassniki"></i></a>
+				</li>
+				<li class="social-list__item">
+					<a class="social-list__link social-list__link--tw" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+				</li>
+				<li class="social-list__item">
+					<a class="social-list__link social-list__link--vk" href="#" target="_blank"><i class="fab fa-vk"></i></a>
+				</li>
+			</ul>
+		</div>
 	</footer>
-	<!--Попап с формой звонка-->
+	<!--Попап с правилами участия-->
+	<div class="popup-rules">
+		<div class="popup-rules__wrapper">
+			<button class="popup-rules__close" type="button"></button>
+			<h3 class="popup-rules__title">Как участвовать</h3>
+			<ul class="popup-rules__list">
+				<li class="popup-rules__item">
+					<span class="popup-rules__text">1. Реши, что именно ты хочешь смотреть в эфире Nickelodeon.</span>
+				</li>
+				<li class="popup-rules__item">
+					<span class="popup-rules__text">2. Выбери мультфильм или сериал и перетащи его в одну из пустых клеточек со временем эфира.</span>
+				</li>
+				<li class="popup-rules__item">
+					<span class="popup-rules__text">3. Расставляй любимые шоу так, как тебе захочется, пока эфирная сетка не будет заполнена.</span>
+				</li>
+				<li class="popup-rules__item">
+					<span class="popup-rules__text">4. Жми кнопку &laquo;Подтвердить&raquo;... Готово!</span>
+				</li>
+				<li class="popup-rules__item">
+					<span class="popup-rules__text">5. И не забудь попробовать свои силы в творческом конкурсе.</span>
+				</li>
+				<li class="popup-rules__item">
+					<span class="popup-rules__text">6. Но не переживай, если вдруг не успел отправить свою идею мультфильма. До 20 мая ты можешь вернуться и составить программу ещё не раз!</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!--Попап с призами-->
+	<div class="popup-prize">
+		<div class="popup-prize__wrapper">
+			<button class="popup-prize__close" type="button"></button>
+			<h3 class="popup-prize__title">Призы</h3>
+			<img class="popup-prize__img" src="img/prize.svg" alt="Планшет" />
+			<p class="popup-prize__description">Автору самой интересной идеи мультфильма мы подарим графический планшет!
+			Б></p>
+		</div>
+	</div>
+	<!--Попап с формой отправки эссе-->
+	<div class="popup-register">
+		<div class="popup-register__wrapper">
+			<button class="popup-register__close" type="button"></button>
+			<h3 class="popup-register__title">Супер! Теперь заполни форму ниже и отправь её нам!</h3>
+			<form class="popup-register__form reg-form" action="#" method="post">
+				<ul class="reg-form__list reg-list">
+					<li class="reg-list__item">
+						<label class="reg-list__label" for="name">Твоё имя:</label>
+						<input class="reg-list__input" type="text" name="name" id="name" />
+						<span class="reg-list__error reg-list__error--name">Это поле должно быть заполнено!</span>
+					</li>
+					<li class="reg-list__item">
+						<label class="reg-list__label" for="tel">Номер телефона:</label>
+						<input class="reg-list__input" type="tel" name="tel" id="tel" />
+						<span class="reg-list__error reg-list__error--tel">Это поле должно быть заполнено!</span>
+					</li>
+					<li class="reg-list__item reg-list__item--agreement">
+						<input class="reg-list__checkbox reg-list__checkbox--agreement visually-hidden" type="checkbox" name="agree" id="agree" required checked />
+						<label class="reg-list__label reg-list__label--checkbox reg-list__label--agreement" for="agree">Я согласен на<a class="reg-list__label--link" href="#" target="_blank">обработку моих персональных данных</a></label>
+						<span class="reg-list__error reg-list__error--required">Это поле должно быть заполнено!</span>
+					</li>
+					<li class="reg-list__item reg-list__item--policy">
+						<input class="reg-list__checkbox reg-list__checkbox--policy visually-hidden" type="checkbox" name="policy" id="policy" required checked />
+						<label class="reg-list__label reg-list__label--checkbox reg-list__label--policy" for="policy">Я согласен с <a class="reg-list__label--link" href="#" target="_blank">условиями проведения конкурсов</a></label>
+						<span class="reg-list__error reg-list__error--required">Это поле должно быть заполнено!</span>
+					</li>
+					<li class="reg-list__item reg-list__item--textarea">
+						<label class="reg-list__label reg-list__label--textarea" for="textarea">Твоя идея для мультфильма<br /><span class="reg-list__label--small">(Заполни, если хочешь выиграть планшет):</span></label>
+						<textarea class="reg-list__textarea" placeholder="..." id="textarea"></textarea>
+					</li>
+				</ul>
+				<button class="reg-form__submit" type="submit">Отправить!</button>
+			</form>
+		</div>
+	</div>
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 	<script src="js/script.js"></script>
