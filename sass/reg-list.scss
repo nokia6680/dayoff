@@ -1,0 +1,168 @@
+.reg-list {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  align-items: center;
+
+  &__item {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    position: relative;
+
+    margin-bottom: 15px;
+
+    &--agreement,
+    &--policy {
+      margin-top: 5px;
+    }
+
+    &--textarea {
+      &::after {
+        position: absolute;
+        content: '';
+
+        width: 2px;
+        height: 120px;
+
+        background-color: $input-border;
+        bottom: 0;
+        right: 9px;
+      }
+    }
+  }
+
+  &__label {
+    font: {
+      size: 0.875em;
+      family: $semibold-font;
+      weight: 600;
+    }
+
+    color: $input-label;
+    line-height: normal;
+    text-transform: uppercase;
+
+    &--checkbox {
+      color: $text-lightblack;
+      font-size: 0.575em;
+    }
+
+    &--link {
+      text-decoration: none;
+      color: $text-lightblack;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    &--textarea {
+      line-height: 1;
+      margin-bottom: 5px;
+    }
+
+    &--small {
+      font-size: 0.875em;
+    }
+  }
+
+  &__error {
+    visibility: hidden;
+
+    font: {
+      size: 0.5em;
+      family: $medium-font;
+      weight: 600;
+    }
+
+    color: $text-error;
+    line-height: normal;
+    text-transform: uppercase;
+
+    position: absolute;
+
+    left: 0;
+    bottom: -12px;
+  }
+
+  &__input {
+    width: 100%;
+
+    border: 2px solid $input-border;
+    padding: 3px 10px;
+
+    font: {
+      size: 1.25em;
+      family: $bold-font;
+      weight: 700;
+    }
+
+    color: $text-lightblack;
+    text-transform: uppercase;
+    line-height: normal;
+  }
+
+  &__textarea {
+    width: 100%;
+    border: 2px solid $input-border;
+
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+
+    position: relative;
+    overflow-y: scroll;
+
+    cursor: text;
+    outline: none;
+
+    font: {
+      size: 1em;
+      family: $bold-font;
+      weight: 700;
+    }
+
+    color: $text-lightblack;
+    text-transform: uppercase;
+    line-height: normal;
+
+    height: 120px;
+
+    &::-webkit-scrollbar {
+      width: 7px;
+    }
+
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $input-border;
+    }
+  }
+
+  &__checkbox + label {
+    @include checkbox-default;
+  }
+
+  &__checkbox + label::before {
+    @include custom-checkbox;
+  }
+
+  &__checkbox:checked + label::after {
+    @include checkbox-checked;
+  }
+}

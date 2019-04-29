@@ -8,6 +8,8 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<!--[if lt IE 9]>
@@ -66,7 +68,7 @@
 			<form class="main-content__form content-form" action="#" method="get">
 				<div class="content-form__choose choose">
 					<!--Мобильный слайдер-->
-					<div class="choose__slider choose-slider choose-slider--mobile">
+					<div class="choose__slider choose-slider choose-slider--mobile" style="display: none;">
 						<!--Слайд дневных передач-->
 						<div class="choose-slider__item choose-slider__item--day">
 							<div class="choose-slider__show">
@@ -219,76 +221,76 @@
 						</div>
 					</div>
 					<!--Десктопный слайдер-->
-					<div class="choose__slider choose-slider choose-slider--desktop" style="display: none;">
+					<div class="choose__slider choose-slider choose-slider--desktop">
 						<!--Слайд дневных передач-->
 						<div class="choose-slider__item choose-slider__item--day">
 							<div class="choose-slider__show">
-								<div class="choose-slider__details">
+								<div class="choose-slider__details ui-droppable">
 									<b class="choose-slider__time">00:00</b>
 								</div>
 								<input type="hidden" name="0" value="" />
 							</div>
-							<div class="choose-slider__show">
+							<div class="choose-slider__show ui-droppable">
 								<div class="choose-slider__details">
 									<b class="choose-slider__time">01:00</b>
 								</div>
 								<input type="hidden" name="1" value="" />
 							</div>
-							<div class="choose-slider__show">
+							<div class="choose-slider__show ui-droppable">
 								<div class="choose-slider__details">
 									<b class="choose-slider__time">02:00</b>
 								</div>
 								<input type="hidden" name="2" value="" />
 							</div>
-							<div class="choose-slider__show">
+							<div class="choose-slider__show ui-droppable">
 								<div class="choose-slider__details">
 									<b class="choose-slider__time">03:00</b>
 								</div>
 								<input type="hidden" name="3" value="" />
 							</div>
-							<div class="choose-slider__show">
+							<div class="choose-slider__show ui-droppable">
 								<div class="choose-slider__details">
 									<b class="choose-slider__time">04:00</b>
 								</div>
 								<input type="hidden" name="4" value="" />
 							</div>
-							<div class="choose-slider__show">
+							<div class="choose-slider__show ui-droppable">
 								<div class="choose-slider__details">
 									<b class="choose-slider__time">05:00</b>
 								</div>
 								<input type="hidden" name="5" value="" />
 							</div>
-							<div class="choose-slider__show">
+							<div class="choose-slider__show ui-droppable">
 								<div class="choose-slider__details">
 									<b class="choose-slider__time">06:00</b>
 								</div>
 								<input type="hidden" name="6" value="" />
 							</div>
-							<div class="choose-slider__show">
+							<div class="choose-slider__show ui-droppable">
 								<div class="choose-slider__details">
 									<b class="choose-slider__time">07:00</b>
 								</div>
 								<input type="hidden" name="7" value="" />
 							</div>
-							<div class="choose-slider__show">
+							<div class="choose-slider__show ui-droppable">
 								<div class="choose-slider__details">
 									<b class="choose-slider__time">08:00</b>
 								</div>
 								<input type="hidden" name="8" value="" />
 							</div>
-							<div class="choose-slider__show">
+							<div class="choose-slider__show ui-droppable">
 								<div class="choose-slider__details">
 									<b class="choose-slider__time">09:00</b>
 								</div>
 								<input type="hidden" name="9" value="" />
 							</div>
-							<div class="choose-slider__show">
+							<div class="choose-slider__show ui-droppable">
 								<div class="choose-slider__details">
 									<b class="choose-slider__time">10:00</b>
 								</div>
 								<input type="hidden" name="10" value="" />
 							</div>
-							<div class="choose-slider__show">
+							<div class="choose-slider__show ui-droppable">
 								<div class="choose-slider__details">
 									<b class="choose-slider__time">11:00</b>
 								</div>
@@ -297,73 +299,73 @@
 						</div>
 						<!--Слайд вечерних передач-->
 						<div class="choose-slider__item choose-slider__item--night">
-							<div class="choose-slider__show">
+							<div class="choose-slider__show ui-droppable">
 								<div class="choose-slider__details">
 									<b class="choose-slider__time">12:00</b>
 								</div>
 								<input type="hidden" name="12" value="" />
 							</div>
-							<div class="choose-slider__show">
+							<div class="choose-slider__show ui-droppable">
 								<div class="choose-slider__details">
 									<b class="choose-slider__time">13:00</b>
 								</div>
 								<input type="hidden" name="13" value="" />
 							</div>
-							<div class="choose-slider__show">
+							<div class="choose-slider__show ui-droppable">
 								<div class="choose-slider__details">
 									<b class="choose-slider__time">14:00</b>
 								</div>
 								<input type="hidden" name="14" value="" />
 							</div>
-							<div class="choose-slider__show">
+							<div class="choose-slider__show ui-droppable">
 								<div class="choose-slider__details">
 									<b class="choose-slider__time">15:00</b>
 								</div>
 								<input type="hidden" name="15" value="" />
 							</div>
-							<div class="choose-slider__show">
+							<div class="choose-slider__show ui-droppable">
 								<div class="choose-slider__details">
 									<b class="choose-slider__time">16:00</b>
 								</div>
 								<input type="hidden" name="16" value="" />
 							</div>
-							<div class="choose-slider__show">
+							<div class="choose-slider__show ui-droppable">
 								<div class="choose-slider__details">
 									<b class="choose-slider__time">17:00</b>
 								</div>
 								<input type="hidden" name="17" value="" />
 							</div>
-							<div class="choose-slider__show">
+							<div class="choose-slider__show ui-droppable">
 								<div class="choose-slider__details">
 									<b class="choose-slider__time">18:00</b>
 								</div>
 								<input type="hidden" name="18" value="" />
 							</div>
-							<div class="choose-slider__show">
+							<div class="choose-slider__show ui-droppable">
 								<div class="choose-slider__details">
 									<b class="choose-slider__time">19:00</b>
 								</div>
 								<input type="hidden" name="19" value="" />
 							</div>
-							<div class="choose-slider__show">
+							<div class="choose-slider__show ui-droppable">
 								<div class="choose-slider__details">
 									<b class="choose-slider__time">20:00</b>
 								</div>
 								<input type="hidden" name="20" value="" />
 							</div>
-							<div class="choose-slider__show">
+							<div class="choose-slider__show ui-droppable">
 								<div class="choose-slider__details">
 									<b class="choose-slider__time">21:00</b>
 								</div>
 								<input type="hidden" name="21" value="" />
 							</div>
-							<div class="choose-slider__show">
+							<div class="choose-slider__show ui-droppable">
 								<div class="choose-slider__details">
 									<b class="choose-slider__time">22:00</b>
 								</div>
 								<input type="hidden" name="22" value="" />
 							</div>
-							<div class="choose-slider__show">
+							<div class="choose-slider__show ui-droppable">
 								<div class="choose-slider__details">
 									<b class="choose-slider__time">23:00</b>
 								</div>
@@ -375,7 +377,7 @@
 				<button class="content-form__submit" type="submit">Готово!</button>
 			</form>
 			<!--Список шоу для выбора на мобильных-->
-			<div class="main-content__show content-show content-show--mobile">
+			<div class="main-content__show content-show content-show--mobile" style="display: none;">
 				<h2 class="content-show__title">Выбери шоу для слота <b class="content-show__time" id="00-00">00:00</b></h2>
 				<div class="content-show__wrapper">
 					<!--Фильтр выбора-->
@@ -482,6 +484,89 @@
 					</div>
 					<div class="prev-1"></div>
 					<div class="next-1"></div>
+				</div>
+			</div>
+			<!--Список шоу для выбора на десктопах-->
+			<div class="main-content__show content-show content-show--desktop">
+				<!--Фильтр выбора-->
+				<div class="content-show__filter show-filter">
+					<button class="content-show__close" type="button"></button>
+					<form class="show-filter__form filter-form" action="#" method="get">
+						<h3 class="show-filter__title">Выбери:</h3>
+						<ul class="filter-form__list filter-list">
+							<li class="filter-list__item">
+								<input class="filter-list__radio filter-list__radio--infant visually-hidden" type="radio" name="filter" id="infant" />
+								<label class="filter-list__label filter-list__label--infant" for="infant">Для малышей</label>
+							</li>
+							<li class="filter-list__item">
+								<input class="filter-list__radio filter-list__radio--series visually-hidden" type="radio" name="filter" id="series" />
+								<label class="filter-list__label filter-list__label--series" for="series">Сериалы</label>
+							</li>
+							<li class="filter-list__item">
+								<input class="filter-list__radio filter-list__radio--animation visually-hidden" type="radio" name="filter" id="animation" />
+								<label class="filter-list__label filter-list__label--animation" for="animation">Анимация</label>
+							</li>
+						</ul>
+					</form>
+					<div class="show-filter__btn">
+						<div class="prev-2"></div>
+						<div class="next-2"></div>
+					</div>
+				</div>
+				<!--Слайдер с шоу для десктопа-->
+				<div class="content-show__slider show-slider show-slider--desktop">
+					<!--Single slide-->
+					<div class="show-slider__item">
+						<ul class="show-slider__list show-list">
+							<li class="show-list__item">
+								<a class="show-list__link ui-draggable ui-draggable-handle" href="#" target="_self">Эволюция черепашек-ниндзя</a>
+							</li>
+							<li class="show-list__item">
+								<a class="show-list__link ui-draggable ui-draggable-handle" href="#" target="_self">Губка Боб Квадратные Штаны</a>
+							</li>
+							<li class="show-list__item">
+								<a class="show-list__link ui-draggable ui-draggable-handle" href="#" target="_self">Волшебные покровители</a>
+							</li>
+							<li class="show-list__item">
+								<a class="show-list__link ui-draggable ui-draggable-handle" href="#" target="_self">Эй, Арнольд!</a>
+							</li>
+							<li class="show-list__item">
+								<a class="show-list__link ui-draggable ui-draggable-handle" href="#" target="_self">Мой шумный дом</a>
+							</li>
+							<li class="show-list__item">
+								<a class="show-list__link ui-draggable ui-draggable-handle" href="#" target="_self">Сердитые бобры</a>
+							</li>
+							<li class="show-list__item">
+								<a class="show-list__link ui-draggable ui-draggable-handle" href="#" target="_self">Радужно-бабочково-единорожная кошка</a>
+							</li>
+						</ul>
+					</div>
+					<!--Single slide-->
+					<div class="show-slider__item">
+						<ul class="show-slider__list show-list">
+							<li class="show-list__item">
+								<a class="show-list__link ui-draggable ui-draggable-handle" href="#" target="_self">Эволюция черепашек-ниндзя</a>
+							</li>
+							<li class="show-list__item">
+								<a class="show-list__link ui-draggable ui-draggable-handle" href="#" target="_self">Губка Боб Квадратные Штаны</a>
+							</li>
+							<li class="show-list__item">
+								<a class="show-list__link ui-draggable ui-draggable-handle" href="#" target="_self">Волшебные покровители</a>
+							</li>
+							<li class="show-list__item">
+								<a class="show-list__link ui-draggable ui-draggable-handle" href="#" target="_self">Эй, Арнольд!</a>
+							</li>
+							<li class="show-list__item">
+								<a class="show-list__link ui-draggable ui-draggable-handle" href="#" target="_self">Мой шумный дом</a>
+							</li>
+							<li class="show-list__item">
+								<a class="show-list__link ui-draggable ui-draggable-handle" href="#" target="_self">Сердитые бобры</a>
+							</li>
+							<li class="show-list__item">
+								<a class="show-list__link ui-draggable ui-draggable-handle" href="#" target="_self">Радужно-бабочково-единорожная кошка</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -1,0 +1,37 @@
+.footer-rules {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  padding-bottom: 10px;
+
+  &__item {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  &__link {
+    font: {
+      size: 0.5em;
+      family: $medium-font;
+      weight: 500;
+    }
+    color: $text-white;
+
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $text-yellow;
+    }
+  }
+}

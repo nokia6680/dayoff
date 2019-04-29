@@ -31,16 +31,15 @@ body {
   position: relative;
 
   color: $text-black;
-  font-family: $regular-font;
 
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 
   background-color: $bg-body;
-  background-image: url('../img/bg-main.png');
+  background-image: url('../img/bg-index.jpg');
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center center;
   background-size: auto;
 }
 
