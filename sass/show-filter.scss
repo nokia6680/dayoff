@@ -1,0 +1,35 @@
+.show-filter {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 2px solid #000000;
+  border-radius: 30px;
+
+  background-color: #ffffff;
+
+  padding-left: 10px;
+  padding-right: 2px;
+
+  margin-bottom: 6px;
+
+  &__close {
+    width: 20px;
+    height: 20px;
+
+    background-color: #f44336;
+    border-radius: 50%;
+    border: 1px solid #000000;
+
+    background-image: url('../img/close_btn.png');
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+    background-position: center center;
+
+    cursor: pointer;
+    outline: none;
+  }
+}

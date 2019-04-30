@@ -1,0 +1,81 @@
+.show-slider {
+  width: 280px;
+
+  margin-top: -6px;
+
+  &:not(.slick-initialized) {
+    visibility: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .slick-dots {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    margin-top: 5px;
+
+    li {
+      margin: 0 0.5rem;
+    }
+
+    button {
+      display: block;
+      width: 14px;
+      height: 14px;
+      padding: 0;
+      border: 2px solid #000000;
+      border-radius: 100%;
+      background-color: #ffffff;
+      text-indent: -9999px;
+
+      cursor: pointer;
+      outline: none;
+    }
+
+    li.slick-active button {
+      background-color: transparent;
+      position: relative;
+
+      width: 14px;
+      height: 14px;
+      border: 2px solid #000000;
+      border-radius: 100%;
+      background-color: #ffffff;
+
+      cursor: pointer;
+      outline: none;
+
+      &::before {
+        position: absolute;
+        content: '';
+
+        width: 22px;
+        height: 22px;
+
+        border: 2px solid #000000;
+
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+
+        background-color: transparent;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__item {
+    background-color: transparent;
+    border: 2px solid #000000;
+    border-top: none;
+  }
+}

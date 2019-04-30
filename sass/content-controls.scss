@@ -1,0 +1,36 @@
+.content-controls {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 2px solid #000000;
+  border-radius: 30px;
+
+  background-color: #ffffff;
+
+  padding-left: 10px;
+  padding-right: 10px;
+
+  margin-bottom: 6px;
+
+  &__title {
+    margin: 0;
+
+    font: {
+      size: 1em;
+      family: $semibold-font;
+      weight: 600;
+    }
+
+    color: $text-lightblack;
+    line-height: normal;
+    text-transform: uppercase;
+
+    &--desktop {
+      display: none;
+    }
+  }
+}
