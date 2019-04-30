@@ -23,6 +23,10 @@
     &:not(:last-of-type) {
       margin-right: 10px;
     }
+
+    &:hover {
+      background-color: $social-hover;
+    }
   }
 
   &__link {
@@ -91,6 +95,74 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+    }
+  }
+}
+
+@media only screen and (min-width: $smt) {
+  .social-list {
+    width: 50%;
+
+    padding-top: 0;
+    margin-bottom: 0;
+    justify-content: flex-end;
+
+    &__item {
+      width: 34px;
+      height: 34px;
+
+      &:not(:last-of-type) {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .social-list {
+    &__item {
+      width: 42px;
+      height: 42px;
+
+      &:not(:last-of-type) {
+        margin-right: 10px;
+      }
+    }
+
+    &__link {
+      .fa-youtube::before {
+        font-size: 1.75em;
+      }
+
+      .fa-facebook-f::before {
+        font-size: 1.75em;
+      }
+
+      .fa-vk::before {
+        font-size: 1.75em;
+      }
+
+      .fa-twitter::before {
+        font-size: 1.75em;
+      }
+
+      .fa-instagram::before {
+        font-size: 1.75em;
+      }
+
+      .fa-odnoklassniki::before {
+        font-size: 1.75em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-hd) {
+  .social-list {
+    &__item {
+      &:not(:last-of-type) {
+        margin-right: 18px;
+      }
     }
   }
 }

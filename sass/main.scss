@@ -10,3 +10,66 @@
     display: none;
   }
 }
+
+@media only screen and (min-width: $laptop) {
+  .main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      width: 50%;
+      flex-basis: 50%;
+
+      margin-top: -30px;
+    }
+
+    &__link {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .main {
+    &__logo {
+      width: 50%;
+      flex-basis: 50%;
+
+      margin-top: -30px;
+    }
+
+    &__link {
+      width: 100%;
+    }
+
+    &__img {
+      max-height: 500px;
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook) {
+  .main {
+    &__logo {
+      width: 50%;
+      flex-basis: 50%;
+
+      margin-top: -30px;
+    }
+
+    &__link {
+      width: 100%;
+    }
+
+    &__img {
+      max-height: 755px;
+    }
+  }
+}

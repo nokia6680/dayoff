@@ -10,6 +10,8 @@
   margin: 0;
   padding: 0;
 
+  padding-bottom: 20px;
+
   &__item {
     width: 100%;
 
@@ -51,27 +53,26 @@
         transition: 0.5s ease;
       }
     }
-
-    &__btn {
-      border: none;
-      border-radius: 15px;
-
-      display: inline-flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      margin-bottom: 15px;
-
-      width: 50%;
-    }
   }
+
+  &__btn {
+    border: none;
+    border-radius: 15px;
+
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+  }
+
   /*Заголовок*/
   &__title {
     margin: 0;
 
     font: {
-      size: 1.25em;
+      size: 1.125em;
       family: $bold-font;
       weight: 700;
     }
@@ -172,4 +173,250 @@
       box-shadow: none;
     }
   }
+}
+
+@media only screen and (min-width: $mobile) {
+  .main-rules {
+    padding-bottom: 30px;
+
+    &__item {
+      max-width: 360px;
+      padding: 10px 10px;
+    }
+
+    &__btn {
+      width: 50%;
+      max-width: 150px;
+      flex-basis: 50%;
+    }
+
+    /*Заголовок*/
+    &__title {
+      font: {
+        size: 1.375em;
+      }
+    }
+    /*Содержание текстовых блоков*/
+    &__text {
+      font: {
+        size: 0.875em;
+      }
+    }
+    /*Квадратики в углах*/
+    &__tech {
+      width: 11px;
+      height: 11px;
+    }
+    /*Кнопка*/
+    &__submit {
+      font: {
+        size: 1.125em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .main-rules {
+    padding-bottom: 30px;
+
+    &__item {
+      max-width: 380px;
+    }
+
+    &__text {
+      font: {
+        size: 1em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $smt) {
+  .main-rules {
+    padding-bottom: 30px;
+
+    &__item {
+      max-width: 635px;
+      border-width: 4px;
+    }
+
+    &__btn {
+      margin-top: 30px;
+      max-width: 200px;
+    }
+
+    /*Заголовок*/
+    &__title {
+      font: {
+        size: 2em;
+      }
+    }
+    /*Содержание текстовых блоков*/
+    &__text {
+      font: {
+        size: 1.25em;
+      }
+    }
+    /*Квадратики в углах*/
+    &__tech {
+      width: 18px;
+      height: 18px;
+
+      border-width: 4px;
+
+      &--1 {
+        top: -4px;
+        left: -4px;
+      }
+
+      &--2 {
+        top: -4px;
+        right: -4px;
+      }
+
+      &--3 {
+        bottom: -4px;
+        left: -4px;
+      }
+
+      &--4 {
+        bottom: -4px;
+        right: -4px;
+      }
+    }
+    /*Кнопка*/
+    &__submit {
+      border-radius: 30px;
+
+      font: {
+        size: 1.375em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .main-rules {
+    padding-bottom: 50px;
+
+    &__item {
+      padding: 14px 14px;
+      margin-bottom: 34px;
+    }
+
+    &__btn {
+      margin-top: 19px;
+      max-width: 300px;
+    }
+
+    /*Заголовок*/
+    &__title {
+      font: {
+        size: 2.649em;
+      }
+    }
+    /*Содержание текстовых блоков*/
+    &__text {
+      font: {
+        size: 1.324em;
+      }
+    }
+    /*Кнопка*/
+    &__submit {
+      border-radius: 30px;
+
+      font: {
+        size: 2.404em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .main-rules {
+    width: 50%;
+    flex-basis: 50%;
+
+    padding-bottom: 0;
+    margin-top: 30px;
+
+    &__item {
+      padding: 10px 10px;
+      margin-bottom: 15px;
+      max-width: 400px;
+    }
+
+    &__btn {
+      margin-top: 19px;
+      max-width: 300px;
+    }
+
+    /*Заголовок*/
+    &__title {
+      font: {
+        size: 1.5em;
+      }
+    }
+    /*Содержание текстовых блоков*/
+    &__text {
+      font: {
+        size: 1.125em;
+      }
+    }
+    /*Кнопка*/
+    &__submit {
+      border-radius: 30px;
+
+      font: {
+        size: 1.75em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-hd) {
+  .main-rules {
+    &__item {
+      max-width: 500px;
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook) {
+  .main-rules {
+    &__item {
+      max-width: 750px;
+      margin-bottom: 45px;
+    }
+
+    &__btn {
+      margin-top: 57px;
+    }
+
+    /*Заголовок*/
+    &__title {
+      font: {
+        size: 3.131em;
+      }
+    }
+    /*Содержание текстовых блоков*/
+    &__text {
+      font: {
+        size: 1.566em;
+      }
+    }
+    /*Кнопка*/
+    &__submit {
+      border-radius: 30px;
+
+      font: {
+        size: 2.404em;
+      }
+    }
+  }
+}
+
+@media only screen {
+
 }

@@ -59,3 +59,69 @@
     }
   }
 }
+
+@media only screen and (min-width: $hdm) {
+  .reg-form {
+
+    &__submit {
+      font: {
+        size: 1.125em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .reg-form {
+    padding-left: 27px;
+    padding-right: 28px;
+    padding-bottom: 24px;
+    padding-top: 10px;
+
+    &__submit {
+      border-radius: 30px;
+
+      background-color: $submit-btn-bg;
+
+      padding: 2px 15px;
+
+      font: {
+        size: 1.688em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .reg-form {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    padding-top: 10px;
+
+    &__submit {
+      padding: 2px 10px;
+
+      font: {
+        size: 1.25em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook) {
+  .reg-form {
+    padding-left: 27px;
+    padding-right: 28px;
+    padding-bottom: 24px;
+    padding-top: 10px;
+
+    &__submit {
+      padding: 2px 15px;
+
+      font: {
+        size: 1.688em;
+      }
+    }
+  }
+}

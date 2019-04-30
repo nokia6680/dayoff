@@ -1,5 +1,4 @@
 .footer {
-  @include container;
   width: 100%;
 
   margin-bottom: 0;
@@ -18,5 +17,49 @@
 
   &__social {
     order: 1;
+  }
+}
+
+@media only screen and (min-width: $smt) {
+  .footer {
+    padding-left: 40px;
+    padding-right: 40px;
+
+    padding-top: 9px;
+    padding-bottom: 9px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &__rules {
+      order: 1;
+    }
+
+    &__social {
+      order: 2;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .footer {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .footer {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media only screen and (min-width: $widebook) {
+  .footer {
+    padding-left: 95px;
+    padding-right: 95px;
   }
 }

@@ -35,3 +35,91 @@
     }
   }
 }
+
+
+@media only screen and (min-width: $smt) {
+  .footer-rules {
+    width: 50%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-bottom: 0;
+
+    &__item {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    &__link {
+      font: {
+        size: 0.875em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .footer-rules {
+    &__item {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+
+    &__link {
+      cursor: pointer;
+      outline: none;
+
+      font: {
+        size: 1em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .footer-rules {
+    &__link {
+      font: {
+        size: 1em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-hd) {
+  .footer-rules {
+    flex-direction: row;
+    justify-content: flex-start;
+
+    &__item {
+      margin-right: 10px;
+    }
+
+    &__link {
+      &:hover,
+      &:active,
+      &:focus {
+        color: $text-white;
+        border-bottom: 2px solid #ffffff;
+      }
+
+      font: {
+        size: 1em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-hd) {
+  .footer-rules {
+    &__item {
+      margin-right: 20px;
+    }
+
+    &__link {
+      font: {
+        size: 1.25em;
+      }
+    }
+  }
+}

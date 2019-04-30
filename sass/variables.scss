@@ -1,7 +1,13 @@
 $mobile: 375px;
+$hdm: 414px;
+$smt: 600px;
 $tablet: 768px;
 $laptop: 1024px;
-$laptop-wide: 1152px;
+$laptop-hd: 1280px;
+$laptop-wide: 1366px;
+$widebook-sm: 1440px;
+$widebook: 1600px;
+$widebook-hd: 1920px;
 
 $bg-body: #c0c0c0;
 $bg-footer: #231f20;
@@ -26,6 +32,8 @@ $btn-closer: #f44336;
 
 $input-border: #78909c;
 $input-label: #78909c;
+
+$social-hover: #ff6700;
 
 $link-hover-bg: #e60c96;
 $link-hover-text: #ffff00;
