@@ -67,7 +67,8 @@
   .show-filter {
     padding-right: 4px;
     padding-left: 25px;
-    
+    min-height: 48px;
+
     &__close {
       min-width: 36px;
       max-height: 36px;
@@ -77,5 +78,29 @@
 
       background-size: 20px 20px;
     }
+  }
+}
+
+@media only screen and (min-width: $laptop-hd) {
+  .show-filter {
+    padding-right: 4px;
+    padding-left: 25px;
+    min-height: 48px;
+
+    &__close {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-hd) {
+  .show-filter {
+    min-height: 42px;
+  }
+}
+
+@media only screen and (min-width: $widebook-hd) {
+  .show-filter {
+    min-height: 50px;
   }
 }

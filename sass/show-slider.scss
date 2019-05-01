@@ -1,6 +1,10 @@
 .show-slider {
   width: 280px;
 
+  &--desktop {
+    display: none !important;
+  }
+
   &:not(.slick-initialized) {
     visibility: hidden;
     display: flex;
@@ -63,7 +67,7 @@
         width: 22px;
         height: 22px;
 
-        border: 2px solid #000000;
+        border: 2px solid #ffffff;
 
         top: 50%;
         left: 50%;
@@ -95,7 +99,7 @@
 
 @media only screen and (min-width: $hdm) {
   .show-slider {
-    width: 360px;
+    width: 340px;
 
     .slick-dots {
       margin-top: 20px;
@@ -179,6 +183,174 @@
 
     .next-2 {
       top: 43%;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .show-slider {
+    width: 640px;
+
+    .prev-2 {
+      top: 40%;
+    }
+
+    .next-2 {
+      top: 40%;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-hd) {
+  .show-slider {
+    &--mobile {
+      display: none !important;
+    }
+
+    &--desktop {
+      display: block !important;
+      width: 810px;
+
+      .slick-dots {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        margin-top: 10px;
+
+        li {
+          margin: 0 0.5rem;
+        }
+
+        button {
+          display: block;
+          width: 14px;
+          height: 14px;
+          padding: 0;
+          border: 2px solid #000000;
+          border-radius: 100%;
+          background-color: #ffffff;
+          text-indent: -9999px;
+
+          cursor: pointer;
+          outline: none;
+        }
+
+        li.slick-active button {
+          background-color: transparent;
+          position: relative;
+
+          width: 14px;
+          height: 14px;
+          border: 2px solid #000000;
+          border-radius: 100%;
+          background-color: #ffffff;
+
+          cursor: pointer;
+          outline: none;
+
+          &::before {
+            position: absolute;
+            content: '';
+
+            width: 22px;
+            height: 22px;
+
+            border: 2px solid #000000;
+
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+
+            background-color: transparent;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+
+    .prev-2 {
+      width: 53px;
+      height: 30px;
+      border: 2px solid #000000;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+
+      background-image: url('../img/left-arrow.png');
+      background-size: 32px 21px;
+      background-position: center center;
+      background-repeat: no-repeat;
+
+      top: -40px;
+      right: 50px;
+      left: auto;
+    }
+
+    .next-2 {
+      width: 53px;
+      height: 30px;
+      border: 2px solid #000000;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+
+      background-image: url('../img/right-arrow.png');
+      background-size: 32px 21px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      top: -40px;
+      right: -2px;
+      left: auto;
+    }
+
+    &__item {
+      &--desktop {
+        width: 100%;
+        border: none;
+        padding-left: 2px;
+        padding-bottom: 2px;
+        padding-right: 2px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .show-slider {
+    &--desktop {
+      width: 660px;
+    }
+
+    .prev-2 {
+      top: -36px;
+      right: 39px;
+    }
+
+    .next-2 {
+      top: -36px;
+      right: -12px;
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook-hd) {
+  .show-slider {
+    &--desktop {
+      width: 810px;
+    }
+
+    .prev-2 {
+      top: -40px;
+      right: 50px;
+    }
+
+    .next-2 {
+      top: -40px;
+      right: -2px;
     }
   }
 }

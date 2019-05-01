@@ -5,9 +5,14 @@
   justify-content: space-between;
   align-items: center;
 
-  padding-top: 10px;
+  padding-top: 5px;
 
   margin-bottom: 20px;
+
+  &--event {
+    padding-top: 5px;
+    margin-bottom: 10px;
+  }
 
   &__logo {
     width: 44%;
@@ -158,6 +163,26 @@
 
     &__logo {
       display: none;
+
+      &--event {
+        display: flex;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-hd) {
+  .header-nav {
+    justify-content: flex-end;
+    margin-bottom: 0;
+    padding-top: 0;
+
+    &__logo {
+      display: none;
+
+      &--event {
+        display: none;
+      }
     }
   }
 }

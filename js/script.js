@@ -29,11 +29,42 @@ $(document).ready(function() {
     infinite: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true,
-    dots: true,
+    arrows: false,
+    dots: false,
 
-    prevArrow: '<div class="prev"></div>',
-    nextArrow: '<div class="next"></div>',
+    responsive: [{
+        breakpoint: 9999,
+        settings: {
+          infinite: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+          arrows: false
+        }
+      },
+      {
+        breakpoint: 1280,
+        settings: {
+          infinite: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          arrows: true,
+          prevArrow: '<div class="prev"></div>',
+          nextArrow: '<div class="next"></div>',
+        }
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          infinite: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          arrows: false
+        }
+      }
+    ]
   });
 });
 
@@ -47,5 +78,41 @@ $(document).ready(function() {
 
     prevArrow: '<div class="prev-2"></div>',
     nextArrow: '<div class="next-2"></div>',
+
+    responsive: [{
+        breakpoint: 9999,
+        settings: {
+          infinite: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          arrows: true,
+          prevArrow: '<div class="prev-2"></div>',
+          nextArrow: '<div class="next-2"></div>',
+        }
+      },
+      {
+        breakpoint: 1280,
+        settings: {
+          infinite: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          arrows: true,
+          prevArrow: '<div class="prev-2"></div>',
+          nextArrow: '<div class="next-2"></div>',
+        }
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          infinite: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          arrows: false
+        }
+      }
+    ]
   });
 });

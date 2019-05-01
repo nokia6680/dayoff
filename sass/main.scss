@@ -28,6 +28,10 @@
       flex-basis: 50%;
 
       margin-top: -30px;
+
+      &--event {
+        display: none;
+      }
     }
 
     &__link {
@@ -35,6 +39,34 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop-hd) {
+  .main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &--event {
+      align-items: flex-start;
+    }
+
+    &__logo {
+      &--event {
+        display: flex;
+        width: auto;
+        max-width: 350px;
+
+        margin-top: 0px;
+      }
+    }
+
+    &__link {
+      width: 100%;
+    }
+  }
+}
+
 
 @media only screen and (min-width: $laptop-wide) {
   .main {
@@ -57,11 +89,19 @@
 
 @media only screen and (min-width: $widebook) {
   .main {
+    &--event {
+      justify-content: flex-start;
+    }
+
     &__logo {
       width: 50%;
       flex-basis: 50%;
 
       margin-top: -30px;
+
+      &--event {
+        margin-top: -50px;
+      }
     }
 
     &__link {
@@ -70,6 +110,17 @@
 
     &__img {
       max-height: 755px;
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook-hd) {
+  .main {
+
+    &__logo {
+      &--event {
+        margin-right: 5%;
+      }
     }
   }
 }

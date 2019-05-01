@@ -142,12 +142,24 @@
   }
 }
 
-@media only screen and (min-width: $laptop) {
+@media only screen and (min-width: $laptop-wide) {
   .nav-list {
     padding-top: 28px;
 
     &__btn {
       padding: 0 20px;
+
+      font-size: 1.677em;
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook-hd) {
+  .nav-list {
+    padding-top: 10px;
+
+    &__btn {
+      padding: 0 18px;
 
       font-size: 1.677em;
     }

@@ -19,7 +19,7 @@
     line-height: normal;
     text-transform: uppercase;
 
-    margin-right: 10px;
+    margin-right: 5px;
   }
 }
 
@@ -56,6 +56,26 @@
       }
 
       margin-right: 15px;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .filter-form {
+    &__title {
+      font: {
+        size: 1.375em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook-hd) {
+  .filter-form {
+    &__title {
+      font: {
+        size: 1.66em;
+      }
     }
   }
 }
