@@ -1,14 +1,17 @@
 .show-slider {
   width: 280px;
 
-  margin-top: -6px;
-
   &:not(.slick-initialized) {
     visibility: hidden;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+  }
+
+  .prev-2,
+  .next-2 {
+    display: none;
   }
 
   .slick-dots {
@@ -77,5 +80,105 @@
     background-color: transparent;
     border: 2px solid #000000;
     border-top: none;
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .show-slider {
+    width: 340px;
+
+    .slick-dots {
+      margin-top: 10px;
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .show-slider {
+    width: 360px;
+
+    .slick-dots {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media only screen and (min-width: $smt) {
+  .show-slider {
+    .prev-2,
+    .next-2 {
+      display: block;
+
+      width: 29px;
+      height: 53px;
+
+      cursor: pointer;
+      outline: none;
+    }
+
+    .prev-2 {
+      background-image: url('../img/arr-prev.png');
+      background-size: 29px 53px;
+      background-repeat: no-repeat;
+      background-position: center center;
+
+      position: absolute;
+
+      top: 35%;
+      left: -50px;
+
+      z-index: 22;
+    }
+
+    .next-2 {
+      background-image: url('../img/arr-next.png');
+      background-size: 29px 53px;
+      background-repeat: no-repeat;
+      background-position: center center;
+
+      position: absolute;
+
+      top: 35%;
+      right: -50px;
+
+      z-index: 22;
+    }
+
+    .slick-disabled {
+      opacity: 0.5;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .show-slider {
+    width: 640px;
+
+    .slick-dots {
+      margin-top: 10px;
+
+      button {
+        width: 15px;
+        height: 15px;
+      }
+
+      li.slick-active button {
+        width: 15px;
+        height: 15px;
+
+        &::before {
+          width: 28px;
+          height: 28px;
+        }
+      }
+    }
+
+    .prev-2 {
+      top: 43%;
+    }
+
+    .next-2 {
+      top: 43%;
+    }
   }
 }

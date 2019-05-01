@@ -35,3 +35,53 @@
     color: $text-orange;
   }
 }
+
+@media only screen and (min-width: $mobile) {
+  .filter-list {
+    &__label {
+      font: {
+        size: 0.75em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .filter-list {
+    &__label {
+      font: {
+        size: 0.875em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .filter-list {
+    &__label {
+      font: {
+        size: 1.25em;
+      }
+    }
+
+    &__item {
+      margin-right: 20px;
+    }
+
+    &__radio + label {
+      @include radio-default;
+    }
+
+    &__radio + label::before {
+      @include custom-radio;
+    }
+
+    &__radio:checked + label::after {
+      @include radio-checked;
+    }
+
+    &__radio:checked + label {
+      color: #231f20;
+    }
+  }
+}

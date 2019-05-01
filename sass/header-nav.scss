@@ -113,19 +113,39 @@
   .header-nav {
     margin-bottom: 30px;
 
+    &--event {
+      margin-bottom: 10px;
+      padding-top: 10px;
+    }
+
     &__logo {
       min-height: 270px;
       max-height: 270px;
+
+      &--event {
+        min-height: 172px;
+        max-height: 172px;
+      }
     }
 
     &__link {
       min-height: 270px;
       max-height: 270px;
+
+      &--event {
+        min-height: 172px;
+        max-height: 172px;
+      }
     }
 
     &__img {
       min-height: 270px;
       max-height: 270px;
+
+      &--event {
+        min-height: 172px;
+        max-height: 172px;
+      }
     }
   }
 }

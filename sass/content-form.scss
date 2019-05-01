@@ -23,6 +23,7 @@
 
     padding: 2px 15px;
     margin-top: 25px;
+    margin-bottom: 10px;
 
     box-shadow: 2px 2px 1px 1px rgba(0,0,0,1);
     -webkit-box-shadow: 2px 2px 1px 1px rgba(0,0,0,1);
@@ -47,6 +48,45 @@
       transition: 0.2s ease;
       transform: translate(2px, 2px);
       box-shadow: none;
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .content-form {
+    &__submit {
+      padding: 2px 15px;
+
+      font: {
+        size: 1.125em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .content-form {
+    &__submit {
+      border-radius: 30px;
+      max-width: 180px;
+
+      font: {
+        size: 1.25em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .content-form {
+    &__submit {
+      border-radius: 30px;
+      max-width: 170px;
+      margin-top: 15px;
+
+      font: {
+        size: 1.968em;
+      }
     }
   }
 }

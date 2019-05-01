@@ -17,6 +17,8 @@
   margin-bottom: 6px;
 
   &__title {
+    display: inline-flex;
+
     margin: 0;
 
     font: {
@@ -31,6 +33,51 @@
 
     &--desktop {
       display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .content-controls {
+    margin-bottom: 10px;
+
+    &__title {
+      font: {
+        size: 1.125em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .content-controls {
+    margin-bottom: 10px;
+
+    max-width: 480px;
+
+    &__title {
+      font: {
+        size: 1.25em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .content-controls {
+    margin-bottom: 7px;
+
+    max-width: 706px;
+
+    padding-top: 2px;
+    padding-bottom: 4px;
+    padding-left: 24px;
+    padding-right: 22px;
+
+    &__title {
+      font: {
+        size: 1.546em;
+      }
     }
   }
 }

@@ -53,3 +53,38 @@
     }
   }
 }
+
+
+@media only screen and (min-width: $mobile) {
+  .show-list {
+    &__link {
+      font: {
+        size: 0.875em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .show-list {
+    &__link {
+      font: {
+        size: 1em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .show-list {
+    &__link {
+      padding-left: 45px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      
+      font: {
+        size: 1.75em;
+      }
+    }
+  }
+}

@@ -22,3 +22,40 @@
     margin-right: 10px;
   }
 }
+
+@media only screen and (min-width: $mobile) {
+  .filter-form {
+    &__title {
+      font: {
+        size: 1.125em;
+      }
+
+      margin-right: 10px;
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .filter-form {
+    &__title {
+      font: {
+        size: 1.25em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .filter-form {
+    padding-bottom: 3px;
+    padding-top: 2px;
+
+    &__title {
+      font: {
+        size: 1.66em;
+      }
+
+      margin-right: 15px;
+    }
+  }
+}

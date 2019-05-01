@@ -1,5 +1,19 @@
 .choose-slider {
   width: 100%;
+  position: relative;
+
+  &:not(.slick-initialized) {
+    visibility: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .prev-1,
+  .next-1 {
+    display: none;
+  }
 
   .slick-dots {
     display: flex;
@@ -114,5 +128,123 @@
     color: #788f9b;
     line-height: normal;
     text-transform: uppercase;
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .choose-slider {
+    .slick-dots {
+      margin-top: 10px;
+    }
+
+    &__item {
+      padding-top: 2px;
+      padding-bottom: 2px;
+      padding-left: 2px;
+      padding-right: 2px;
+    }
+
+    &__show {
+      width: 77px;
+      height: 77px;
+
+      margin-bottom: 8px;
+    }
+
+    &__details {
+      width: 69px;
+      height: 69px;
+    }
+
+    &__time {
+      font: {
+        size: 1.25em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .choose-slider {
+    max-width: 374px;
+    .slick-dots {
+      margin-top: 10px;
+    }
+
+    &__item {
+      padding-top: 2px;
+      padding-bottom: 2px;
+      padding-left: 2px;
+      padding-right: 2px;
+    }
+
+    &__show {
+      width: 86px;
+      height: 86px;
+
+      margin-bottom: 8px;
+    }
+
+    &__details {
+      width: 78px;
+      height: 78px;
+    }
+
+    &__time {
+      font: {
+        size: 1.375em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .choose-slider {
+    max-width: 658px;
+
+    .slick-dots {
+      margin-top: 12px;
+
+      button {
+        width: 14px;
+        height: 14px;
+      }
+
+      li.slick-active button {
+        width: 14px;
+        height: 14px;
+
+        &::before {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+
+    &__item {
+      padding-top: 2px;
+      padding-bottom: 2px;
+      padding-left: 2px;
+      padding-right: 2px;
+    }
+
+    &__show {
+      width: 153px;
+      height: 156px;
+      border-width: 7px;
+
+      margin-bottom: 8px;
+    }
+
+    &__details {
+      width: 138px;
+      height: 140px;
+    }
+
+    &__time {
+      font: {
+        size: 1.809em;
+      }
+    }
   }
 }
