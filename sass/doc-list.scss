@@ -1,0 +1,142 @@
+.doc-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  width: 100%;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    position: relative;
+
+    margin-bottom: 15px;
+
+    &--age {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+
+  &__label {
+    font: {
+      size: 0.875em;
+      family: $semibold-font;
+      weight: 600;
+    }
+
+    color: $input-label;
+    line-height: normal;
+    text-transform: uppercase;
+
+    &--age {
+      margin-right: 15px;
+    }
+  }
+
+  &__error {
+    visibility: hidden;
+
+    font: {
+      size: 0.5em;
+      family: $medium-font;
+      weight: 600;
+    }
+
+    color: $text-error;
+    line-height: normal;
+    text-transform: uppercase;
+
+    position: absolute;
+
+    left: 0;
+    bottom: -12px;
+  }
+
+  &__input {
+    width: 100%;
+
+    border: 2px solid $input-border;
+    padding: 3px 10px;
+
+    font: {
+      size: 1.25em;
+      family: $bold-font;
+      weight: 700;
+    }
+
+    color: $text-lightblack;
+    text-transform: uppercase;
+    line-height: normal;
+
+    &--age {
+      -moz-appearance: textfield;
+      width: 40px;
+      padding: 3px 3px;
+      text-align: center;
+    }
+
+    &--age::-webkit-outer-spin-button,
+    &--age::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .doc-list {
+    &__label {
+      font: {
+        size: 1em;
+      }
+    }
+
+    &__error {
+      visibility: hidden;
+
+      font: {
+        size: 0.5em;
+        family: $medium-font;
+        weight: 600;
+      }
+
+      color: $text-error;
+      line-height: normal;
+      text-transform: uppercase;
+
+      position: absolute;
+
+      left: 0;
+      bottom: -12px;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .doc-list {
+    &__label {
+      font: {
+        size: 1.125em;
+      }
+    }
+
+    &__input {
+      font-size: 1.375em;
+
+      &--age {
+        width: 44px;
+        height: 44px;
+        padding-left: 3px;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.vote-slider {
+  width: 100%;
+  position: relative;
+  box-shadow:0px 0px 1px 1px rgba(0,0,0,1);
+  -webkit-box-shadow:0px 0px 1px 1px rgba(0,0,0,1);
+  -moz-box-shadow:0px 0px 1px 1px rgba(0,0,0,1);
+
+  &:not(.slick-initialized) {
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &--desktop {
+    display: none;
+  }
+}

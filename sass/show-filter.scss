@@ -63,7 +63,7 @@
   }
 }
 
-@media only screen and (min-width: $hdm) {
+@media only screen and (min-width: $tablet) {
   .show-filter {
     padding-right: 4px;
     padding-left: 25px;
@@ -93,7 +93,19 @@
   }
 }
 
-@media only screen and (min-width: $laptop-hd) {
+@media only screen and (min-width: $laptop-wide) {
+  .show-filter {
+    padding-right: 4px;
+    padding-left: 15px;
+    min-height: 48px;
+
+    &__close {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook-sm) {
   .show-filter {
     min-height: 42px;
   }

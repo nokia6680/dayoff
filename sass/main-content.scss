@@ -14,12 +14,15 @@
     align-items: center;
     justify-content: center;
 
+    position: relative;
+    overflow: hidden;
+
     width: 50%;
     height: 100%;
 
     border: 2px solid #000000;
     border-radius: 15px;
-    background-color: $submit-btn-bg;
+    background-color: #cacaca;
 
     padding: 2px 15px;
     margin-top: 15px;
@@ -35,6 +38,14 @@
     outline: none;
     cursor: pointer;
 
+    &:active {
+      transition: 0.2s ease;
+      transform: translate(2px, 2px);
+      box-shadow: none;
+    }
+  }
+
+  &__buttontxt {
     font: {
       size: 1em;
       family: $bold-font;
@@ -44,11 +55,22 @@
     color: $text-black;
     line-height: normal;
 
-    &:active {
-      transition: 0.2s ease;
-      transform: translate(2px, 2px);
-      box-shadow: none;
-    }
+    z-index: 10;
+  }
+
+  &__buttonbg {
+    position: absolute;
+
+    width: 50%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    background: -moz-linear-gradient(left, rgba(174,234,0,0.7) 0%, rgba(174,234,0,0.7) 1%, rgba(174,234,0,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(174,234,0,0.7) 0%,rgba(174,234,0,0.7) 1%,rgba(174,234,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(174,234,0,0.7) 0%,rgba(174,234,0,0.7) 1%,rgba(174,234,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3aeea00', endColorstr='#aeea00',GradientType=1 ); /* IE6-9 */
   }
 }
 
@@ -56,7 +78,9 @@
   .main-content {
     &__submit {
       padding: 2px 15px;
+    }
 
+    &__buttontxt {
       font: {
         size: 1.125em;
       }
@@ -69,7 +93,9 @@
     &__submit {
       border-radius: 30px;
       max-width: 180px;
+    }
 
+    &__buttontxt {
       font: {
         size: 1.25em;
       }
@@ -83,7 +109,9 @@
       border-radius: 30px;
       max-width: 170px;
       margin-top: 15px;
+    }
 
+    &__buttontxt {
       font: {
         size: 1.968em;
       }
@@ -107,6 +135,11 @@
 @media only screen and (min-width: $laptop-wide) {
   .main-content {
     margin-top: 15px;
+
+    &__submit {
+      margin-top: 10px;
+      height: 45px;
+    }
   }
 }
 
@@ -127,5 +160,9 @@
   .main-content {
     max-width: 860px;
     margin-top: -10px;
+
+    &__submit {
+      height: 55px;
+    }
   }
 }

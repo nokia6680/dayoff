@@ -54,9 +54,11 @@
     line-height: normal;
     text-transform: uppercase;
 
+    cursor: pointer;
+
     &--checkbox {
       color: $text-lightblack;
-      font-size: 0.575em;
+      font-size: 0.5em;
     }
 
     &--link {
@@ -74,7 +76,7 @@
     }
 
     &--small {
-      font-size: 0.875em;
+      font-size: 0.75em;
     }
   }
 
@@ -104,7 +106,7 @@
     padding: 3px 10px;
 
     font: {
-      size: 1.25em;
+      size: 1.125em;
       family: $bold-font;
       weight: 700;
     }
@@ -112,6 +114,8 @@
     color: $text-lightblack;
     text-transform: uppercase;
     line-height: normal;
+
+    cursor: text;
   }
 
   &__textarea {

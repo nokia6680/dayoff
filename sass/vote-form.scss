@@ -1,0 +1,19 @@
+.vote-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 100%;
+  max-height: 155px;
+
+  margin-bottom: 10px;
+
+  box-shadow:0px 0px 1px 1px rgba(0,0,0,1);
+  -webkit-box-shadow:0px 0px 1px 1px rgba(0,0,0,1);
+  -moz-box-shadow:0px 0px 1px 1px rgba(0,0,0,1);
+
+  border: 6px solid #ffffff;
+  background-color: #546e7a;
+
+}
