@@ -43,3 +43,35 @@
     margin-bottom: 10px;
   }
 }
+
+@media only screen and (min-width: $laptop-wide) {
+  .vote-form {
+    width: 100%;
+
+    max-width: 592px;
+
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (min-width: $widebook) {
+  .vote-form {
+    width: 100%;
+
+    max-width: 760px;
+
+    margin-bottom: 10px;
+    border-width: 8px;
+  }
+}
+
+@media only screen and (min-width: $widebook-hd) {
+  .vote-form {
+    width: 100%;
+
+    max-width: 812px;
+
+    margin-bottom: 13px;
+    border-width: 8px;
+  }
+}

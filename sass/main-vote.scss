@@ -106,3 +106,46 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop) {
+  .main-vote {
+    margin-top: -70px;
+  }
+}
+
+@media only screen and (min-width: $laptop-hd) {
+  .main-vote {
+    align-items: center;
+    margin-top: 120px;
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .main-vote {
+    max-width: 630px;
+
+    align-items: center;
+    margin-top: -28px;
+  }
+}
+
+@media only screen and (min-width: $widebook) {
+  .main-vote {
+    max-width: 800px;
+
+    &__submit {
+      height: 55px;
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook-hd) {
+  .main-vote {
+    max-width: 866px;
+    margin-top: 0;
+
+    &__submit {
+      height: 55px;
+    }
+  }
+}

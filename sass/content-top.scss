@@ -84,3 +84,39 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop) {
+  .content-top {
+    max-width: 480px;
+
+    &__title {
+      font: {
+        size: 1.25em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .content-top {
+    max-width: 100%;
+
+    &__title {
+      font: {
+        size: 1.211em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook) {
+  .content-top {
+    &__title {
+      font: {
+        size: 1.66em;
+      }
+
+      padding-left: 5px;
+    }
+  }
+}
