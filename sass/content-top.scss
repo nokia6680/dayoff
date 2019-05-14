@@ -48,3 +48,39 @@
     margin: 0;
   }
 }
+
+@media only screen and (min-width: $mobile) {
+  .content-top {
+    max-width: 360px;
+
+    &__title {
+      font: {
+        size: 1.125em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .content-top {
+    max-width: 374px;
+
+    &__title {
+      font: {
+        size: 1.25em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .content-top {
+    max-width: 662px;
+
+    &__title {
+      font: {
+        size: 1.347em;
+      }
+    }
+  }
+}

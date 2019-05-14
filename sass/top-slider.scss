@@ -37,6 +37,9 @@
   }
 
   &__details {
+    cursor: pointer;
+    outline: none;
+
     border: 2px solid #000000;
 
     height: 100%;
@@ -56,6 +59,38 @@
       .top-slider__name {
         display: inline-flex;
         opacity: 1;
+      }
+    }
+
+    &--selected {
+      .top-slider__name {
+        display: none;
+      }
+
+      background-color: rgba(174, 234, 0, 0.6);
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+
+        width: 60px;
+        height: 47px;
+
+        background-image: url('../img/vote-tick.png');
+        background-size: 60px 47px;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &:hover {
+        .top-slider__name {
+          display: none;
+        }
       }
     }
   }
@@ -85,5 +120,83 @@
     align-items: center;
 
     opacity: 0;
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .top-slider {
+    &__show {
+      width: 100px;
+      height: 100px;
+    }
+
+    &__name {
+      font: {
+        size: 0.55em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .top-slider {
+    &__show {
+      width: 110px;
+      height: 110px;
+    }
+
+    &__details {
+      width: 98px;
+      height: 98px;
+    }
+
+    &__name {
+      font: {
+        size: 0.55em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .top-slider {
+    &__show {
+      width: 208px;
+      height: 208px;
+      border-width: 12px;
+
+      box-shadow: 0px 0px 1px 2px rgba(0,0,0,1);
+      -webkit-box-shadow: 0px 0px 1px 2px rgba(0,0,0,1);
+      -moz-box-shadow: 0px 0px 1px 2px rgba(0,0,0,1);
+    }
+
+    &__details {
+      width: 182px;
+      height: 182px;
+
+      &--selected {
+        &::after {
+          width: 120px;
+          height: 93px;
+
+          background-size: 120px 93px;
+        }
+      }
+    }
+
+    &__name {
+      width: 154px;
+      height: auto;
+
+      border: 2px solid #000000;
+      padding-top: 4px;
+      padding-bottom: 4px;
+
+      margin-bottom: 19px;
+
+      font: {
+        size: 1em;
+      }
+    }
   }
 }

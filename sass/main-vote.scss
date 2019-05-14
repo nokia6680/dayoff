@@ -61,3 +61,48 @@
     background: linear-gradient(to right, rgba(174,234,0,0.7) 0%,rgba(174,234,0,0.7) 1%,rgba(174,234,0,1) 100%);
   }
 }
+
+@media only screen and (min-width: $mobile) {
+  .main-vote {
+    &__submit {
+      padding: 2px 15px;
+    }
+
+    &__buttontxt {
+      font: {
+        size: 1.125em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .main-vote {
+    &__submit {
+      border-radius: 30px;
+      max-width: 180px;
+    }
+
+    &__buttontxt {
+      font: {
+        size: 1.25em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .main-vote {
+    &__submit {
+      border-radius: 30px;
+      max-width: 170px;
+      margin-top: 15px;
+    }
+
+    &__buttontxt {
+      font: {
+        size: 1.968em;
+      }
+    }
+  }
+}
