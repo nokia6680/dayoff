@@ -12,6 +12,114 @@
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
+	<style>
+		.body-card {
+			background-color: transparent;
+			background-image: none;
+		}
+
+		.card {
+		  width: 2360px;
+		  height: 1545px;
+		  border: 10px solid #000000;
+		  border-radius: 10px;
+		  position: relative;
+		  display: -webkit-box;
+		  display: -ms-flexbox;
+		  display: flex;
+		  -webkit-box-orient: horizontal;
+		  -webkit-box-direction: normal;
+		      -ms-flex-direction: row;
+		          flex-direction: row;
+		  -webkit-box-pack: justify;
+		      -ms-flex-pack: justify;
+		          justify-content: space-between;
+		  -webkit-box-align: start;
+		      -ms-flex-align: start;
+		          align-items: flex-start;
+		  -ms-flex-wrap: wrap;
+		      flex-wrap: wrap;
+		}
+
+		.title {
+		  display: block;
+		  width: 100%;
+		  padding-top: 60px;
+		  height: 324px;
+		  border-bottom: 10px solid #000000;
+		  background-image: url("../img/print-head.png");
+		  background-size: 304px 304px;
+		  background-position: top left;
+		  text-align: center;
+		  text-transform: uppercase;
+		  vertical-align: middle;
+		  font-size: 114.73px;
+		  font-family: "Oswald-Bold", sans-serif;
+		  font-weight: 600;
+		  color: #231f20;
+		  line-height: normal;
+		}
+
+		.photo {
+		  width: 1170px;
+		  height: 1200px;
+		  background-image: url("../img/doc-form-bg.svg"), url("../img/photo-bg-hole.png");
+		  background-size: 931px 1060px, 1170px 1200px;
+		  background-position: top 25px left 130px, top left;
+		  background-repeat: no-repeat;
+		  padding-top: 20px;
+		  padding-left: 130px;
+		  position: relative;
+		  overflow: hidden;
+		}
+
+		.photo-inside {
+		  width: 866px;
+		  height: 866px;
+		  border-radius: 50%;
+		  background-image: url("../img/photo1.jpg");
+		  background-size: cover;
+		  background-repeat: no-repeat;
+		  background-position: center center;
+		  position: absolute;
+		  top: 31%;
+		  left: 7%;
+		  z-index: -1;
+		}
+
+		.name {
+		  width: 50%;
+		  height: 1200px;
+		  padding-right: 75px;
+		  padding-top: 140px;
+		  background-color: #ffffff;
+		}
+
+		.info {
+		  margin: 0;
+		  font-size: 125px;
+		  font-family: "Oswald-Bold", sans-serif;
+		  font-weight: 600;
+		  color: #231f20;
+		  line-height: normal;
+		  text-transform: uppercase;
+		  border-bottom: 10px solid #78909c;
+		}
+
+		.stamp {
+		  width: 690px;
+		  height: 520px;
+		  position: absolute;
+		  bottom: 60px;
+		  right: 75px;
+		  background-color: #ffffff;
+		  background-image: url("../img/stamp.png");
+		  background-size: 477px 514px;
+		  background-repeat: no-repeat;
+		  background-position: top right;
+		}
+
+	</style>
 </head>
 
 <body class="body-card">

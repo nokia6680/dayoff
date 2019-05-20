@@ -79,7 +79,7 @@
     justify-content: center;
     align-items: center;
 
-    padding: 10px 20px;
+    padding: 10px 10px;
 
     background-image: url('../img/popup-prize-pattern.png');
     background-size: 150px 150px;
@@ -110,6 +110,34 @@
     max-width: 260px;
     margin-top: 0;
     margin-bottom: 5px;
+  }
+
+  &__link {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    text-decoration: none;
+
+    &::before {
+      position: absolute;
+      content: '';
+
+      height: 1px;
+      width: 100%;
+
+      background-color: #000000;
+      top: -3px;
+      left: 0;
+    }
+  }
+
+  &__doc {
+    @extend .popup-success__description;
+
+    color: $social-hover;
   }
 }
 
@@ -148,6 +176,12 @@
 
       margin-bottom: 20px;
     }
+
+    &__link {
+      &::before {
+        top: -8px;
+      }
+    }
   }
 }
 
@@ -174,13 +208,15 @@
     &__body {
       width: 100%;
 
-      padding: 20px 20px;
+      padding: 20px 10px;
     }
 
     &__description {
       font: {
         size: 1.375em;
       }
+
+      max-width: 360px;
     }
   }
 }
@@ -197,12 +233,12 @@
     }
 
     &__body {
-      padding-top: 0;
+      padding-top: 10px;
     }
-    
+
     &__description {
       font: {
-        size: 1.5em;
+        size: 1.375em;
       }
 
       margin-top: 0;

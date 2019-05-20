@@ -90,7 +90,43 @@
         flex-basis: 232px;
 
         margin-left: 40px;
-        margin-right: 40px;
+        margin-right: 5%;
+      }
+    }
+
+    &__link {
+      width: 100%;
+
+      &--vote {
+        height: 254px;
+        width: 232px;
+      }
+    }
+
+    &__img {
+      max-height: 500px;
+
+      &--vote {
+        height: 254px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook-sm) {
+  .main {
+    &__logo {
+      width: 50%;
+      flex-basis: 50%;
+
+      margin-top: -30px;
+
+      &--vote {
+        width: 232px;
+        flex-basis: 232px;
+
+        margin-left: 40px;
+        margin-right: 10%;
       }
     }
 
