@@ -72,6 +72,56 @@
     background: linear-gradient(to right, rgba(174,234,0,0.7) 0%,rgba(174,234,0,0.7) 1%,rgba(174,234,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3aeea00', endColorstr='#aeea00',GradientType=1 ); /* IE6-9 */
   }
+
+  &__final {
+    -webkit-tap-highlight-color: transparent;
+
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+
+    width: 50%;
+    height: 100%;
+
+    font: {
+      size: 1em;
+      family: $bold-font;
+      weight: 700;
+    }
+
+    color: $text-black;
+    line-height: normal;
+
+    z-index: 10;
+
+    border: 2px solid #000000;
+    border-radius: 15px;
+    background-color: $submit-btn-bg;
+
+    padding: 2px 15px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+    box-shadow: 2px 2px 1px 1px rgba(0,0,0,1);
+    -webkit-box-shadow: 2px 2px 1px 1px rgba(0,0,0,1);
+    -moz-box-shadow: 2px 2px 1px 1px rgba(0,0,0,1);
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    outline: none;
+    cursor: pointer;
+
+    &:active {
+      transition: 0.2s ease;
+      transform: translate(2px, 2px);
+      box-shadow: none;
+    }
+  }
 }
 
 @media only screen and (min-width: $mobile) {
@@ -84,6 +134,11 @@
       font: {
         size: 1.125em;
       }
+    }
+
+    &__final {
+      padding: 2px 15px;
+      font-size: 1.125em;
     }
   }
 }
@@ -100,6 +155,12 @@
         size: 1.25em;
       }
     }
+
+    &__final {
+      border-radius: 30px;
+      max-width: 180px;
+      font-size: 1.25em;
+    }
   }
 }
 
@@ -115,6 +176,13 @@
       font: {
         size: 1.968em;
       }
+    }
+
+    &__final {
+      border-radius: 30px;
+      max-width: 230px;
+      margin-top: 15px;
+      font-size: 1.968em;
     }
   }
 }
@@ -137,6 +205,11 @@
     margin-top: 15px;
 
     &__submit {
+      margin-top: 10px;
+      height: 45px;
+    }
+
+    &__final {
       margin-top: 10px;
       height: 45px;
     }
@@ -163,6 +236,31 @@
 
     &__submit {
       height: 55px;
+    }
+
+    &__final {
+      height: 55px;
+    }
+  }
+}
+
+@media only screen and (min-width: $ultra) {
+  .main-content {
+    max-width: 1290px;
+    margin-top: -10px;
+
+    &--final {
+      margin-top: 100px;
+    }
+
+    &__submit {
+      height: 55px;
+    }
+
+    &__final {
+      height: 70px;
+      font-size: 2.5em;
+      max-width: 280px;
     }
   }
 }

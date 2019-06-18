@@ -4,25 +4,31 @@
 <head>
 	<meta charset="utf-8">
 	<title>Твое удостоверение | Nickelodeon</title>
-	<link rel="stylesheet" href="css/style.css">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
-		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-	<![endif]-->
 	<style>
+		@font-face {
+			font-family: 'Oswald-Bold';
+			src: url('../fonts/Oswald-Bold.eot');
+			src: local('☺'), url('../fonts/Oswald-Bold.woff') format('woff'), url('../fonts/Oswald-Bold.otf') format('opentype'), url('../fonts/Oswald-Bold.ttf') format('truetype'), url('../fonts/Oswald-Bold.svg') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+
 		.body-card {
 			background-color: transparent;
 			background-image: none;
 		}
 
 		.card {
-		  width: 2360px;
-		  height: 1545px;
-		  border: 10px solid #000000;
-		  border-radius: 10px;
+		  width: 1003px;
+		  height: 557px;
+		  border: 5px solid #000000;
+		  border-radius: 5px;
+			box-sizing: border-box;
+			overflow: hidden;
+
 		  position: relative;
 		  display: -webkit-box;
 		  display: -ms-flexbox;
@@ -44,40 +50,40 @@
 		.title {
 		  display: block;
 		  width: 100%;
-		  padding-top: 60px;
-		  height: 324px;
-		  border-bottom: 10px solid #000000;
+		  padding-top: 15px;
+		  height: 80px;
+		  border-bottom: 5px solid #000000;
 		  background-image: url("../img/print-head.png");
-		  background-size: 304px 304px;
+		  background-size: 152px 152px;
 		  background-position: top left;
 		  text-align: center;
 		  text-transform: uppercase;
 		  vertical-align: middle;
-		  font-size: 114.73px;
+		  font-size: 42px;
 		  font-family: "Oswald-Bold", sans-serif;
 		  font-weight: 600;
 		  color: #231f20;
 		  line-height: normal;
 		}
-
+		/*
 		.photo {
-		  width: 1170px;
-		  height: 1200px;
+		  width: 292px;
+		  height: 300px;
 		  background-image: url("../img/doc-form-bg.svg"), url("../img/photo-bg-hole.png");
-		  background-size: 931px 1060px, 1170px 1200px;
-		  background-position: top 25px left 130px, top left;
+		  background-size: 232px 265px, 292px 300px;
+		  background-position: top 12px left 75px, top left;
 		  background-repeat: no-repeat;
-		  padding-top: 20px;
-		  padding-left: 130px;
+		  padding-top: 10px;
+		  padding-left: 65px;
 		  position: relative;
 		  overflow: hidden;
 		}
 
 		.photo-inside {
-		  width: 866px;
-		  height: 866px;
+		  width: 216px;
+		  height: 216px;
 		  border-radius: 50%;
-		  background-image: url("../img/photo1.jpg");
+		  background-image: url("../img/photo.jpg");
 		  background-size: cover;
 		  background-repeat: no-repeat;
 		  background-position: center center;
@@ -85,39 +91,39 @@
 		  top: 31%;
 		  left: 7%;
 		  z-index: -1;
-		}
+		} */
 
 		.name {
 		  width: 50%;
-		  height: 1200px;
-		  padding-right: 75px;
-		  padding-top: 140px;
+		  height: 300px;
+		  padding-right: 37px;
+		  padding-top: 40px;
 		  background-color: #ffffff;
 		}
 
 		.info {
 		  margin: 0;
-		  font-size: 125px;
+		  font-size: 42px;
 		  font-family: "Oswald-Bold", sans-serif;
 		  font-weight: 600;
 		  color: #231f20;
 		  line-height: normal;
 		  text-transform: uppercase;
-		  border-bottom: 10px solid #78909c;
+		  border-bottom: 5px solid #78909c;
 		}
-
+		/*
 		.stamp {
-		  width: 690px;
-		  height: 520px;
+		  width: 345px;
+		  height: 260px;
 		  position: absolute;
-		  bottom: 60px;
-		  right: 75px;
+		  bottom: 30px;
+		  right: 37px;
 		  background-color: #ffffff;
 		  background-image: url("../img/stamp.png");
-		  background-size: 477px 514px;
+		  background-size: 237px 257px;
 		  background-repeat: no-repeat;
 		  background-position: top right;
-		}
+		}*/
 
 	</style>
 </head>
@@ -125,14 +131,16 @@
 <body class="body-card">
 	<div class="card">
 		<div class="title">Удостоверение программного директора</div>
+		<!--
 		<div class="photo"></div>
-		<div class="photo-inside"></div>
+		<div class="photo-inside"></div>-->
 		<div class="name">
 			<p class="info">{NAME}</p>
 			<p class="info">{LAST_NAME}</p>
 			<p class="info">{AGE}</p>
 		</div>
-		<div class="stamp"></div>
+		<!--
+		<div class="stamp"></div>-->
 	</div>
 </body>
 

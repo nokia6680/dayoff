@@ -1,0 +1,154 @@
+.popup-winner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+
+  &__wrapper {
+    width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: #ffffff;
+
+    position: relative;
+
+    border: 2px solid #000000;
+    border-radius: 0;
+
+    box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.4);
+  }
+
+  &__close {
+    @extend .popup-rules__close;
+  }
+
+  &__title {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    margin: 0;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    border-bottom: 2px solid #000000;
+
+    background-color: #ffcb2b;
+    background-image: url('../img/popup-reg-head-pattern.png');
+    background-size: 50px 50px;
+    background-repeat: repeat;
+    background-position: top left;
+
+    font: {
+      size: 1.25em;
+      family: $bold-font;
+      weight: 700;
+    }
+
+    color: $text-lightblack;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: normal;
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .popup-winner {
+    &__wrapper {
+      width: 406px;
+    }
+
+    &__close {
+      top: -45px;
+      right: -45px;
+    }
+
+    &__title {
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      font: {
+        size: 1.875em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop) {
+  .popup-winner {
+    &__wrapper {
+      width: 406px;
+    }
+
+    &__close {
+      top: -45px;
+      right: -45px;
+    }
+
+    &__title {
+      padding-top: 5px;
+      padding-bottom: 5px;
+
+      font: {
+        size: 1.875em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook) {
+  .popup-winner {
+    &__title {
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      font: {
+        size: 1.875em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $ultra) {
+  .popup-winner {
+    &__wrapper {
+      width: 700px;
+    }
+    &__title {
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      font: {
+        size: 2.875em;
+      }
+    }
+
+    &__close {
+      width: 60px;
+      height: 60px;
+
+      top: -65px;
+      right: -65px;
+    }
+  }
+}

@@ -166,7 +166,7 @@
         flex-basis: 324px;
 
         margin-left: 30px;
-        margin-right: 30px;
+        margin-right: 10%;
       }
 
       &--event {
@@ -194,6 +194,22 @@
     &__logo {
       &--event {
         margin-right: 5%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $ultra) {
+  .main {
+    &--final {
+      align-items: center;
+    }
+    &__logo {
+      max-width: 525px;
+      height: 582px;
+
+      &--final {
+        margin-right: 10%;
       }
     }
   }

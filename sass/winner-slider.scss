@@ -1,0 +1,202 @@
+.winner-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  border-top: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+
+  &:not(.slick-initialized) {
+    visibility: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .slick-dots {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    margin-top: 5px;
+
+    position: absolute;
+
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    li {
+      margin: 0 0.5rem;
+    }
+
+    button {
+      display: block;
+      width: 12px;
+      height: 12px;
+      padding: 0;
+      border: 1px solid #000000;
+      border-radius: 100%;
+      background-color: #ffffff;
+      text-indent: -9999px;
+
+      cursor: pointer;
+      outline: none;
+    }
+
+    li.slick-active button {
+      background-color: transparent;
+      position: relative;
+
+      width: 12px;
+      height: 12px;
+      border: 1px solid #000000;
+      border-radius: 100%;
+      background-color: #ffffff;
+
+      cursor: pointer;
+      outline: none;
+
+      &::before {
+        position: absolute;
+        content: '';
+
+        width: 18px;
+        height: 18px;
+
+        border: 1px solid #ffffff;
+
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+
+        background-color: transparent;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  /*Кнопки*/
+  .prev-5 {
+    display: none;
+  }
+
+  .next-5 {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .winner-slider {
+    /*Кнопки*/
+    .prev-5 {
+      display: block;
+      position: absolute;
+
+      width: 32px;
+      height: 32px;
+
+      border: none;
+
+      z-index: 10;
+
+      top: 35%;
+      left: -50px;
+
+      background-image: url('../img/arrow-left.png');
+      background-size: 19px 32px;
+      background-repeat: no-repeat;
+      background-position: right center;
+
+      transition: 0.2s ease-in;
+
+      cursor: pointer;
+      outline: none;
+    }
+
+    .next-5 {
+      display: block;
+      position: absolute;
+
+      width: 32px;
+      height: 32px;
+
+      border: none;
+
+      z-index: 10;
+
+      top: 35%;
+      right: -50px;
+
+      background-image: url('../img/arrow-right.png');
+      background-size: 19px 32px;
+      background-repeat: no-repeat;
+      background-position: left center;
+
+      transition: 0.2s ease-in;
+
+      cursor: pointer;
+      outline: none;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .winner-slider {
+    /*Кнопки*/
+    .prev-5 {
+      width: 64px;
+      height: 64px;
+
+      top: 35%;
+      left: -100px;
+
+      background-size: 38px 64px;
+    }
+
+    .next-5 {
+      width: 64px;
+      height: 64px;
+
+      top: 35%;
+      right: -100px;
+
+      background-size: 38px 64px;
+    }
+  }
+}
+
+@media only screen and (min-width: $ultra) {
+  .winner-slider {
+    .slick-dots {
+      margin-top: 20px;
+
+      bottom: -50px;
+
+      button {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #000000;
+      }
+
+      li.slick-active button {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #000000;
+
+        &::before {
+          width: 28px;
+          height: 28px;
+
+          border: 2px solid #ffffff;
+        }
+      }
+    }
+  }
+}

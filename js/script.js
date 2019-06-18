@@ -1,12 +1,12 @@
-var menuShow = document.querySelector(".content-show");
-var openButton = document.querySelectorAll(".choose-slider__show");
-var closeButton = document.querySelector(".show-filter__close")
+var menuShow = document.querySelector(".intro-controls");
+var openButton = document.querySelectorAll(".intro__opener");
+var closeButton = document.querySelector(".intro__closer")
 
 
 if (menuShow) {
   for (var i = 0; i < openButton.length; i++) openButton[i].addEventListener("click", function(event) {
     event.preventDefault();
-    menuShow.classList.add("content-show--visible");
+    menuShow.classList.add("intro-controls--active");
   });
 
   menuShow.addEventListener("click", function(event) {
@@ -14,12 +14,12 @@ if (menuShow) {
   });
 
   closeButton.addEventListener("click", function() {
-    menuShow.classList.remove("content-show--visible");
+    menuShow.classList.remove("intro-controls--active");
   });
 
   window.addEventListener("keydown", function(event) {
     if (event.keyCode === 27) {
-      menuShow.classList.remove("content-show--visible");
+      menuShow.classList.remove("intro-controls--active");
     }
   });
 }
@@ -132,16 +132,7 @@ $(document).ready(function() {
 
     responsive: [{
         breakpoint: 9999,
-        settings: {
-          infinite: false,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          draggable: false,
-          dots: false,
-          arrows: true,
-          nextArrow: document.querySelector('#my-arrow-next'),
-          prevArrow: document.querySelector('#my-arrow-prev')
-        }
+        settings: "unslick"
       },
       {
         breakpoint: 1280,
@@ -300,5 +291,19 @@ $(document).ready(function() {
     dots: false,
     fade: true,
     arrows: false
+  });
+});
+
+/*Слайдер в попапе winner*/
+$(document).ready(function() {
+  $('.winner-slider').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    fade: true,
+    arrows: true,
+    prevArrow: '<div class="prev-5"></div>',
+    nextArrow: '<div class="next-5"></div>'
   });
 });

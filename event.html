@@ -613,13 +613,19 @@
 			<button class="popup-doc__close" type="button"></button>
 			<h3 class="popup-doc__title">Удостоверение программного директора</h3>
 			<div class="popup-doc__body">
+
 				<div class="popup-doc__user">
 					<div class="popup-doc__photo">
 						<!--Элемент с фиолетовым фоном, скрывается после загрузки изображения, добавляется класс --closed -->
 						<div class="popup-doc__bg"></div>
 						<img class="popup-doc__img" src="img/photo.jpg" alt="user-photo" />
 					</div>
-					<a class="popup-doc__upload" href="#" target="_self">Твоё фото</a>
+
+					<span class="popup-doc__btn">
+						<span class="popup-doc__label">Твоё фото</span>
+						<!-- The file input field used as target for the file upload widget -->
+						<input id="fileupload" type="file" name="files" class="popup-doc__upload">
+					</span>
 				</div>
 				<!--Форма ввода данных-->
 				<form class="popup-doc__form doc-form" action="#" method="post">
@@ -642,7 +648,6 @@
 					<!--Блок кнопок-->
 					<div class="doc-form__controls">
 						<button class="doc-form__btn doc-form__btn--save" type="submit">Сохранить</button>
-						<button class="doc-form__btn doc-form__btn--print" type="button">Напечатать</button>
 					</div>
 				</form>
 			</div>

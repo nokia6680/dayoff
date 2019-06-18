@@ -41,6 +41,10 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: auto;
+
+  @media only screen and (min-width: $laptop-wide) {
+    background-size: cover;
+  }
 }
 
 .body-card {
@@ -53,13 +57,17 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
   background-size: auto;
+
+  @media only screen and (min-width: $laptop-wide) {
+    background-size: cover;
+  }
 }
 
 .body-event {
   background-image: url('../img/bg-event.jpg');
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: auto;
+  background-size: cover;
 
   .ui-draggable-dragging {
     .show-list__name {

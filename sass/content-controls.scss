@@ -34,6 +34,12 @@
     &--desktop {
       display: none;
     }
+
+    &--final {
+      font-size: 0.875em;
+      padding-top: 2px;
+      padding-bottom: 2px;
+    }
   }
 }
 
@@ -102,6 +108,8 @@
 
     max-width: 860px;
 
+    justify-content: center;
+
     &__title {
       font: {
         size: 1.546em;
@@ -145,6 +153,21 @@
     &__title {
       font: {
         size: 1.66em;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $ultra) {
+  .content-controls {
+    margin-bottom: 0;
+
+    max-width: 1290px;
+    min-height: 75px;
+
+    &__title {
+      font: {
+        size: 2em;
       }
     }
   }
