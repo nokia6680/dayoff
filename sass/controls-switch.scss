@@ -1,28 +1,27 @@
 .controls-switch {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  @include flex-setting(row, center, center);
 
   &__btn {
     background-color: transparent;
     border: none;
 
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
 
     outline: none;
     cursor: pointer;
 
     &--sun {
       background-image: url('../img/sun.png');
-      background-size: 20px 20px;
+      background-size: contain;
+      background-position: 50% 50%;
       background-repeat: no-repeat;
     }
 
     &--moon {
       background-image: url('../img/moon.png');
-      background-size: 15px 20px;
+      background-size: contain;
+      background-position: 50% 50%;
       background-repeat: no-repeat;
     }
   }
@@ -71,7 +70,7 @@
       height: 10px;
 
       background-color: #ffffff;
-      border: 1px solid #000000;
+      border: 2px solid #000000;
       border-radius: 50%;
       transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
       cursor: pointer;
@@ -90,21 +89,14 @@
   }
 
   &__text {
-    font: {
-      size: 0.5em;
-      family: $bold-font;
-      weight: 700;
-    }
-
-    color: $text-lightblack;
-    line-height: normal;
+    @include font-setting($primary-font, 0.5rem, 1, 700, $text-lightblack);
     text-transform: uppercase;
 
     position: absolute;
 
-    top: -1px;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%,-50%);
   }
 
   &__checkbox {
@@ -136,14 +128,6 @@
     &__btn {
       width: 22px;
       height: 22px;
-
-      &--sun {
-        background-size: 22px 22px;
-      }
-
-      &--moon {
-        background-size: 16px 22px;
-      }
     }
 
     &__cover {
@@ -166,11 +150,7 @@
     }
 
     &__text {
-      font: {
-        size: 0.55em;
-      }
-
-      top: 1px;
+      font-size: 0.55rem;
     }
   }
 }
@@ -178,42 +158,27 @@
 @media only screen and (min-width: $tablet) {
   .controls-switch {
     &__btn {
-      width: 31px;
-      height: 31px;
-
-      &--sun {
-        background-size: 31px 31px;
-      }
-
-      &--moon {
-        background-size: 23px 31px;
-      }
+      width: 32px;
+      height: 32px;
     }
 
     &__cover {
       width: 80px;
-      height: 31px;
+      height: 32px;
 
       margin-left: 8px;
       margin-right: 8px;
 
       border-width: 4px;
-
-      box-shadow: 0px 0px 1px 2px rgba(0,0,0,1);
-      -webkit-box-shadow: 0px 0px 1px 2px rgba(0,0,0,1);
-      -moz-box-shadow: 0px 0px 1px 2px rgba(0,0,0,1);
     }
 
     &__toggle {
-      height: 23px;
-      box-shadow: 0px 0px 1px 2px rgba(0,0,0,1);
-      -webkit-box-shadow: 0px 0px 1px 2px rgba(0,0,0,1);
-      -moz-box-shadow: 0px 0px 1px 2px rgba(0,0,0,1);
+      height: 24px;
 
       .controls-switch__knobs::before {
         left: -1px;
-        width: 23px;
-        height: 23px;
+        width: 24px;
+        height: 24px;
       }
 
       .controls-switch__checkbox:checked + .controls-switch__knobs::before {
@@ -222,11 +187,7 @@
     }
 
     &__text {
-      font: {
-        size: 0.875em;
-      }
-
-      top: 0;
+      font-size: 0.75rem;
     }
   }
 }

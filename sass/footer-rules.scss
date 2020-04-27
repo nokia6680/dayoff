@@ -1,110 +1,25 @@
 .footer-rules {
-  width: 100%;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  padding-bottom: 10px;
-
-  &__item {
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-
-  &__link {
-    font: {
-      size: 0.5em;
-      family: $medium-font;
-      weight: 500;
-    }
-    color: $text-white;
-
-    text-transform: uppercase;
-    text-decoration: none;
-
-    &:hover,
-    &:active,
-    &:focus {
-      color: $text-yellow;
-    }
-  }
-}
-
-
-@media only screen and (min-width: $smt) {
-  .footer-rules {
-    width: 50%;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding-bottom: 0;
-
-    &__item {
-      margin-left: 0px;
-      margin-right: 0px;
-    }
-
-    &__link {
-      font: {
-        size: 0.875em;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: $tablet) {
-  .footer-rules {
-    &__item {
-      margin-left: 0px;
-      margin-right: 0px;
-    }
-
-    &__link {
-      cursor: pointer;
-      outline: none;
-
-      font: {
-        size: 1em;
-      }
-    }
-  }
+  display: none;
 }
 
 @media only screen and (min-width: $laptop) {
   .footer-rules {
-    &__link {
-      font: {
-        size: 1em;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: $laptop-hd) {
-  .footer-rules {
-    flex-direction: row;
-    justify-content: flex-start;
-
-    &__item {
-      margin-right: 10px;
-    }
+    @include flex-setting(column, flex-start, center);
+    margin: 0;
+    padding: 0;
+    list-style: none;
 
     &__link {
+      @include font-setting($primary-font, 0.75rem, 1, 400, $text-white);
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: 0.2s ease-in-out;
+
       &:hover,
       &:active,
       &:focus {
-        color: $text-white;
-        border-bottom: 2px solid #ffffff;
-      }
-
-      font: {
-        size: 1em;
+        color: $social-hover;
+        transition: 0.2s ease-in-out;
       }
     }
   }
@@ -112,14 +27,35 @@
 
 @media only screen and (min-width: $laptop-wide) {
   .footer-rules {
-    &__item {
-      margin-right: 20px;
-    }
+    flex-direction: row;
 
     &__link {
-      font: {
-        size: 1.25em;
+      font-size: 0.875rem;
+
+      &--conditions {
+        margin-right: 1.875rem;
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: '';
+
+          width: 2px;
+          height: 70%;
+
+          background-color: #fff;
+
+          top: 50%;
+          right: -0.938rem;
+          transform: translateY(-50%);
+        }
       }
     }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .footer-rules {
+
   }
 }

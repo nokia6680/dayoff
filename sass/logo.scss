@@ -1,0 +1,106 @@
+.logo {
+  width: 100%;
+  max-width: 320px;
+  @include flex-setting(column, flex-start, center);
+
+  margin-top: -2rem;
+
+  position: relative;
+
+  &__link {
+    @include flex-setting(column, center, center);
+
+    width: 145px;
+    height: 21px;
+
+    margin-bottom: 0.625rem;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__title {
+    @include font-setting('Trappist', 1.25rem, 1, 400, #668ef3);
+    text-transform: uppercase;
+
+    border-top: 2px solid #668ef3;
+    border-bottom: 2px solid #668ef3;
+
+    padding-top: 0.25rem;
+    padding-bottom: 0.188rem;
+
+    margin: 0;
+    margin-bottom: 0.625rem;
+  }
+
+  &__figure {
+    position: absolute;
+    width: 55px;
+    height: auto;
+    object-fit: contain;
+    left: -5px;
+    top: 10%;
+    transform: translateY(-50%);
+  }
+
+  &__subtitle {
+    @include font-setting('Trappist', 1.125rem, 1, 400, #668ef3);
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (min-width: $mobile) {
+  .logo {
+    &__figure {
+      width: 65px;
+      left: -15px;
+      top: 40%;
+    }
+
+    &__subtitle {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .logo {
+    &__title {
+      font-size: 1.375rem;
+    }
+    &__figure {
+      width: 85px;
+      left: -35px;
+      top: 45%;
+    }
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .logo {
+    margin-top: -5rem;
+    max-width: 400px;
+
+    &__title {
+      font-size: 2.5rem;
+      border-width: 3px;
+      margin-bottom: 0.75rem;
+    }
+
+    &__figure {
+      width: 147px;
+      left: -150px;
+      top: 44%;
+    }
+
+    &__subtitle {
+      font-size: 2.25rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+}

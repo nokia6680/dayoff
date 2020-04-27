@@ -14,6 +14,12 @@
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 1000;
 
+  display: none;
+
+  &.active {
+    display: flex;
+  }
+
   &__wrapper {
     width: 300px;
 
@@ -133,6 +139,15 @@
   }
 }
 
+@media only screen and (min-width: 360px) {
+  .popup-rules {
+    &__close {
+      top: -15px;
+      right: -15px;
+    }
+  }
+}
+
 @media only screen and (min-width: $tablet) {
   .popup-rules {
     &__wrapper {
@@ -140,14 +155,8 @@
     }
 
     &__close {
-      width: 46px;
-      height: 46px;
-
-      top: -45px;
-      right: -45px;
-
-      background-image: url('../img/close_btn.png');
-      background-size: 24px 24px;
+      top: -25px;
+      right: -25px;
     }
 
     &__title {

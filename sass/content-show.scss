@@ -1,9 +1,6 @@
 .content-show {
   visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex-setting(column, center, center);
 
   position: fixed;
   width: 100%;
@@ -24,7 +21,7 @@
 
   &__wrapper {
     width: 100%;
-    max-width: 340px;
+    max-width: 300px;
 
     display: flex;
     flex-direction: column;
@@ -37,17 +34,11 @@
   }
 
   &__title {
-    font: {
-      size: 1.25em;
-      family: $semibold-font;
-      weight: 600;
-    }
-
-    color: $text-white;
-    line-height: normal;
+    @include font-setting($primary-font, 1.375rem, 1.2, 700, $text-white);
+    text-align: center;
     text-transform: uppercase;
     margin-top: 0;
-    margin-bottom: 5px;
+    margin-bottom: 1.25rem;
   }
 }
 
@@ -58,11 +49,7 @@
     }
 
     &__title {
-      font: {
-        size: 1.375em;
-      }
-
-      margin-bottom: 10px;
+      font-size: 1.413rem;
     }
   }
 }
@@ -70,13 +57,11 @@
 @media only screen and (min-width: $hdm) {
   .content-show {
     &__wrapper {
-      max-width: 380px;
+      max-width: 400px;
     }
 
     &__title {
-      font: {
-        size: 1.5em;
-      }
+      font-size: 1.625rem;
     }
   }
 }
@@ -88,9 +73,7 @@
     }
 
     &__title {
-      font: {
-        size: 3.081em;
-      }
+      font-size: 3.081rem;
     }
   }
 }

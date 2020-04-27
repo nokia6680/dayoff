@@ -5,34 +5,14 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-
-  &__logo {
-    display: none;
-  }
 }
 
 @media only screen and (min-width: $laptop) {
   .main {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-
-    &__logo {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      width: 50%;
-      flex-basis: 50%;
-
-      margin-top: -30px;
-
-      &--event {
-        display: none;
-      }
-    }
 
     &__link {
       width: 100%;
@@ -42,10 +22,7 @@
 
 @media only screen and (min-width: $laptop-hd) {
   .main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    max-width: 1200px;
 
     &--vote {
       align-items: flex-start;
@@ -190,6 +167,7 @@
 
 @media only screen and (min-width: $widebook-hd) {
   .main {
+    max-width: 1360px;
 
     &__logo {
       &--event {

@@ -45,11 +45,7 @@
   cursor: pointer;
 
   position: relative;
-  padding-left: 25px;
-
-  @media only screen and (min-width: $tablet) {
-    padding-left: 30px;
-  }
+  padding-left: 1.25rem;
 }
 
 @mixin custom-checkbox {
@@ -57,43 +53,28 @@
   content: "";
   display: block;
 
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
 
   bottom: -2px;
   left: 0;
 
   background-color: transparent;
-  border: 2px solid $input-border;
-
-  @media only screen and (min-width: $tablet) {
-    bottom: -4px;
-
-    width: 26px;
-    height: 26px;
-  }
+  border: 1px solid $input-border;
 }
 
 @mixin checkbox-checked {
   content: "";
   position: absolute;
-  top: -1px;
-  left: 3px;
+  top: -4px;
+  left: 2px;
   display: block;
   width: 12px;
   height: 12px;
 
   background-image: url('../img/tick.png');
-  background-size: 12px 12px;
+  background-size: contain;
   background-repeat: no-repeat;
-
-  @media only screen and (min-width: $tablet) {
-    width: 16px;
-    height: 16px;
-    top: 0px;
-    left: 5px;
-    background-size: 16px 16px;
-  }
 }
 
 @mixin radio-default {
@@ -102,7 +83,15 @@
   cursor: pointer;
 
   position: relative;
-  padding-left: 35px;
+  padding-left: 0.75rem;
+
+  @media only screen and (min-width: $mobile) {
+    padding-left: 0.875rem;
+  }
+
+  @media only screen and (min-width: $tablet) {
+    padding-left: 2.25rem;
+  }
 }
 
 @mixin custom-radio {
@@ -110,33 +99,47 @@
   content: "";
   display: block;
 
-  width: 25px;
-  height: 25px;
+  width: 11px;
+  height: 11px;
 
-  bottom: 0;
+  bottom: 1px;
   left: 0;
 
   background-color: #78909c;
-  border: 2px solid #000000;
+  border: 1px solid #000000;
   border-radius: 50%;
 
   box-shadow:0px 0px 20px 1px rgba(0,0,0,0.21)inset;
   -webkit-box-shadow:0px 0px 20px 1px rgba(0,0,0,0.21)inset;
   -moz-box-shadow:0px 0px 20px 1px rgba(0,0,0,0.21)inset;
+
+  @media only screen and (min-width: $tablet) {
+    height: 26px;
+    width: 26px;
+    border-width: 2px;
+    bottom: -2px;
+  }
 }
 
 @mixin radio-checked {
   content: "";
   position: absolute;
-  top: 10px;
-  left: 5px;
+  top: 1px;
+  left: 0px;
   display: block;
-  width: 15px;
-  height: 15px;
+  width: 9px;
+  height: 9px;
   background-color: #ffffff;
   box-shadow: 0px 0px 0px 1px rgba(0,0,0,1), 0px 0px 0px 3px rgba(173,233,0,1);
   border-radius: 50%;
-  border: 2px solid #000000;
+  border: 1px solid #000000;
+
+  @media only screen and (min-width: $tablet) {
+    height: 26px;
+    width: 26px;
+    border-width: 2px;
+    top: -3px;
+  }
 }
 
 @mixin soft-animation {
@@ -159,4 +162,19 @@
     from { opacity: 0; }
     to { opacity: 1 }
   }
+}
+
+@mixin font-setting($family, $size, $line-height, $font-width, $color) {
+  font-family: $family;
+  font-size: $size;
+  line-height: $line-height;
+  font-weight: $font-width;
+  color: $color;
+}
+
+@mixin flex-setting($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
 }

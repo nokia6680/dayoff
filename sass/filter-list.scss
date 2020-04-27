@@ -1,34 +1,33 @@
 .filter-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
+  @include flex-setting(row, space-between, flex-start);
 
   margin: 0;
   padding: 0;
   list-style: none;
 
   &__item {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-
+    @include flex-setting(column, center, center);
     margin-right: 3px;
   }
 
   &__label {
-    font: {
-      size: 0.625em;
-      family: $semibold-font;
-      weight: 600;
-    }
-
-    line-height: normal;
+    @include font-setting($primary-font, 0.625rem, 1, 700, #7e8285);
     text-transform: uppercase;
     color: #7e8285;
 
     cursor: pointer;
+  }
+
+  &__radio + label {
+    @include radio-default;
+  }
+
+  &__radio + label::before {
+    @include custom-radio;
+  }
+
+  &__radio:checked + label::after {
+    @include radio-checked;
   }
 
   &__radio:checked + label {
@@ -38,10 +37,12 @@
 
 @media only screen and (min-width: $mobile) {
   .filter-list {
+    &__item {
+      margin-right: 0.5rem;
+    }
+
     &__label {
-      font: {
-        size: 0.75em;
-      }
+      font-size: 0.7rem;
     }
   }
 }
@@ -49,9 +50,7 @@
 @media only screen and (min-width: $hdm) {
   .filter-list {
     &__label {
-      font: {
-        size: 0.875em;
-      }
+      font-size: 0.75rem;
     }
   }
 }
@@ -59,29 +58,11 @@
 @media only screen and (min-width: $tablet) {
   .filter-list {
     &__label {
-      font: {
-        size: 1.25em;
-      }
+      font-size: 1.25rem;
     }
 
     &__item {
       margin-right: 20px;
-    }
-
-    &__radio + label {
-      @include radio-default;
-    }
-
-    &__radio + label::before {
-      @include custom-radio;
-    }
-
-    &__radio:checked + label::after {
-      @include radio-checked;
-    }
-
-    &__radio:checked + label {
-      color: #231f20;
     }
   }
 }

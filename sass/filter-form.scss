@@ -1,36 +1,23 @@
 .filter-form {
   width: 100%;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+  @include flex-setting(row, flex-start, center);
 
   &__title {
-    margin: 0;
-
-    font: {
-      size: 1em;
-      family: $semibold-font;
-      weight: 600;
-    }
-
-    color: $text-lightblack;
-    line-height: normal;
+    @include font-setting($primary-font, 0.875rem, 1, 700, $text-lightblack);
     text-transform: uppercase;
 
-    margin-right: 5px;
+    margin: 0;
+    margin-right: 0.25rem;
   }
 }
 
 @media only screen and (min-width: $mobile) {
   .filter-form {
     &__title {
-      font: {
-        size: 1.125em;
-      }
+      font-size: 1rem;
 
-      margin-right: 10px;
+      margin-right: 0.5rem;
     }
   }
 }
@@ -38,10 +25,7 @@
 @media only screen and (min-width: $hdm) {
   .filter-form {
     &__title {
-      margin-right: 5px;
-      font: {
-        size: 1.25em;
-      }
+      font-size: 1.125rem;
     }
   }
 }
@@ -52,11 +36,9 @@
     padding-top: 2px;
 
     &__title {
-      font: {
-        size: 1.66em;
-      }
+      font-size: 1.625rem;
 
-      margin-right: 15px;
+      margin-right: 0.75rem;
     }
   }
 }

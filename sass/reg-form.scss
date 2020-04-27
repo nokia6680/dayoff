@@ -1,93 +1,64 @@
 .reg-form {
   width: 100%;
-
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 15px;
-  padding-top: 10px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  @include flex-setting(column, flex-start, center);
 
   &__submit {
-    -webkit-tap-highlight-color: transparent;
-
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    width: 50%;
-    height: 100%;
-
-    border: 2px solid #000000;
-    border-radius: 15px;
-
-    background-color: $submit-btn-bg;
-
-    padding: 2px 10px;
-
-    box-shadow: 2px 2px 1px 1px rgba(0,0,0,1);
-    -webkit-box-shadow: 2px 2px 1px 1px rgba(0,0,0,1);
-    -moz-box-shadow: 2px 2px 1px 1px rgba(0,0,0,1);
-
-    text-decoration: none;
+    @include flex-setting(column, center, center);
+    @include font-setting($primary-font, 1rem, 1, 700, $text-black);
     text-transform: uppercase;
+    text-decoration: none;
 
-    outline: none;
-    cursor: pointer;
+    border: 2px solid #000;
+    padding-left: 1.25rem;
+    padding-top: 0.625rem;
+    padding-right: 3.25rem;
+    padding-bottom: 0.625rem;
 
-    font: {
-      size: 1em;
-      family: $bold-font;
-      weight: 700;
+    background-color: #dbee07;
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 1);
+    transition: 0.2s ease-in-out;
+
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 186'%3E%3Cg data-name='Слой 2'%3E%3Cpath d='M379.6 82.38l-78.38-78a15 15 0 00-21.16 21.26L332.67 78H15a15 15 0 000 30h317.67l-52.62 52.37a15 15 0 1021.16 21.26l78.38-78a15 15 0 000-21.24z' data-name='Режим изоляции'/%3E%3C/g%3E%3C/svg%3E");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      width: 26px;
+      height: 13px;
+
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: 0.2s ease-in-out;
     }
 
-    color: $text-black;
-    line-height: normal;
-
-    &:hover {
-      opacity: 0.9;
-    }
-
-    &:active {
-      transition: 0.2s ease;
-      transform: translate(2px, 2px);
+    &:hover,
+    &:active,
+    &:focus {
       box-shadow: none;
+      transform: translate(3px, 3px);
+      transition: 0.2s ease-in-out;
+
+      &::after {
+        right: 0.625rem;
+        transition: 0.2s ease-in-out;
+      }
     }
   }
 }
 
 @media only screen and (min-width: $hdm) {
   .reg-form {
-
     &__submit {
-      font: {
-        size: 1.125em;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: $tablet) {
-  .reg-form {
-    padding-left: 27px;
-    padding-right: 28px;
-    padding-bottom: 24px;
-    padding-top: 10px;
-
-    &__submit {
-      border-radius: 30px;
-
-      background-color: $submit-btn-bg;
-
-      padding: 2px 15px;
-
-      font: {
-        size: 1.688em;
-      }
+      width: 200px;
+      height: 40px;
+      font-size: 1.25rem;
     }
   }
 }

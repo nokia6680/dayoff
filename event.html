@@ -9,10 +9,9 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -20,519 +19,489 @@
 </head>
 
 <body class="body-event">
-	<div class="wrapper">
-		<!--Page header-->
-		<header class="header">
-			<nav class="header__nav header-nav header-nav--event">
-				<div class="header-nav__logo header-nav__logo--event">
-					<a class="header-nav__link header-nav__link--event" href="index.html" target="_self">
-						<img class="header-nav__img header-nav__img--event" src="img/logo.svg" alt="День самоуправления - на главную страницу" />
+	<!--Page header-->
+	<header class="header">
+		<nav class="header__nav header-nav">
+			<ul class="header-nav__list nav-list">
+				<li class="nav-list__item">
+					<a class="nav-list__link nav-list__link--howto" href="#" target="_self">
+						Как участвовать?
 					</a>
+				</li>
+				<li class="nav-list__item">
+					<a class="nav-list__link nav-list__link--prize" href="#" target="_self">
+						Призы
+					</a>
+				</li>
+			</ul>
+			<!--Menu btn-->
+			<div class="header-nav__toggle" id="nav-toggle">
+				<span class="header-nav__toggle-span"></span>
+				<span class="header-nav__toggle-span"></span>
+				<span class="header-nav__toggle-span"></span>
+			</div>
+		</nav>
+	</header>
+	<!--Page main part-->
+	<main class="main main--event">
+		<!--upper or left part-->
+		<div class="main__logo logo">
+			<a class="logo__link" href="index.html" target="_self">
+				<img class="logo__img" src="img/logo.svg" alt="День самоуправления - на главную страницу" />
+			</a>
+			<h1 class="logo__title">День самоуправления</h1>
+			<img class="logo__figure" src="img/stage-logo.png" alt="Этап 1">
+			<h2 class="logo__subtitle">Этап 1</h2>
+		</div>
+		<!--Right part for desktop and middle for mobile devices-->
+		<div class="main__content main-content">
+			<!--Фильтр периода-->
+			<div class="main-content__controls content-controls">
+				<!--Заголовки для разных разрешений-->
+				<h2 class="content-controls__title content-controls__title--mobile">Выбери период:</h2>
+				<h2 class="content-controls__title content-controls__title--desktop">Перетащи шоу в нужный временной слот</h2>
+				<div class="content-controls__switch controls-switch">
+					<!--Переключатель слайдеров, только для мобильной и планшетной версий-->
+					<button class="controls-switch__btn controls-switch__btn--sun" id="my-arrow-prev" type="button"></button>
+					<div class="controls-switch__cover button-cover">
+						<span class="controls-switch__text">или</span>
+						<div class="controls-switch__toggle button" id="button-1">
+							<input type="checkbox" class="controls-switch__checkbox" id="my-checkbox">
+							<div class="controls-switch__knobs"></div>
+							<div class="controls-switch__layer"></div>
+						</div>
+					</div>
+					<button class="controls-switch__btn controls-switch__btn--moon" id="my-arrow-next" type="button"></button>
 				</div>
-				<ul class="header-nav__list nav-list">
-					<li class="nav-list__item">
-						<a class="nav-list__btn nav-list__btn--howto" href="#" target="_self">
-							Как&nbsp;участвовать?
-						</a>
+			</div>
+			<!--Форма с плитками расписания-->
+			<form class="main-content__form content-form" action="#" method="get">
+				<div class="content-form__choose choose">
+					<!--Мобильный слайдер-->
+					<div class="choose__slider choose-slider" id="choose-slider">
+						<!--Слайд дневных передач-->
+						<div class="choose-slider__item choose-slider__item--day" id="day">
+							<div class="choose-slider__show">
+								<div class="choose-slider__details">
+									<b class="choose-slider__time">00:00</b>
+								</div>
+								<input type="hidden" name="0" value="" />
+							</div>
+							<div class="choose-slider__show">
+								<div class="choose-slider__details">
+									<b class="choose-slider__time">01:00</b>
+								</div>
+								<input type="hidden" name="1" value="" />
+							</div>
+							<div class="choose-slider__show">
+								<div class="choose-slider__details">
+									<b class="choose-slider__time">02:00</b>
+								</div>
+								<input type="hidden" name="2" value="" />
+							</div>
+							<div class="choose-slider__show">
+								<div class="choose-slider__details">
+									<b class="choose-slider__time">03:00</b>
+								</div>
+								<input type="hidden" name="3" value="" />
+							</div>
+							<div class="choose-slider__show">
+								<div class="choose-slider__details">
+									<b class="choose-slider__time">04:00</b>
+								</div>
+								<input type="hidden" name="4" value="" />
+							</div>
+							<div class="choose-slider__show">
+								<div class="choose-slider__details">
+									<b class="choose-slider__time">05:00</b>
+								</div>
+								<input type="hidden" name="5" value="" />
+							</div>
+							<div class="choose-slider__show">
+								<div class="choose-slider__details">
+									<b class="choose-slider__time">06:00</b>
+								</div>
+								<input type="hidden" name="6" value="" />
+							</div>
+							<div class="choose-slider__show">
+								<div class="choose-slider__details">
+									<b class="choose-slider__time">07:00</b>
+								</div>
+								<input type="hidden" name="7" value="" />
+							</div>
+							<div class="choose-slider__show">
+								<div class="choose-slider__details">
+									<b class="choose-slider__time">08:00</b>
+								</div>
+								<input type="hidden" name="8" value="" />
+							</div>
+							<div class="choose-slider__show">
+								<div class="choose-slider__details">
+									<b class="choose-slider__time">09:00</b>
+								</div>
+								<input type="hidden" name="9" value="" />
+							</div>
+							<div class="choose-slider__show">
+								<div class="choose-slider__details">
+									<b class="choose-slider__time">10:00</b>
+								</div>
+								<input type="hidden" name="10" value="" />
+							</div>
+							<div class="choose-slider__show">
+								<div class="choose-slider__details">
+									<b class="choose-slider__time">11:00</b>
+								</div>
+								<input type="hidden" name="11" value="" />
+							</div>
+						</div>
+						<!--Слайд вечерних передач-->
+						<div class="choose-slider__item choose-slider__item--night" id="night">
+							<div class="choose-slider__show">
+								<div class="choose-slider__details">
+									<b class="choose-slider__time">12:00</b>
+								</div>
+								<input type="hidden" name="12" value="" />
+							</div>
+							<div class="choose-slider__show">
+								<div class="choose-slider__details">
+									<b class="choose-slider__time">13:00</b>
+								</div>
+								<input type="hidden" name="13" value="" />
+							</div>
+							<div class="choose-slider__show">
+								<div class="choose-slider__details">
+									<b class="choose-slider__time">14:00</b>
+								</div>
+								<input type="hidden" name="14" value="" />
+							</div>
+							<div class="choose-slider__show">
+								<div class="choose-slider__details">
+									<b class="choose-slider__time">15:00</b>
+								</div>
+								<input type="hidden" name="15" value="" />
+							</div>
+							<div class="choose-slider__show">
+								<div class="choose-slider__details">
+									<b class="choose-slider__time">16:00</b>
+								</div>
+								<input type="hidden" name="16" value="" />
+							</div>
+							<div class="choose-slider__show">
+								<div class="choose-slider__details">
+									<b class="choose-slider__time">17:00</b>
+								</div>
+								<input type="hidden" name="17" value="" />
+							</div>
+							<div class="choose-slider__show">
+								<div class="choose-slider__details">
+									<b class="choose-slider__time">18:00</b>
+								</div>
+								<input type="hidden" name="18" value="" />
+							</div>
+							<div class="choose-slider__show">
+								<div class="choose-slider__details">
+									<b class="choose-slider__time">19:00</b>
+								</div>
+								<input type="hidden" name="19" value="" />
+							</div>
+							<div class="choose-slider__show">
+								<div class="choose-slider__details">
+									<b class="choose-slider__time">20:00</b>
+								</div>
+								<input type="hidden" name="20" value="" />
+							</div>
+							<div class="choose-slider__show">
+								<div class="choose-slider__details">
+									<b class="choose-slider__time">21:00</b>
+								</div>
+								<input type="hidden" name="21" value="" />
+							</div>
+							<div class="choose-slider__show">
+								<div class="choose-slider__details">
+									<b class="choose-slider__time">22:00</b>
+								</div>
+								<input type="hidden" name="22" value="" />
+							</div>
+							<div class="choose-slider__show">
+								<div class="choose-slider__details">
+									<b class="choose-slider__time">23:00</b>
+								</div>
+								<input type="hidden" name="23" value="" />
+							</div>
+						</div>
+					</div>
+					<div class="prev-1"></div>
+					<div class="next-1"></div>
+				</div>
+			</form>
+			<!--Список шоу для выбора на мобильных-->
+			<div class="main-content__show content-show content-show--mobile">
+				<div class="content-show__wrapper">
+					<h2 class="content-show__title">Выбери шоу для слота <b class="content-show__time" id="00-00">00:00</b></h2>
+					<!--Фильтр выбора-->
+					<div class="content-show__filter show-filter">
+						<form class="show-filter__form filter-form" action="#" method="get">
+							<h3 class="filter-form__title" id="draggable">Выбери:</h3>
+							<ul class="filter-form__list filter-list">
+								<li class="filter-list__item">
+									<input class="filter-list__radio filter-list__radio--infant visually-hidden" type="radio" name="filter" id="infant" />
+									<label class="filter-list__label filter-list__label--infant" for="infant">Для&nbsp;малышей</label>
+								</li>
+								<li class="filter-list__item">
+									<input class="filter-list__radio filter-list__radio--series visually-hidden" type="radio" name="filter" id="series" />
+									<label class="filter-list__label filter-list__label--series" for="series">Сериалы</label>
+								</li>
+								<li class="filter-list__item">
+									<input class="filter-list__radio filter-list__radio--animation visually-hidden" type="radio" name="filter" id="animation" />
+									<label class="filter-list__label filter-list__label--animation" for="animation">Анимация</label>
+								</li>
+							</ul>
+						</form>
+						<button class="show-filter__close" type="button"></button>
+					</div>
+					<!--Слайдер с шоу-->
+					<div class="content-show__slider show-slider show-slider--mobile">
+						<!--Single slide-->
+						<div class="show-slider__item">
+							<ul class="show-slider__list show-list">
+								<li class="show-list__item">
+									<a class="show-list__link" href="#" target="_self">Эволюция черепашек-ниндзя</a>
+								</li>
+								<li class="show-list__item">
+									<a class="show-list__link" href="#" target="_self">Губка Боб Квадратные Штаны</a>
+								</li>
+								<li class="show-list__item">
+									<a class="show-list__link" href="#" target="_self">Волшебные покровители</a>
+								</li>
+								<li class="show-list__item">
+									<a class="show-list__link" href="#" target="_self">Эй, Арнольд!</a>
+								</li>
+								<li class="show-list__item">
+									<a class="show-list__link" href="#" target="_self">Мой шумный дом</a>
+								</li>
+								<li class="show-list__item">
+									<a class="show-list__link" href="#" target="_self">Сердитые бобры</a>
+								</li>
+								<li class="show-list__item">
+									<a class="show-list__link" href="#" target="_self">Радужно-бабочково-единорожная кошка</a>
+								</li>
+							</ul>
+						</div>
+						<!--Single slide-->
+						<div class="show-slider__item">
+							<ul class="show-slider__list show-list">
+								<li class="show-list__item">
+									<a class="show-list__link" href="#" target="_self">Эволюция черепашек-ниндзя</a>
+								</li>
+								<li class="show-list__item">
+									<a class="show-list__link" href="#" target="_self">Губка Боб Квадратные Штаны</a>
+								</li>
+								<li class="show-list__item">
+									<a class="show-list__link" href="#" target="_self">Волшебные покровители</a>
+								</li>
+								<li class="show-list__item">
+									<a class="show-list__link" href="#" target="_self">Эй, Арнольд!</a>
+								</li>
+								<li class="show-list__item">
+									<a class="show-list__link" href="#" target="_self">Мой шумный дом</a>
+								</li>
+								<li class="show-list__item">
+									<a class="show-list__link" href="#" target="_self">Сердитые бобры</a>
+								</li>
+								<li class="show-list__item">
+									<a class="show-list__link" href="#" target="_self">Радужно-бабочково-единорожная кошка</a>
+								</li>
+							</ul>
+						</div>
+						<!--Single slide-->
+						<div class="show-slider__item">
+							<ul class="show-slider__list show-list">
+								<li class="show-list__item">
+									<a class="show-list__link" href="#" target="_self">Эволюция черепашек-ниндзя</a>
+								</li>
+								<li class="show-list__item">
+									<a class="show-list__link" href="#" target="_self">Губка Боб Квадратные Штаны</a>
+								</li>
+								<li class="show-list__item">
+									<a class="show-list__link" href="#" target="_self">Волшебные покровители</a>
+								</li>
+								<li class="show-list__item">
+									<a class="show-list__link" href="#" target="_self">Эй, Арнольд!</a>
+								</li>
+								<li class="show-list__item">
+									<a class="show-list__link" href="#" target="_self">Мой шумный дом</a>
+								</li>
+								<li class="show-list__item">
+									<a class="show-list__link" href="#" target="_self">Сердитые бобры</a>
+								</li>
+								<li class="show-list__item">
+									<a class="show-list__link" href="#" target="_self">Радужно-бабочково-единорожная кошка</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--Слайдер с шоу для десктопа-->
+					<div class="content-show__slider show-slider show-slider--desktop">
+						<!--Single slide-->
+						<div class="show-slider__item show-slider__item--desktop">
+							<ul class="show-slider__list show-list show-list--desktop">
+								<li class="show-list__item">
+									<div class="show-list__details">
+										<span class="show-list__name">Эволюция черепашек-ниндзя</span>
+									</div>
+								</li>
+								<li class="show-list__item">
+									<div class="show-list__details">
+										<span class="show-list__name">Губка Боб Квадратные Штаны</span>
+									</div>
+								</li>
+								<li class="show-list__item">
+									<div class="show-list__details">
+										<span class="show-list__name">Волшебные покровители</span>
+									</div>
+								</li>
+								<li class="show-list__item">
+									<div class="show-list__details">
+										<span class="show-list__name">Эй, Арнольд!</span>
+									</div>
+								</li>
+								<li class="show-list__item">
+									<div class="show-list__details">
+										<span class="show-list__name">Мой шумный дом</span>
+									</div>
+								</li>
+								<li class="show-list__item">
+									<div class="show-list__details">
+										<span class="show-list__name">Сердитые бобры</span>
+									</div>
+								</li>
+								<li class="show-list__item">
+									<div class="show-list__details">
+										<span class="show-list__name">Радужно-бабочково-единорожная кошка</span>
+									</div>
+								</li>
+								<li class="show-list__item">
+									<div class="show-list__details">
+										<span class="show-list__name">Эволюция черепашек-ниндзя</span>
+									</div>
+								</li>
+								<li class="show-list__item">
+									<div class="show-list__details">
+										<span class="show-list__name">Губка Боб Квадратные Штаны</span>
+									</div>
+								</li>
+								<li class="show-list__item">
+									<div class="show-list__details">
+										<span class="show-list__name">Волшебные покровители</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!--Single slide-->
+						<div class="show-slider__item show-slider__item--desktop">
+							<ul class="show-slider__list show-list show-list--desktop">
+								<li class="show-list__item">
+									<div class="show-list__details">
+										<span class="show-list__name">Эволюция черепашек-ниндзя</span>
+									</div>
+								</li>
+								<li class="show-list__item">
+									<div class="show-list__details">
+										<span class="show-list__name">Губка Боб Квадратные Штаны</span>
+									</div>
+								</li>
+								<li class="show-list__item">
+									<div class="show-list__details">
+										<span class="show-list__name">Волшебные покровители</span>
+									</div>
+								</li>
+								<li class="show-list__item">
+									<div class="show-list__details">
+										<span class="show-list__name">Эй, Арнольд!</span>
+									</div>
+								</li>
+								<li class="show-list__item">
+									<div class="show-list__details">
+										<span class="show-list__name">Мой шумный дом</span>
+									</div>
+								</li>
+								<li class="show-list__item">
+									<div class="show-list__details">
+										<span class="show-list__name">Сердитые бобры</span>
+									</div>
+								</li>
+								<li class="show-list__item">
+									<div class="show-list__details">
+										<span class="show-list__name">Радужно-бабочково-единорожная кошка</span>
+									</div>
+								</li>
+								<li class="show-list__item">
+									<div class="show-list__details">
+										<span class="show-list__name">Эволюция черепашек-ниндзя</span>
+									</div>
+								</li>
+								<li class="show-list__item">
+									<div class="show-list__details">
+										<span class="show-list__name">Губка Боб Квадратные Штаны</span>
+									</div>
+								</li>
+								<li class="show-list__item">
+									<div class="show-list__details">
+										<span class="show-list__name">Волшебные покровители</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="prev-2"></div>
+					<div class="next-2"></div>
+				</div>
+			</div>
+			<!--submit button for all the sizes-->
+			<button class="main-content__submit" type="submit">
+				<span class="main-content__buttonbg"></span>
+				<span class="main-content__buttontxt">Готово!</span>
+			</button>
+		</div>
+	</main>
+	<!--Page footer-->
+	<footer class="footer">
+		<!---->
+		<div class="footer__nav">
+			<div class="footer__support">
+				<b class="footer__support-text">При поддержке...</b>
+			</div>
+
+			<div class="footer__links">
+				<ul class="footer__rules footer-rules">
+					<li class="footer-rules__item">
+						<a class="footer-rules__link footer-rules__link--conditions" href="#" target="_blank">Правила проведения конкурсов</a>
 					</li>
-					<li class="nav-list__item">
-						<a class="nav-list__btn nav-list__btn--prize" href="#" target="_self">
-							Призы
-						</a>
+					<li class="footer-rules__item">
+						<a class="footer-rules__link footer-rules__link--policy" href="#" target="_blank">Политика конфиденциальности</a>
 					</li>
 				</ul>
-			</nav>
-		</header>
-		<!--Page main part-->
-		<main class="main main--event">
-			<!--Left part for desktop-->
-			<div class="main__logo main__logo--event">
-				<a class="main__link" href="index.html" target="_self">
-					<img class="main__img" src="img/logo.svg" alt="День самоуправления - на главную страницу" />
-				</a>
-			</div>
-			<!--Right part for desktop and middle for mobile devices-->
-			<div class="main__content main-content">
-				<!--Фильтр периода-->
-				<div class="main-content__controls content-controls">
-					<!--Заголовки для разных разрешений-->
-					<h2 class="content-controls__title content-controls__title--mobile">Выбери&nbsp;период:</h2>
-					<h2 class="content-controls__title content-controls__title--desktop">Перетащи&nbsp;картинку&nbsp;с&nbsp;шоу&nbsp;на&nbsp;нужное&nbsp;время:</h2>
-					<div class="content-controls__switch controls-switch">
-						<!--Переключатель слайдеров, только для мобильной и планшетной версий-->
-						<button class="controls-switch__btn controls-switch__btn--sun" id="my-arrow-prev" type="button"></button>
-						<div class="controls-switch__cover button-cover">
-							<span class="controls-switch__text">или</span>
-							<div class="controls-switch__toggle button" id="button-1">
-								<input type="checkbox" class="controls-switch__checkbox" id="my-checkbox">
-								<div class="controls-switch__knobs"></div>
-								<div class="controls-switch__layer"></div>
-							</div>
-						</div>
-						<button class="controls-switch__btn controls-switch__btn--moon" id="my-arrow-next" type="button"></button>
-					</div>
-				</div>
-				<!--Форма с плитками расписания-->
-				<form class="main-content__form content-form" action="#" method="get">
-					<div class="content-form__choose choose">
-						<!--Мобильный слайдер-->
-						<div class="choose__slider choose-slider" id="choose-slider">
-							<!--Слайд дневных передач-->
-							<div class="choose-slider__item choose-slider__item--day" id="day">
-								<div class="choose-slider__show">
-									<div class="choose-slider__details">
-										<b class="choose-slider__time">00:00</b>
-									</div>
-									<input type="hidden" name="0" value="" />
-								</div>
-								<div class="choose-slider__show">
-									<div class="choose-slider__details">
-										<b class="choose-slider__time">01:00</b>
-									</div>
-									<input type="hidden" name="1" value="" />
-								</div>
-								<div class="choose-slider__show">
-									<div class="choose-slider__details">
-										<b class="choose-slider__time">02:00</b>
-									</div>
-									<input type="hidden" name="2" value="" />
-								</div>
-								<div class="choose-slider__show">
-									<div class="choose-slider__details">
-										<b class="choose-slider__time">03:00</b>
-									</div>
-									<input type="hidden" name="3" value="" />
-								</div>
-								<div class="choose-slider__show">
-									<div class="choose-slider__details">
-										<b class="choose-slider__time">04:00</b>
-									</div>
-									<input type="hidden" name="4" value="" />
-								</div>
-								<div class="choose-slider__show">
-									<div class="choose-slider__details">
-										<b class="choose-slider__time">05:00</b>
-									</div>
-									<input type="hidden" name="5" value="" />
-								</div>
-								<div class="choose-slider__show">
-									<div class="choose-slider__details">
-										<b class="choose-slider__time">06:00</b>
-									</div>
-									<input type="hidden" name="6" value="" />
-								</div>
-								<div class="choose-slider__show">
-									<div class="choose-slider__details">
-										<b class="choose-slider__time">07:00</b>
-									</div>
-									<input type="hidden" name="7" value="" />
-								</div>
-								<div class="choose-slider__show">
-									<div class="choose-slider__details">
-										<b class="choose-slider__time">08:00</b>
-									</div>
-									<input type="hidden" name="8" value="" />
-								</div>
-								<div class="choose-slider__show">
-									<div class="choose-slider__details">
-										<b class="choose-slider__time">09:00</b>
-									</div>
-									<input type="hidden" name="9" value="" />
-								</div>
-								<div class="choose-slider__show">
-									<div class="choose-slider__details">
-										<b class="choose-slider__time">10:00</b>
-									</div>
-									<input type="hidden" name="10" value="" />
-								</div>
-								<div class="choose-slider__show">
-									<div class="choose-slider__details">
-										<b class="choose-slider__time">11:00</b>
-									</div>
-									<input type="hidden" name="11" value="" />
-								</div>
-							</div>
-							<!--Слайд вечерних передач-->
-							<div class="choose-slider__item choose-slider__item--night" id="night">
-								<div class="choose-slider__show">
-									<div class="choose-slider__details">
-										<b class="choose-slider__time">12:00</b>
-									</div>
-									<input type="hidden" name="12" value="" />
-								</div>
-								<div class="choose-slider__show">
-									<div class="choose-slider__details">
-										<b class="choose-slider__time">13:00</b>
-									</div>
-									<input type="hidden" name="13" value="" />
-								</div>
-								<div class="choose-slider__show">
-									<div class="choose-slider__details">
-										<b class="choose-slider__time">14:00</b>
-									</div>
-									<input type="hidden" name="14" value="" />
-								</div>
-								<div class="choose-slider__show">
-									<div class="choose-slider__details">
-										<b class="choose-slider__time">15:00</b>
-									</div>
-									<input type="hidden" name="15" value="" />
-								</div>
-								<div class="choose-slider__show">
-									<div class="choose-slider__details">
-										<b class="choose-slider__time">16:00</b>
-									</div>
-									<input type="hidden" name="16" value="" />
-								</div>
-								<div class="choose-slider__show">
-									<div class="choose-slider__details">
-										<b class="choose-slider__time">17:00</b>
-									</div>
-									<input type="hidden" name="17" value="" />
-								</div>
-								<div class="choose-slider__show">
-									<div class="choose-slider__details">
-										<b class="choose-slider__time">18:00</b>
-									</div>
-									<input type="hidden" name="18" value="" />
-								</div>
-								<div class="choose-slider__show">
-									<div class="choose-slider__details">
-										<b class="choose-slider__time">19:00</b>
-									</div>
-									<input type="hidden" name="19" value="" />
-								</div>
-								<div class="choose-slider__show">
-									<div class="choose-slider__details">
-										<b class="choose-slider__time">20:00</b>
-									</div>
-									<input type="hidden" name="20" value="" />
-								</div>
-								<div class="choose-slider__show">
-									<div class="choose-slider__details">
-										<b class="choose-slider__time">21:00</b>
-									</div>
-									<input type="hidden" name="21" value="" />
-								</div>
-								<div class="choose-slider__show">
-									<div class="choose-slider__details">
-										<b class="choose-slider__time">22:00</b>
-									</div>
-									<input type="hidden" name="22" value="" />
-								</div>
-								<div class="choose-slider__show">
-									<div class="choose-slider__details">
-										<b class="choose-slider__time">23:00</b>
-									</div>
-									<input type="hidden" name="23" value="" />
-								</div>
-							</div>
-						</div>
-						<div class="prev-1"></div>
-						<div class="next-1"></div>
-					</div>
-				</form>
-				<!--Список шоу для выбора на мобильных-->
-				<div class="main-content__show content-show content-show--mobile">
-					<div class="content-show__wrapper">
-						<h2 class="content-show__title">Выбери шоу для слота <b class="content-show__time" id="00-00">00:00</b></h2>
-						<!--Фильтр выбора-->
-						<div class="content-show__filter show-filter">
-							<form class="show-filter__form filter-form" action="#" method="get">
-								<h3 class="filter-form__title" id="draggable">Выбери:</h3>
-								<ul class="filter-form__list filter-list">
-									<li class="filter-list__item">
-										<input class="filter-list__radio filter-list__radio--infant visually-hidden" type="radio" name="filter" id="infant" />
-										<label class="filter-list__label filter-list__label--infant" for="infant">Для&nbsp;малышей</label>
-									</li>
-									<li class="filter-list__item">
-										<input class="filter-list__radio filter-list__radio--series visually-hidden" type="radio" name="filter" id="series" />
-										<label class="filter-list__label filter-list__label--series" for="series">Сериалы</label>
-									</li>
-									<li class="filter-list__item">
-										<input class="filter-list__radio filter-list__radio--animation visually-hidden" type="radio" name="filter" id="animation" />
-										<label class="filter-list__label filter-list__label--animation" for="animation">Анимация</label>
-									</li>
-								</ul>
-							</form>
-							<button class="show-filter__close" type="button"></button>
-						</div>
-						<!--Слайдер с шоу-->
-						<div class="content-show__slider show-slider show-slider--mobile">
-							<!--Single slide-->
-							<div class="show-slider__item">
-								<ul class="show-slider__list show-list">
-									<li class="show-list__item">
-										<a class="show-list__link" href="#" target="_self">Эволюция черепашек-ниндзя</a>
-									</li>
-									<li class="show-list__item">
-										<a class="show-list__link" href="#" target="_self">Губка Боб Квадратные Штаны</a>
-									</li>
-									<li class="show-list__item">
-										<a class="show-list__link" href="#" target="_self">Волшебные покровители</a>
-									</li>
-									<li class="show-list__item">
-										<a class="show-list__link" href="#" target="_self">Эй, Арнольд!</a>
-									</li>
-									<li class="show-list__item">
-										<a class="show-list__link" href="#" target="_self">Мой шумный дом</a>
-									</li>
-									<li class="show-list__item">
-										<a class="show-list__link" href="#" target="_self">Сердитые бобры</a>
-									</li>
-									<li class="show-list__item">
-										<a class="show-list__link" href="#" target="_self">Радужно-бабочково-единорожная кошка</a>
-									</li>
-								</ul>
-							</div>
-							<!--Single slide-->
-							<div class="show-slider__item">
-								<ul class="show-slider__list show-list">
-									<li class="show-list__item">
-										<a class="show-list__link" href="#" target="_self">Эволюция черепашек-ниндзя</a>
-									</li>
-									<li class="show-list__item">
-										<a class="show-list__link" href="#" target="_self">Губка Боб Квадратные Штаны</a>
-									</li>
-									<li class="show-list__item">
-										<a class="show-list__link" href="#" target="_self">Волшебные покровители</a>
-									</li>
-									<li class="show-list__item">
-										<a class="show-list__link" href="#" target="_self">Эй, Арнольд!</a>
-									</li>
-									<li class="show-list__item">
-										<a class="show-list__link" href="#" target="_self">Мой шумный дом</a>
-									</li>
-									<li class="show-list__item">
-										<a class="show-list__link" href="#" target="_self">Сердитые бобры</a>
-									</li>
-									<li class="show-list__item">
-										<a class="show-list__link" href="#" target="_self">Радужно-бабочково-единорожная кошка</a>
-									</li>
-								</ul>
-							</div>
-							<!--Single slide-->
-							<div class="show-slider__item">
-								<ul class="show-slider__list show-list">
-									<li class="show-list__item">
-										<a class="show-list__link" href="#" target="_self">Эволюция черепашек-ниндзя</a>
-									</li>
-									<li class="show-list__item">
-										<a class="show-list__link" href="#" target="_self">Губка Боб Квадратные Штаны</a>
-									</li>
-									<li class="show-list__item">
-										<a class="show-list__link" href="#" target="_self">Волшебные покровители</a>
-									</li>
-									<li class="show-list__item">
-										<a class="show-list__link" href="#" target="_self">Эй, Арнольд!</a>
-									</li>
-									<li class="show-list__item">
-										<a class="show-list__link" href="#" target="_self">Мой шумный дом</a>
-									</li>
-									<li class="show-list__item">
-										<a class="show-list__link" href="#" target="_self">Сердитые бобры</a>
-									</li>
-									<li class="show-list__item">
-										<a class="show-list__link" href="#" target="_self">Радужно-бабочково-единорожная кошка</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<!--Слайдер с шоу для десктопа-->
-						<div class="content-show__slider show-slider show-slider--desktop">
-							<!--Single slide-->
-							<div class="show-slider__item show-slider__item--desktop">
-								<ul class="show-slider__list show-list show-list--desktop">
-									<li class="show-list__item">
-										<div class="show-list__details">
-											<span class="show-list__name">Эволюция черепашек-ниндзя</span>
-										</div>
-									</li>
-									<li class="show-list__item">
-										<div class="show-list__details">
-											<span class="show-list__name">Губка Боб Квадратные Штаны</span>
-										</div>
-									</li>
-									<li class="show-list__item">
-										<div class="show-list__details">
-											<span class="show-list__name">Волшебные покровители</span>
-										</div>
-									</li>
-									<li class="show-list__item">
-										<div class="show-list__details">
-											<span class="show-list__name">Эй, Арнольд!</span>
-										</div>
-									</li>
-									<li class="show-list__item">
-										<div class="show-list__details">
-											<span class="show-list__name">Мой шумный дом</span>
-										</div>
-									</li>
-									<li class="show-list__item">
-										<div class="show-list__details">
-											<span class="show-list__name">Сердитые бобры</span>
-										</div>
-									</li>
-									<li class="show-list__item">
-										<div class="show-list__details">
-											<span class="show-list__name">Радужно-бабочково-единорожная кошка</span>
-										</div>
-									</li>
-									<li class="show-list__item">
-										<div class="show-list__details">
-											<span class="show-list__name">Эволюция черепашек-ниндзя</span>
-										</div>
-									</li>
-									<li class="show-list__item">
-										<div class="show-list__details">
-											<span class="show-list__name">Губка Боб Квадратные Штаны</span>
-										</div>
-									</li>
-									<li class="show-list__item">
-										<div class="show-list__details">
-											<span class="show-list__name">Волшебные покровители</span>
-										</div>
-									</li>
-								</ul>
-							</div>
-							<!--Single slide-->
-							<div class="show-slider__item show-slider__item--desktop">
-								<ul class="show-slider__list show-list show-list--desktop">
-									<li class="show-list__item">
-										<div class="show-list__details">
-											<span class="show-list__name">Эволюция черепашек-ниндзя</span>
-										</div>
-									</li>
-									<li class="show-list__item">
-										<div class="show-list__details">
-											<span class="show-list__name">Губка Боб Квадратные Штаны</span>
-										</div>
-									</li>
-									<li class="show-list__item">
-										<div class="show-list__details">
-											<span class="show-list__name">Волшебные покровители</span>
-										</div>
-									</li>
-									<li class="show-list__item">
-										<div class="show-list__details">
-											<span class="show-list__name">Эй, Арнольд!</span>
-										</div>
-									</li>
-									<li class="show-list__item">
-										<div class="show-list__details">
-											<span class="show-list__name">Мой шумный дом</span>
-										</div>
-									</li>
-									<li class="show-list__item">
-										<div class="show-list__details">
-											<span class="show-list__name">Сердитые бобры</span>
-										</div>
-									</li>
-									<li class="show-list__item">
-										<div class="show-list__details">
-											<span class="show-list__name">Радужно-бабочково-единорожная кошка</span>
-										</div>
-									</li>
-									<li class="show-list__item">
-										<div class="show-list__details">
-											<span class="show-list__name">Эволюция черепашек-ниндзя</span>
-										</div>
-									</li>
-									<li class="show-list__item">
-										<div class="show-list__details">
-											<span class="show-list__name">Губка Боб Квадратные Штаны</span>
-										</div>
-									</li>
-									<li class="show-list__item">
-										<div class="show-list__details">
-											<span class="show-list__name">Волшебные покровители</span>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="prev-2"></div>
-						<div class="next-2"></div>
-					</div>
-				</div>
-				<!--submit button for all the sizes-->
-				<button class="main-content__submit" type="submit">
-					<span class="main-content__buttonbg"></span>
-					<span class="main-content__buttontxt">Готово!</span>
-				</button>
-			</div>
-		</main>
-		<!--Page footer-->
-		<footer class="footer">
-			<ul class="footer__rules footer-rules">
-				<li class="footer-rules__item">
-					<a class="footer-rules__link footer-rules__link--conditions" href="#" target="_blank">Правила проведения конкурсов</a>
-				</li>
-				<li class="footer-rules__item">
-					<a class="footer-rules__link footer-rules__link--policy" href="#" target="_blank">Политика конфиденциальности</a>
-				</li>
-			</ul>
-			<!--Social media block-->
-			<ul class="footer__social social-list">
-				<li class="social-list__item">
-					<a class="social-list__link social-list__link--yt" href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-				</li>
-				<li class="social-list__item">
-					<a class="social-list__link social-list__link--in" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-				</li>
-				<li class="social-list__item">
-					<a class="social-list__link social-list__link--fb" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-				</li>
-				<li class="social-list__item">
-					<a class="social-list__link social-list__link--ok" href="#" target="_blank"><i class="fab fa-odnoklassniki"></i></a>
-				</li>
-				<li class="social-list__item">
-					<a class="social-list__link social-list__link--tw" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-				</li>
-				<li class="social-list__item">
-					<a class="social-list__link social-list__link--vk" href="#" target="_blank"><i class="fab fa-vk"></i></a>
-				</li>
-			</ul>
-		</footer>
-	</div>
-	<!--Попап с правилами участия-->
-	<div class="popup-rules" style="display: none;">
-		<div class="popup-rules__wrapper">
-			<button class="popup-rules__close" type="button"></button>
-			<h3 class="popup-rules__title">Как участвовать</h3>
-			<ul class="popup-rules__list">
-				<li class="popup-rules__item">
-					<span class="popup-rules__text">1. Реши, что именно ты хочешь смотреть в эфире Nickelodeon.</span>
-				</li>
-				<li class="popup-rules__item">
-					<span class="popup-rules__text">2. Выбери мультфильм или сериал и перетащи его в одну из пустых клеточек со временем эфира.</span>
-				</li>
-				<li class="popup-rules__item">
-					<span class="popup-rules__text">3. Расставляй любимые шоу так, как тебе захочется, пока эфирная сетка не будет заполнена.</span>
-				</li>
-				<li class="popup-rules__item">
-					<span class="popup-rules__text">4. Жми кнопку &laquo;Подтвердить&raquo;... Готово!</span>
-				</li>
-				<li class="popup-rules__item">
-					<span class="popup-rules__text">5. И не забудь попробовать свои силы в творческом конкурсе.</span>
-				</li>
-				<li class="popup-rules__item">
-					<span class="popup-rules__text">6. Но не переживай, если вдруг не успел отправить свою идею мультфильма. До 20 мая ты можешь вернуться и составить программу ещё не раз!</span>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<!--Попап с призами-->
-	<div class="popup-prize" style="display: none;">
-		<div class="popup-prize__wrapper">
-			<button class="popup-prize__close" type="button"></button>
-			<h3 class="popup-prize__title">Призы</h3>
-			<div class="popup-prize__body">
-				<img class="popup-prize__img" src="img/prize.svg" alt="Планшет" />
-				<p class="popup-prize__description">Автору самой интересной идеи мультфильма мы подарим графический планшет!</p>
+				<!--Social media block-->
+				<ul class="footer__social social-list">
+					<li class="social-list__item">
+						<a class="social-list__link social-list__link--yt" href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+					</li>
+					<li class="social-list__item">
+						<a class="social-list__link social-list__link--in" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+					</li>
+					<li class="social-list__item">
+						<a class="social-list__link social-list__link--fb" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+					</li>
+					<li class="social-list__item">
+						<a class="social-list__link social-list__link--tw" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+					</li>
+					<li class="social-list__item">
+						<a class="social-list__link social-list__link--vk" href="#" target="_blank"><i class="fab fa-vk"></i></a>
+					</li>
+				</ul>
 			</div>
 		</div>
-	</div>
+	</footer>
 	<!--Попап успеха-->
 	<div class="popup-success" style="display: none;">
 		<div class="popup-success__wrapper">
@@ -558,34 +527,32 @@
 		</div>
 	</div>
 	<!--Попап с формой отправки эссе-->
-	<div class="popup-register" style="display: none;">
+	<div class="popup-register">
 		<div class="popup-register__wrapper">
 			<button class="popup-register__close" type="button"></button>
-			<h3 class="popup-register__title">Супер! Теперь заполни форму ниже и отправь её нам!</h3>
+			<h3 class="popup-register__title">Спасибо! Теперь заполни форму ниже и отправь нам!</h3>
 			<form class="popup-register__form reg-form" action="#" method="post">
 				<ul class="reg-form__list reg-list">
-					<li class="reg-list__item">
+					<li class="reg-list__item reg-list__item--name">
 						<label class="reg-list__label" for="name">Твоё имя:</label>
 						<input class="reg-list__input" type="text" name="name" id="name" />
-						<span class="reg-list__error reg-list__error--name">Это поле должно быть заполнено!</span>
+						<span class="reg-list__status no"></span>
 					</li>
-					<li class="reg-list__item">
+					<li class="reg-list__item reg-list__item--tel">
 						<label class="reg-list__label" for="tel">Номер телефона:</label>
 						<input class="reg-list__input" type="tel" name="tel" id="tel" />
-						<span class="reg-list__error reg-list__error--tel">Это поле должно быть заполнено!</span>
+						<span class="reg-list__status yes"></span>
 					</li>
-					<li class="reg-list__item reg-list__item--agreement">
-						<input class="reg-list__checkbox reg-list__checkbox--agreement visually-hidden" type="checkbox" name="agree" id="agree" required checked />
-						<label class="reg-list__label reg-list__label--checkbox reg-list__label--agreement" for="agree">Я согласен на<a class="reg-list__label--link" href="#" target="_blank">обработку моих персональных данных</a></label>
-						<span class="reg-list__error reg-list__error--required">Это поле должно быть заполнено!</span>
+					<li class="reg-list__item">
+						<input class="reg-list__checkbox visually-hidden" type="checkbox" name="policy" id="policy" required checked />
+						<label class="reg-list__label reg-list__label--policy" for="policy">Я согласен с <a class="reg-list__label--link" href="#" target="_blank">условиями проведения конкурсов</a></label>
 					</li>
-					<li class="reg-list__item reg-list__item--policy">
-						<input class="reg-list__checkbox reg-list__checkbox--policy visually-hidden" type="checkbox" name="policy" id="policy" required checked />
-						<label class="reg-list__label reg-list__label--checkbox reg-list__label--policy" for="policy">Я согласен с <a class="reg-list__label--link" href="#" target="_blank">условиями проведения конкурсов</a></label>
-						<span class="reg-list__error reg-list__error--required">Это поле должно быть заполнено!</span>
+					<li class="reg-list__item">
+						<input class="reg-list__checkbox visually-hidden" type="checkbox" name="agree" id="agree" required checked />
+						<label class="reg-list__label reg-list__label--agreement" for="agree">Я согласен на <a class="reg-list__label--link" href="#" target="_blank">обработку моих персональных данных</a></label>
 					</li>
 					<li class="reg-list__item reg-list__item--textarea">
-						<label class="reg-list__label reg-list__label--textarea" for="textarea">Твоя идея для мультфильма<br /><span class="reg-list__label--small">(Заполни, если хочешь выиграть планшет):</span></label>
+						<label class="reg-list__label reg-list__label--textarea" for="textarea">Если хочешь попробовать выиграть главный приз, расскажи нам на кого из героев Nickelodeon похож твой друг и почему:</label>
 						<textarea class="reg-list__textarea" placeholder="..." id="textarea"></textarea>
 					</li>
 				</ul>
@@ -656,6 +623,7 @@
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+	<script src="js/slider.js"></script>
 	<script src="js/script.js"></script>
 </body>
 

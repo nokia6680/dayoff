@@ -11,6 +11,18 @@
 
 @media only screen and (min-width: $mobile) {
   .choose {
-    max-width: 100%;
+    max-width: 332px;
+  }
+}
+
+@media only screen and (min-width: $hdm) {
+  .choose {
+    max-width: 368px;
+  }
+}
+
+@media only screen and (min-width: $tablet) {
+  .choose {
+    max-width: 650px;
   }
 }

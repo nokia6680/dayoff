@@ -1,35 +1,25 @@
 .content-controls {
   width: 100%;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  @include flex-setting(row, space-between, center);
 
-  border: 2px solid #000000;
+  border: 1px solid #000000;
   border-radius: 30px;
 
   background-color: #ffffff;
 
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
 
-  margin-bottom: 6px;
+  margin-bottom: 0.5rem;
+
+  padding-top: 0.188rem;
+  padding-bottom: 0.188rem;
 
   &__title {
-    display: inline-flex;
-
-    margin: 0;
-
-    font: {
-      size: 1em;
-      family: $semibold-font;
-      weight: 600;
-    }
-
-    color: $text-lightblack;
-    line-height: normal;
+    @include font-setting($primary-font, 0.875rem, 1, 700, $text-lightblack);
     text-transform: uppercase;
+    margin: 0;
 
     &--desktop {
       display: none;
@@ -45,45 +35,37 @@
 
 @media only screen and (min-width: $mobile) {
   .content-controls {
-    margin-bottom: 10px;
-
     &__title {
-      font: {
-        size: 1.125em;
-      }
+      font-size: 1rem;
     }
   }
 }
 
 @media only screen and (min-width: $hdm) {
   .content-controls {
-    margin-bottom: 10px;
-
-    max-width: 480px;
+    margin-bottom: 0.25rem;
 
     &__title {
-      font: {
-        size: 1.25em;
-      }
+      font-size: 1.125rem;
     }
   }
 }
 
 @media only screen and (min-width: $tablet) {
   .content-controls {
-    margin-bottom: 7px;
+    margin-bottom: 0.5rem;
 
     max-width: 706px;
 
-    padding-top: 2px;
-    padding-bottom: 4px;
-    padding-left: 24px;
-    padding-right: 22px;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    border: 2px solid #000;
 
     &__title {
-      font: {
-        size: 1.546em;
-      }
+      font-size: 1.5rem;
     }
   }
 }

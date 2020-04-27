@@ -1,27 +1,26 @@
 .social-list {
-  width: 100%;
+  width: auto;
 
   list-style: none;
   margin: 0;
   padding: 0;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  @include flex-setting(row, flex-end, center);
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
 
-  padding-top: 10px;
-  margin-bottom: 5px;
 
   &__item {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
 
     border-radius: 50%;
     background-color: #ffffff;
 
+    z-index: 2;
+
     &:not(:last-of-type) {
-      margin-right: 10px;
+      margin-right: 0.5rem;
     }
 
     &:hover {
@@ -40,7 +39,7 @@
     .fa-youtube::before {
       position: absolute;
       content: '\f167';
-      font-size: 1.125em;
+      font-size: 0.875rem;
       color: $text-lightblack;
       top: 50%;
       left: 50%;
@@ -50,7 +49,7 @@
     .fa-facebook-f::before {
       position: absolute;
       content: '\f39e';
-      font-size: 1.125em;
+      font-size: 0.875rem;
       color: $text-lightblack;
       top: 50%;
       left: 50%;
@@ -60,7 +59,7 @@
     .fa-vk::before {
       position: absolute;
       content: '\f189';
-      font-size: 1.125em;
+      font-size: 0.875rem;
       color: $text-lightblack;
       top: 50%;
       left: 50%;
@@ -70,7 +69,7 @@
     .fa-twitter::before {
       position: absolute;
       content: '\f099';
-      font-size: 1.125em;
+      font-size: 0.875rem;
       color: $text-lightblack;
       top: 50%;
       left: 50%;
@@ -80,17 +79,7 @@
     .fa-instagram::before {
       position: absolute;
       content: '\f16d';
-      font-size: 1.125em;
-      color: $text-lightblack;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .fa-odnoklassniki::before {
-      position: absolute;
-      content: '\f263';
-      font-size: 1.125em;
+      font-size: 0.875rem;
       color: $text-lightblack;
       top: 50%;
       left: 50%;
@@ -98,71 +87,50 @@
     }
   }
 }
-
-@media only screen and (min-width: $smt) {
-  .social-list {
-    width: 50%;
-
-    padding-top: 0;
-    margin-bottom: 0;
-    justify-content: flex-end;
-
-    &__item {
-      width: 34px;
-      height: 34px;
-
-      &:not(:last-of-type) {
-        margin-right: 10px;
-      }
-    }
-  }
-}
-
 @media only screen and (min-width: $tablet) {
   .social-list {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+
     &__item {
-      width: 42px;
-      height: 42px;
+      width: 36px;
+      height: 36px;
 
       &:not(:last-of-type) {
-        margin-right: 10px;
+        margin-right: 1rem;
       }
     }
 
     &__link {
       .fa-youtube::before {
-        font-size: 1.75em;
+        font-size: 1.25rem;
       }
 
       .fa-facebook-f::before {
-        font-size: 1.75em;
+        font-size: 1.25rem;
       }
 
       .fa-vk::before {
-        font-size: 1.75em;
+        font-size: 1.25rem;
       }
 
       .fa-twitter::before {
-        font-size: 1.75em;
+        font-size: 1.25rem;
       }
 
       .fa-instagram::before {
-        font-size: 1.75em;
-      }
-
-      .fa-odnoklassniki::before {
-        font-size: 1.75em;
+        font-size: 1.25rem;
       }
     }
   }
 }
-
-@media only screen and (min-width: $laptop-hd) {
+@media only screen and (min-width: $laptop) {
   .social-list {
-    &__item {
-      &:not(:last-of-type) {
-        margin-right: 18px;
-      }
-    }
+    margin-left: 2.5rem;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .social-list {
+    margin-left: 9rem;
   }
 }

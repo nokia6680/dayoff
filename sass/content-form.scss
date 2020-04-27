@@ -1,16 +1,19 @@
 .content-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-
+  @include flex-setting(column, flex-start, center);
   width: 100%;
+
+  margin-bottom: 1.25rem;
+}
+
+@media only screen and (min-width: $mobile) {
+  .content-form {
+    margin-bottom: 0.875rem;
+  }
 }
 
 @media only screen and (min-width: $laptop-hd) {
   .content-form {
     margin-bottom: 2px;
-    position: relative;
   }
 }
 
