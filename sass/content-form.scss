@@ -11,15 +11,15 @@
   }
 }
 
-@media only screen and (min-width: $laptop-hd) {
+@media only screen and (min-width: $laptop-wide) {
   .content-form {
-    margin-bottom: 2px;
+    margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width: $widebook) {
   .content-form {
-    margin-bottom: 30px;
+    margin-bottom: 0.625rem;
   }
 }
 

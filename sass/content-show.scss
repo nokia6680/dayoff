@@ -94,8 +94,9 @@
   }
 }
 
-@media only screen and (min-width: $laptop-hd) {
+@media only screen and (min-width: $laptop-wide) {
   .content-show {
+    margin-top: -2px;
     visibility: visible;
 
     position: relative;
@@ -105,7 +106,6 @@
     justify-content: center;
     align-items: center;
 
-    max-width: 860px;
     height: auto;
     left: auto;
     right: auto;
@@ -113,23 +113,14 @@
     bottom: auto;
     background-color: transparent;
     opacity: 1;
-
-    &__wrapper {
-      max-width: 860px;
-    }
-
-    &__title {
-      display: none;
-    }
-  }
-}
-
-@media only screen and (min-width: $laptop-wide) {
-  .content-show {
     max-width: 700px;
 
     &__wrapper {
       max-width: 700px;
+    }
+
+    &__title {
+      display: none;
     }
   }
 }

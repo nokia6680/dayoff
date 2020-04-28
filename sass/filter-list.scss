@@ -66,3 +66,15 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop-wide) {
+  .filter-list {
+    &__label {
+      font-size: 1.25rem;
+    }
+
+    &__item {
+      margin-right: 10px;
+    }
+  }
+}

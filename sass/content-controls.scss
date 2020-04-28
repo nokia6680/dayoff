@@ -72,30 +72,12 @@
 
 @media only screen and (min-width: $laptop) {
   .content-controls {
-    margin-bottom: 5px;
-
-    max-width: 580px;
-
-    &__title {
-      font: {
-        size: 1.375em;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: $laptop-hd) {
-  .content-controls {
     margin-bottom: 0;
 
     max-width: 860px;
 
-    justify-content: center;
-
     &__title {
-      font: {
-        size: 1.546em;
-      }
+      font-size: 1.25rem;
 
       &--mobile {
         display: none;
@@ -113,15 +95,6 @@
     margin-bottom: 0;
 
     max-width: 700px;
-    min-height: 48px;
-
-    padding-left: 15px;
-
-    &__title {
-      font: {
-        size: 1.375em;
-      }
-    }
   }
 }
 
@@ -130,13 +103,7 @@
     margin-bottom: 0;
 
     max-width: 860px;
-    min-height: 50px;
-
-    &__title {
-      font: {
-        size: 1.66em;
-      }
-    }
+    min-height: 46px;
   }
 }
 
@@ -144,13 +111,11 @@
   .content-controls {
     margin-bottom: 0;
 
-    max-width: 1290px;
-    min-height: 75px;
+    max-width: 1000px;
+    min-height: 50px;
 
     &__title {
-      font: {
-        size: 2em;
-      }
+      font-size: 1.5rem;
     }
   }
 }

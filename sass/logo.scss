@@ -104,3 +104,79 @@
     }
   }
 }
+
+@media only screen and (min-width: $laptop) {
+  .logo {
+    margin-top: -2rem;
+    max-width: 400px;
+
+    &__title {
+      font-size: 1.75rem;
+      border-width: 2px;
+      margin-bottom: 0.75rem;
+    }
+
+    &__figure {
+      width: 120px;
+      left: -250px;
+      top: 40%;
+    }
+
+    &__subtitle {
+      font-size: 1.375rem;
+      margin-bottom: 0.625rem;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-hd) {
+  .logo {
+    margin-top: -2rem;
+
+    &__figure {
+      width: 120px;
+      left: -380px;
+      top: 40%;
+    }
+  }
+}
+
+@media only screen and (min-width: $laptop-wide) {
+  .logo {
+    margin-top: 5rem;
+    max-width: 270px;
+
+    &__title {
+      font-size: 1.625rem;
+    }
+
+    &__link {
+      width: 97px;
+      height: 14px;
+    }
+
+    &__figure {
+      position: relative;
+      left: auto;
+      top: auto;
+      transform: none;
+      width: 240px;
+    }
+
+    &__subtitle {
+      font-size: 1.625rem;
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook-sm) {
+  .logo {
+    margin-top: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: $widebook-hd) {
+  .logo {
+    margin-top: -1rem;
+  }
+}

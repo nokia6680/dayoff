@@ -81,23 +81,3 @@
     }
   }
 }
-
-@media only screen and (min-width: $laptop) {
-  .popup-register {
-    &__title {
-      font: {
-        size: 1.25em;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: $widebook) {
-  .popup-register {
-    &__title {
-      font: {
-        size: 1.5em;
-      }
-    }
-  }
-}

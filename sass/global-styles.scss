@@ -92,15 +92,16 @@ body {
 
   .ui-draggable-dragging {
     .show-list__name {
-      position: absolute;
       font: {
-        size: 0.75em;
-        family: $medium-font;
-        weight: 500;
+        family: $primary-font;
+        size: 0.625rem;
+        weight: 700;
       }
 
+      line-height: 1.2;
       color: $text-lightblack;
-      line-height: normal;
+      position: absolute;
+
       text-transform: uppercase;
       text-align: center;
 
@@ -128,21 +129,13 @@ body {
     .body-event {
       .ui-draggable-dragging {
         .show-list__name {
-          font-size: 0.5em;
+          font-size: 0.625rem;
           height: 30px;
         }
       }
     }
   }
-  @media only screen and (min-width: $widebook-sm) {
-    .body-event {
-      .ui-draggable-dragging {
-        .show-list__name {
-          font-size: 0.625em;
-        }
-      }
-    }
-  }
+
   @media only screen and (min-width: $widebook-hd) {
     .body-event {
       .ui-draggable-dragging {

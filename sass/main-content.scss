@@ -173,25 +173,15 @@
 
 @media only screen and (min-width: $laptop) {
   .main-content {
-    margin-top: -30px;
-  }
-}
-
-@media only screen and (min-width: $laptop-hd) {
-  .main-content {
-    margin-top: 20px;
-    max-width: 860px;
+    margin-top: 0px;
   }
 }
 
 @media only screen and (min-width: $laptop-wide) {
   .main-content {
-    margin-top: 15px;
-
-    &__submit {
-      margin-top: 10px;
-      height: 45px;
-    }
+    max-width: 720px;
+    margin-top: 0;
+    z-index: 10;
 
     &__final {
       margin-top: 10px;
@@ -216,11 +206,6 @@
 @media only screen and (min-width: $widebook-hd) {
   .main-content {
     max-width: 860px;
-    margin-top: -10px;
-
-    &__submit {
-      height: 55px;
-    }
 
     &__final {
       height: 55px;
@@ -235,10 +220,6 @@
 
     &--final {
       margin-top: 100px;
-    }
-
-    &__submit {
-      height: 55px;
     }
 
     &__final {

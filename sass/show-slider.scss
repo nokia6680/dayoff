@@ -156,13 +156,13 @@
       margin-top: 20px;
 
       button {
-        width: 15px;
-        height: 15px;
+        width: 16px;
+        height: 16px;
       }
 
       li.slick-active button {
-        width: 15px;
-        height: 15px;
+        width: 16px;
+        height: 16px;
 
         &::before {
           width: 28px;
@@ -203,7 +203,7 @@
   }
 }
 
-@media only screen and (min-width: $laptop-hd) {
+@media only screen and (min-width: $laptop-wide) {
   .show-slider {
     &--mobile {
       display: none !important;
@@ -211,7 +211,7 @@
 
     &--desktop {
       display: block !important;
-      width: 810px;
+      width: 660px;
 
       .slick-dots {
         display: flex;
@@ -222,7 +222,8 @@
         margin: 0;
         padding: 0;
 
-        margin-top: 10px;
+        margin-top: 4px;
+        margin-bottom: 6px;
 
         li {
           margin: 0 0.5rem;
@@ -230,10 +231,10 @@
 
         button {
           display: block;
-          width: 14px;
-          height: 14px;
+          width: 10px;
+          height: 10px;
           padding: 0;
-          border: 2px solid #000000;
+          border: 1px solid #000000;
           border-radius: 100%;
           background-color: #ffffff;
           text-indent: -9999px;
@@ -246,9 +247,9 @@
           background-color: transparent;
           position: relative;
 
-          width: 14px;
-          height: 14px;
-          border: 2px solid #000000;
+          width: 12px;
+          height: 12px;
+          border: 1px solid #000000;
           border-radius: 100%;
           background-color: #ffffff;
 
@@ -259,10 +260,10 @@
             position: absolute;
             content: '';
 
-            width: 22px;
-            height: 22px;
+            width: 18px;
+            height: 18px;
 
-            border: 2px solid #000000;
+            border: 1px solid #000000;
 
             top: 50%;
             left: 50%;
@@ -287,18 +288,22 @@
         pointer-events: all;
       }
     }
-  }
-}
-
-@media only screen and (min-width: $laptop-wide) {
-  .show-slider {
-    &--desktop {
-      width: 660px;
-    }
 
     .prev-2,
     .next-2 {
       top: 33%;
+      filter: drop-shadow(0 0 1px black);
+    }
+  }
+}
+
+@media only screen and (min-width: $widebook-sm) {
+  .show-slider {
+    &--desktop {
+      .slick-dots {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
     }
   }
 }
@@ -321,7 +326,7 @@
       background-position: center center;
       background-repeat: no-repeat;
 
-      top: -40px;
+      top: -38px;
       right: 50px;
       left: auto;
     }
@@ -337,7 +342,7 @@
       background-size: 32px 21px;
       background-position: center center;
       background-repeat: no-repeat;
-      top: -40px;
+      top: -38px;
       right: -2px;
       left: auto;
     }

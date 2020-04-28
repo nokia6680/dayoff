@@ -17,58 +17,19 @@
     &__link {
       width: 100%;
     }
-  }
-}
-
-@media only screen and (min-width: $laptop-hd) {
-  .main {
-    max-width: 1200px;
-
-    &--vote {
-      align-items: flex-start;
-    }
 
     &--event {
-      align-items: flex-start;
-    }
-
-    &__logo {
-      &--event {
-        display: flex;
-        width: auto;
-        max-width: 350px;
-
-        margin-top: 0px;
-      }
-    }
-
-    &__link {
-      width: 100%;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
     }
   }
 }
-
 
 @media only screen and (min-width: $laptop-wide) {
   .main {
-
     &--vote {
       justify-content: flex-start;
-    }
-
-    &__logo {
-      width: 50%;
-      flex-basis: 50%;
-
-      margin-top: -30px;
-
-      &--vote {
-        width: 232px;
-        flex-basis: 232px;
-
-        margin-left: 40px;
-        margin-right: 5%;
-      }
     }
 
     &__link {
@@ -87,26 +48,24 @@
         height: 254px;
       }
     }
+
+    &--event {
+      margin-top: -2.875rem;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      padding-left: 30px;
+      padding-right: 30px;
+    }
   }
 }
 
 @media only screen and (min-width: $widebook-sm) {
   .main {
-    &__logo {
-      width: 50%;
-      flex-basis: 50%;
-
-      margin-top: -30px;
-
-      &--vote {
-        width: 232px;
-        flex-basis: 232px;
-
-        margin-left: 40px;
-        margin-right: 10%;
-      }
+    &--event {
+      margin-top: -4rem;
     }
-
     &__link {
       width: 100%;
 
@@ -128,29 +87,6 @@
 
 @media only screen and (min-width: $widebook) {
   .main {
-    &--event {
-      justify-content: flex-start;
-    }
-
-    &__logo {
-      width: 50%;
-      flex-basis: 50%;
-
-      margin-top: -30px;
-
-      &--vote {
-        width: 324px;
-        flex-basis: 324px;
-
-        margin-left: 30px;
-        margin-right: 10%;
-      }
-
-      &--event {
-        margin-top: -50px;
-      }
-    }
-
     &__link {
       width: 100%;
     }
@@ -167,7 +103,11 @@
 
 @media only screen and (min-width: $widebook-hd) {
   .main {
-    max-width: 1360px;
+    max-width: 1540px;
+
+    &--event {
+      margin-top: -2.625rem;
+    }
 
     &__logo {
       &--event {
@@ -179,6 +119,7 @@
 
 @media only screen and (min-width: $ultra) {
   .main {
+    max-width: 1920px;
     &--final {
       align-items: center;
     }

@@ -200,6 +200,11 @@
   .header-nav {
     padding-top: 8rem;
     padding-right: 8rem;
+
+    &--event {
+      padding-top: 2rem;
+      padding-right: 2rem;
+    }
   }
 }
 
@@ -207,5 +212,24 @@
   .header-nav {
     padding-top: 11rem;
     padding-right: 11rem;
+
+    &--event {
+      max-width: 1540px;
+      padding-top: 2rem;
+      padding-right: 2rem;
+    }
+  }
+}
+
+@media only screen and (min-width: $ultra) {
+  .header-nav {
+    padding-top: 11rem;
+    padding-right: 11rem;
+
+    &--event {
+      max-width: 1920px;
+      padding-top: 2rem;
+      padding-right: 2rem;
+    }
   }
 }

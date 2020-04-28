@@ -30,7 +30,7 @@ $(document).ready(function() {
         settings: "unslick"
       },
       {
-        breakpoint: 1280,
+        breakpoint: 5000,
         settings: {
           infinite: false,
           slidesToShow: 1,
