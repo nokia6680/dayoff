@@ -3,18 +3,12 @@
   padding: 0;
   list-style: none;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  @include flex-setting(column, flex-start, flex-start);
 
   width: 100%;
 
   &__item {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    @include flex-setting(column, flex-start, flex-start);
     width: 100%;
     position: relative;
 
@@ -28,60 +22,28 @@
   }
 
   &__label {
-    font: {
-      size: 0.875em;
-      family: $semibold-font;
-      weight: 600;
-    }
-
-    color: $input-label;
-    line-height: normal;
+    @include font-setting($primary-font, 0.75rem, 1, 700, #a09e9f);
     text-transform: uppercase;
+    margin-bottom: 0.25rem;
 
     &--age {
       margin-right: 15px;
     }
   }
 
-  &__error {
-    visibility: hidden;
-
-    font: {
-      size: 0.5em;
-      family: $medium-font;
-      weight: 600;
-    }
-
-    color: $text-error;
-    line-height: normal;
-    text-transform: uppercase;
-
-    position: absolute;
-
-    left: 0;
-    bottom: -12px;
-  }
-
   &__input {
-    width: 100%;
+    @include font-setting($primary-font, 1.125rem, 1, 700, $text-lightblack);
+    width: 90%;
 
-    border: 2px solid $input-border;
-    padding: 3px 10px;
+    border: 1px solid $input-border;
+    padding: 0.25rem 0.625rem;
 
-    font: {
-      size: 1.25em;
-      family: $bold-font;
-      weight: 700;
-    }
-
-    color: $text-lightblack;
     text-transform: uppercase;
-    line-height: normal;
 
     &--age {
       -moz-appearance: textfield;
       width: 40px;
-      padding: 3px 3px;
+      padding: 0.25rem;
       text-align: center;
     }
 
@@ -90,53 +52,54 @@
       -webkit-appearance: none;
     }
   }
-}
 
-@media only screen and (min-width: $hdm) {
-  .doc-list {
-    &__label {
-      font: {
-        size: 1em;
-      }
+  &__status {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+
+    top: 70%;
+    right: 0.625rem;
+    transform: translateY(-50%);
+
+    &.yes {
+      background-image: url('../img/correct.svg');
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
     }
 
-    &__error {
-      visibility: hidden;
-
-      font: {
-        size: 0.5em;
-        family: $medium-font;
-        weight: 600;
-      }
-
-      color: $text-error;
-      line-height: normal;
-      text-transform: uppercase;
-
-      position: absolute;
-
-      left: 0;
-      bottom: -12px;
+    &.no {
+      background-image: url('../img/incorrect.svg');
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
     }
   }
 }
 
-@media only screen and (min-width: $laptop) {
+@media only screen and (min-width: $tablet) {
   .doc-list {
-    &__label {
-      font: {
-        size: 1.125em;
+
+    &__item {
+      &--age {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
       }
     }
 
     &__input {
-      font-size: 1.375em;
-
       &--age {
         width: 44px;
-        height: 44px;
+        height: 30px;
         padding-left: 3px;
       }
+    }
+
+    &__status {
+      right: 0;
+      top: 60%;
     }
   }
 }

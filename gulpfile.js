@@ -55,12 +55,6 @@ gulp.task("images", function() {
     .pipe(gulp.dest("img"));
 });
 
-gulp.task("webp", function() {
-  return gulp.src("img/**/*.{png,jpg}")
-    .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("img"));
-});
-
 gulp.task("sprite", function() {
   return gulp.src("img/icon-*.svg")
     .pipe(svgstore({
@@ -103,7 +97,6 @@ gulp.task("scripts", function() {
 gulp.task("build", function(done) {
   run(
     "clean",
-    "webp",
     "copy",
     "style",
     "sprite",
