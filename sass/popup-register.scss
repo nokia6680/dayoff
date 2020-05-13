@@ -34,8 +34,6 @@
 
   &__close {
     @extend .popup-rules__close;
-
-    top: -25px;
   }
 
   &__title {
@@ -55,15 +53,6 @@
 
     text-transform: uppercase;
     text-align: center;
-  }
-}
-
-@media only screen and (min-width: $mobile) {
-  .popup-register {
-    &__close {
-      top: -20px;
-      right: -20px;
-    }
   }
 }
 

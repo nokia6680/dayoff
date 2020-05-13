@@ -28,9 +28,17 @@
     justify-content: flex-start;
     align-items: center;
 
-    background-color: #ffffff;
+    background-image: url('../img/prize-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
 
     position: relative;
+
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+
+    padding-bottom: 1.25rem;
 
     border: 2px solid #000000;
     border-radius: 0;
@@ -47,36 +55,15 @@
   }
 
   &__title {
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
     width: 100%;
 
     margin: 0;
+    padding-top: 1.25rem;
 
-    padding-top: 5px;
-    padding-bottom: 5px;
+    @include font-setting($secondary-font, 1.25rem, 1, 500, #668ef3);
 
-    border-bottom: 2px solid #000000;
-
-    background-color: #ffcb2b;
-    background-image: url('../img/popup-prize-head-pattern.png');
-    background-size: 50px 50px;
-    background-repeat: repeat;
-    background-position: top left;
-
-    font: {
-      size: 1.25em;
-      family: $bold-font;
-      weight: 700;
-    }
-
-    color: $text-lightblack;
     text-transform: uppercase;
     text-align: center;
-    line-height: normal;
   }
 
   &__body {
@@ -87,13 +74,6 @@
     justify-content: center;
     align-items: center;
 
-    padding: 20px 10px;
-
-    background-image: url('../img/popup-prize-pattern.png');
-    background-size: 150px 150px;
-    background-repeat: repeat;
-    background-position: top left;
-
     position: relative;
   }
 
@@ -101,113 +81,59 @@
     display: inline-flex;
 
     width: 280px;
+    margin-bottom: 1.25rem;
   }
 
   &__description {
-    font: {
-      size: 0.875em;
-      family: $semibold-font;
-      weight: 600;
-    }
-
-    color: $text-lightblack;
-    line-height: normal;
+    @include font-setting($secondary-font, 0.75rem, 1.3, 500, $text-lightblack);
     text-transform: uppercase;
-    text-align: center;
+    text-align: left;
 
     max-width: 300px;
-    margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0.625rem;
+  }
+
+  &__note {
+    align-self: flex-start;
+
+    @include font-setting($secondary-font, 0.5rem, 1.3, 500, $text-lightblack);
+    text-transform: uppercase;
+    text-align: left;
+
+    max-width: 80%;
   }
 }
 
-@media only screen and (min-width: $tablet) {
+@media only screen and (min-width: 414px) {
   .popup-prize {
     &__wrapper {
-      width: 406px;
+      width: 360px;
+
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+
+      padding-bottom: 1.75rem;
     }
 
-    &__close {
-      top: -45px;
-      right: -45px;
-    }
-
-    &__title {
-      padding-top: 10px;
-      padding-bottom: 10px;
-
-      font: {
-        size: 2.249em;
-      }
-    }
-
-    &__body {
+    &__img {
       width: 100%;
-
-      padding: 20px 10px;
+      margin-bottom: 1.875rem;
     }
 
     &__description {
-      font: {
-        size: 1.25em;
-      }
+      @include font-setting($secondary-font, 0.75rem, 1.3, 500, $text-lightblack);
+      font-size: 0.875rem;
 
-      max-width: 360px;
-    }
-  }
-}
-
-@media only screen and (min-width: $laptop) {
-  .popup-prize {
-    &__wrapper {
-      width: 406px;
+      max-width: 320px;
+      margin-top: 0;
+      margin-bottom: 1.25rem;
     }
 
-    &__close {
-      top: -45px;
-      right: -45px;
-    }
+    &__note {
+      font-size: 0.625rem;
 
-    &__title {
-      padding-top: 5px;
-      padding-bottom: 5px;
-
-      font: {
-        size: 2em;
-      }
-    }
-
-    &__body {
-      width: 100%;
-
-      padding: 10px 10px;
-    }
-
-    &__description {
-      font: {
-        size: 1em;
-      }
-
-      max-width: 360px;
-    }
-  }
-}
-
-@media only screen and (min-width: $widebook) {
-  .popup-prize {
-    &__title {
-      padding-top: 10px;
-      padding-bottom: 10px;
-
-      font: {
-        size: 2.249em;
-      }
-    }
-
-
-    &__description {
-      font: {
-        size: 1.25em;
-      }
+      max-width: 90%;
     }
   }
 }

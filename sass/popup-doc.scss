@@ -43,13 +43,6 @@
 
   &__close {
     @extend .popup-rules__close;
-
-    top: 5px;
-    right: 5px;
-    width: 30px;
-    height: 30px;
-    background-size: 60% 60%;
-
   }
 
   &__title {
@@ -214,11 +207,6 @@
 
       font-size: 1.625rem;
       width: 100%;
-    }
-
-    &__close {
-      top: -40px;
-      right: -40px;
     }
 
     &__body {

@@ -8,139 +8,112 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<style>
-		@font-face {
-			font-family: 'Oswald-Bold';
-			src: url('../fonts/Oswald-Bold.eot');
-			src: local('☺'), url('../fonts/Oswald-Bold.woff') format('woff'), url('../fonts/Oswald-Bold.otf') format('opentype'), url('../fonts/Oswald-Bold.ttf') format('truetype'), url('../fonts/Oswald-Bold.svg') format('svg');
-			font-weight: normal;
-			font-style: normal;
-		}
-
-		.body-card {
-			background-color: transparent;
-			background-image: none;
-		}
-
 		.card {
-		  width: 1003px;
-		  height: 557px;
-		  border: 5px solid #000000;
-		  border-radius: 5px;
-			box-sizing: border-box;
-			overflow: hidden;
-
-		  position: relative;
-		  display: -webkit-box;
-		  display: -ms-flexbox;
-		  display: flex;
-		  -webkit-box-orient: horizontal;
-		  -webkit-box-direction: normal;
-		      -ms-flex-direction: row;
-		          flex-direction: row;
-		  -webkit-box-pack: justify;
-		      -ms-flex-pack: justify;
-		          justify-content: space-between;
-		  -webkit-box-align: start;
-		      -ms-flex-align: start;
-		          align-items: flex-start;
-		  -ms-flex-wrap: wrap;
-		      flex-wrap: wrap;
-		}
+			width: 1003px;
+			height: 557px;
+			border: 5px solid #000000;
+			border-radius: 5px;
+			position: relative;
+			display: block;
+			background-image: url("/bitrix/templates/td/html/card/event-bg.png");
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			background-size: cover; }
 
 		.title {
-		  display: block;
-		  width: 100%;
-		  padding-top: 15px;
-		  height: 80px;
-		  border-bottom: 5px solid #000000;
-		  background-image: url("../img/print-head.png");
-		  background-size: 152px 152px;
-		  background-position: top left;
-		  text-align: center;
-		  text-transform: uppercase;
-		  vertical-align: middle;
-		  font-size: 42px;
-		  font-family: "Oswald-Bold", sans-serif;
-		  font-weight: 600;
-		  color: #231f20;
-		  line-height: normal;
-		}
-		/*
+			display: block;
+			width: 100%;
+			padding-top: 30px;
+			height: 100px;
+			text-align: center;
+			text-transform: uppercase;
+			vertical-align: middle;
+			font-size: 34px;
+			font-family: "DejaVu Sans", sans-serif;
+			font-weight: 600;
+			color: #ff6700;
+			line-height: normal; }
+
 		.photo {
-		  width: 292px;
-		  height: 300px;
-		  background-image: url("../img/doc-form-bg.svg"), url("../img/photo-bg-hole.png");
-		  background-size: 232px 265px, 292px 300px;
-		  background-position: top 12px left 75px, top left;
-		  background-repeat: no-repeat;
-		  padding-top: 10px;
-		  padding-left: 65px;
-		  position: relative;
-		  overflow: hidden;
-		}
+			margin-top: 0px;
+			width: 335px;
+			height: 302px;
+			border: 5px solid #668ef3;
+			position: relative;
+			overflow: hidden;
+			margin-left: 80px;
+			box-sizing: border-box;
+			float: left; }
 
 		.photo-inside {
-		  width: 216px;
-		  height: 216px;
-		  border-radius: 50%;
-		  background-image: url("../img/photo.jpg");
-		  background-size: cover;
-		  background-repeat: no-repeat;
-		  background-position: center center;
-		  position: absolute;
-		  top: 31%;
-		  left: 7%;
-		  z-index: -1;
-		} */
+			width: 335px;
+			height: 302px;
+			background-image: url("/bitrix/templates/td/html/card/photo.png");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+			position: absolute;
+			z-index: 0;
+			top: 19.55%;
+			left: 8.5%; }
+
+		.logo {
+			width: 250px;
+			height: 35px;
+			background-image: url("/bitrix/templates/td/html/card/logo.png");
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			background-size: contain;
+			position: absolute;
+			top: 65%;
+			left: 13%; }
 
 		.name {
-		  width: 50%;
-		  height: 300px;
-		  padding-right: 37px;
-		  padding-top: 40px;
-		  background-color: #ffffff;
-		}
+			float: right;
+			margin-top: 30px;
+			width: 50%;
+			height: 300px;
+			padding-right: 37px; }
 
 		.info {
-		  margin: 0;
-		  font-size: 42px;
-		  font-family: "Oswald-Bold", sans-serif;
-		  font-weight: 600;
-		  color: #231f20;
-		  line-height: normal;
-		  text-transform: uppercase;
-		  border-bottom: 5px solid #78909c;
-		}
-		/*
-		.stamp {
-		  width: 345px;
-		  height: 260px;
-		  position: absolute;
-		  bottom: 30px;
-		  right: 37px;
-		  background-color: #ffffff;
-		  background-image: url("../img/stamp.png");
-		  background-size: 237px 257px;
-		  background-repeat: no-repeat;
-		  background-position: top right;
-		}*/
+			margin: 0;
+			font-size: 42px;
+			font-family: "DejaVu Sans", sans-serif;
+			font-weight: 600;
+			color: #231f20;
+			line-height: normal;
+			text-transform: uppercase;
+			border-bottom: 5px solid #78909c; }
 
+		.info-age {
+			width: 50%; }
+
+		.stamp {
+			width: 260px;
+			height: 260px;
+			position: absolute;
+			bottom: 150px;
+			right: 40px;
+			background-image: url("/bitrix/templates/td/html/card/form-face.png");
+			background-size: 260px 260px;
+
+			background-repeat: no-repeat;
+			background-position: center center; }
 	</style>
 </head>
 
-<body class="body-card">
+<body>
 	<div class="card">
 		<div class="title">Удостоверение программного директора</div>
-		<!--
 		<div class="photo"></div>
-		<div class="photo-inside"></div>-->
+		<div class="photo-inside"></div>
+		<div class="logo"></div>
 		<div class="name">
 			<p class="info">{NAME}</p>
 			<p class="info">{LAST_NAME}</p>
-			<p class="info">{AGE}</p>
+			<p class="info info-age">{AGE}</p>
 		</div>
-		<!--
-		<div class="stamp"></div>-->
+		<div class="stamp"></div>
 	</div>
 </body>
 

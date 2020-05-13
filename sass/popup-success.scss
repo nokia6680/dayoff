@@ -14,6 +14,12 @@
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 1000;
 
+  display: none;
+
+  &.active {
+    display: flex;
+  }
+
   &__wrapper {
     width: 300px;
 
@@ -22,226 +28,121 @@
     justify-content: flex-start;
     align-items: center;
 
-    background-color: #ffffff;
 
     position: relative;
-
-    border: 2px solid #000000;
     border-radius: 0;
-
-    box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.4);
-    -webkit-box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.4);
-    -moz-box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.4);
   }
 
   &__close {
     @extend .popup-rules__close;
   }
 
-  &__title {
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  &__body {
+    @include flex-setting(column, flex-start, center);
+    background-color: #f7f4ef;
 
+    border: 2px solid #000000;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+
+    box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.4);
+
+    margin-bottom: 1.25rem;
+  }
+
+  &__title {
     width: 100%;
 
     margin: 0;
+    margin-bottom: 1.25rem;
 
-    padding-top: 5px;
-    padding-bottom: 5px;
+    @include font-setting($secondary-font, 1.25rem, 1, 500, #668ef3);
 
-    border-bottom: 2px solid #000000;
-
-    background-color: #ffcb2b;
-    background-image: url('../img/popup-reg-head-pattern.png');
-    background-size: 50px 50px;
-    background-repeat: repeat;
-    background-position: top left;
-
-    font: {
-      size: 1.25em;
-      family: $bold-font;
-      weight: 700;
-    }
-
-    color: $text-lightblack;
     text-transform: uppercase;
     text-align: center;
-    line-height: normal;
-  }
-
-  &__body {
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    padding: 10px 10px;
-
-    background-image: url('../img/popup-prize-pattern.png');
-    background-size: 150px 150px;
-    background-repeat: repeat;
-    background-position: top left;
-
-    position: relative;
-  }
-
-  &__img {
-    display: inline-flex;
-
-    width: 280px;
   }
 
   &__description {
-    font: {
-      size: 0.875em;
-      family: $semibold-font;
-      weight: 600;
-    }
-
-    color: $text-lightblack;
-    line-height: normal;
+    @include font-setting($secondary-font, 0.75rem, 1.3, 500, $text-lightblack);
     text-transform: uppercase;
     text-align: center;
-
-    max-width: 260px;
-    margin-top: 0;
-    margin-bottom: 5px;
   }
 
   &__link {
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 100%;
+    @include flex-setting(column, center, center);
+    @include font-setting($primary-font, 1rem, 1, 700, $text-black);
+    text-transform: uppercase;
     text-decoration: none;
 
-    &::before {
+    border: 2px solid #000;
+    padding-left: 1.25rem;
+    padding-top: 0.625rem;
+    padding-right: 3.25rem;
+    padding-bottom: 0.625rem;
+
+    background-color: #dbee07;
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 1);
+    transition: 0.2s ease-in-out;
+
+    position: relative;
+
+    &::after {
       position: absolute;
       content: '';
 
-      height: 1px;
-      width: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 186'%3E%3Cg data-name='Слой 2'%3E%3Cpath d='M379.6 82.38l-78.38-78a15 15 0 00-21.16 21.26L332.67 78H15a15 15 0 000 30h317.67l-52.62 52.37a15 15 0 1021.16 21.26l78.38-78a15 15 0 000-21.24z' data-name='Режим изоляции'/%3E%3C/g%3E%3C/svg%3E");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
 
-      background-color: #000000;
-      top: -3px;
-      left: 0;
+      width: 26px;
+      height: 13px;
+
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: 0.2s ease-in-out;
     }
-  }
 
-  &__doc {
-    @extend .popup-success__description;
+    &:hover,
+    &:active,
+    &:focus {
+      box-shadow: none;
+      transform: translate(3px, 3px);
+      transition: 0.2s ease-in-out;
 
-    color: $social-hover;
+      &::after {
+        right: 0.625rem;
+        transition: 0.2s ease-in-out;
+      }
+    }
   }
 }
 
-@media only screen and (min-width: $tablet) {
+@media only screen and (min-width: 414px) {
   .popup-success {
     &__wrapper {
-      width: 406px;
-    }
-
-    &__close {
-      top: -45px;
-      right: -45px;
-    }
-
-    &__title {
-      padding-top: 10px;
-      padding-bottom: 10px;
-
-      font: {
-        size: 1.875em;
-      }
+      width: 360px;
     }
 
     &__body {
-      width: 100%;
+      margin-bottom: 1.5rem;
+    }
 
-      padding: 20px 20px;
+    &__title {
+      margin-bottom: 1.5rem;
     }
 
     &__description {
-      font: {
-        size: 1.25em;
-      }
-
-      max-width: 340px;
-
-      margin-bottom: 20px;
+      font-size: 0.875rem;
     }
 
     &__link {
-      &::before {
-        top: -8px;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: $laptop) {
-  .popup-success {
-    &__wrapper {
-      width: 406px;
-    }
-
-    &__close {
-      top: -45px;
-      right: -45px;
-    }
-
-    &__title {
-      padding-top: 5px;
-      padding-bottom: 5px;
-
-      font: {
-        size: 1.875em;
-      }
-    }
-
-    &__body {
-      width: 100%;
-
-      padding: 20px 10px;
-    }
-
-    &__description {
-      font: {
-        size: 1.375em;
-      }
-
-      max-width: 360px;
-    }
-  }
-}
-
-@media only screen and (min-width: $widebook) {
-  .popup-success {
-    &__title {
-      padding-top: 10px;
-      padding-bottom: 10px;
-
-      font: {
-        size: 1.875em;
-      }
-    }
-
-    &__body {
-      padding-top: 10px;
-    }
-
-    &__description {
-      font: {
-        size: 1.375em;
-      }
-
-      margin-top: 0;
+      font-size: 1.125rem;
     }
   }
 }

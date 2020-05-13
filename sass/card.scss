@@ -1,9 +1,9 @@
 .card {
-  width: 2360px;
-  height: 1545px;
+  width: 1003px;
+  height: 557px;
 
-  border: 10px solid #000000;
-  border-radius: 10px;
+  border: 5px solid #000000;
+  border-radius: 5px;
 
   position: relative;
   display: flex;
@@ -11,89 +11,103 @@
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
+
+  background-image: url('../img/event-bg.jpg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .title {
   display: block;
   width: 100%;
-  padding-top: 60px;
-  height: 324px;
-  border-bottom: 10px solid #000000;
-  background-image: url('../img/print-head.png');
-  background-size: 304px 304px;
-  background-position: top left;
+  padding-top: 30px;
+  height: 100px;
   text-align: center;
   text-transform: uppercase;
   vertical-align: middle;
-  font-size: 114.73px;
-  font-family: "Oswald-Bold", sans-serif;
-  font-weight: 600;
-  color: #231f20;
+  font-size: 48px;
+  font-family: "Trappist", sans-serif;
+  font-weight: 400;
+  color: #ff6700;
   line-height: normal;
 }
 
 .photo {
-  width: 1170px;
-  height: 1200px;
+  margin-top: -40px;
+  width: 335px;
+  height: 302px;
 
-  background-image: url('../img/doc-form-bg.svg'), url('../img/photo-bg-hole.png');
-  background-size: 931px 1060px, 1170px 1200px;
-  background-position: top 25px left 130px, top left;
-  background-repeat: no-repeat;
-  padding-top: 20px;
-  padding-left: 130px;
+  border: 5px solid #668ef3;
 
   position: relative;
   overflow: hidden;
+
+  margin-left: 40px;
+  box-sizing: border-box;
 }
 
 .photo-inside {
-  width: 866px;
-  height: 866px;
+  width: 325px;
+  height: 292px;
 
-  border-radius: 50%;
-  background-image: url('../img/photo1.jpg');
+  background-image: url('../img/photo.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 
   position: absolute;
-  top: 31%;
-  left: 7%;
 
-  z-index: -1;
+  z-index: 0;
+  top: 25.5%;
+  left: 4.6%;
+}
+
+.logo-1 {
+  width: 250px;
+  height: 35px;
+  background-image: url('../img/logo.svg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  position: absolute;
+
+  top: 70%;
+  left: 10%;
 }
 
 .name {
   width: 50%;
-  height: 1200px;
-  padding-right: 75px;
-  padding-top: 140px;
-  background-color: #ffffff;
+  height: 300px;
+  padding-right: 37px;
 }
 
 .info {
   margin: 0;
-  font-size: 125px;
-  font-family: "Oswald-Bold", sans-serif;
+  font-size: 42px;
+  font-family: "Roboto Condensed", sans-serif;
   font-weight: 600;
   color: #231f20;
   line-height: normal;
   text-transform: uppercase;
-  border-bottom: 10px solid #78909c;
+  border-bottom: 5px solid #78909c;
+}
+
+.info-age {
+  width: 50%;
 }
 
 .stamp {
-  width: 690px;
-  height: 520px;
+  width: 230px;
+  height: 230px;
 
   position: absolute;
-  bottom: 60px;
-  right: 75px;
+  bottom: 20px;
+  right: 80px;
 
-  background-color: #ffffff;
-  background-image: url('../img/stamp.png');
-  background-size: 477px 514px;
+  background-image: url('../img/form-face.png');
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: top right;
 }

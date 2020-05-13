@@ -47,6 +47,8 @@
     &-text {
       @include font-setting($primary-font, 0.75rem, 1, 700, $text-black);
       text-transform: uppercase;
+      visibility: hidden;
+      pointer-events: none;
     }
   }
 
