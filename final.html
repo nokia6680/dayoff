@@ -13,6 +13,8 @@
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -20,45 +22,48 @@
 </head>
 
 <body class="body-event">
-	<div class="wrapper">
-		<!--Page header-->
-		<header class="header">
-			<nav class="header__nav header-nav header-nav--event">
-				<div class="header-nav__logo header-nav__logo--event">
-					<a class="header-nav__link header-nav__link--event" href="index.html" target="_self">
-						<img class="header-nav__img header-nav__img--event" src="img/logo.svg" alt="День самоуправления - на главную страницу" />
+	<!--Page header-->
+	<header class="header">
+		<nav class="header__nav header-nav header-nav--event">
+			<ul class="header-nav__list nav-list">
+				<li class="nav-list__item">
+					<a class="nav-list__link nav-list__link--howto" href="#" target="_self">
+						Как участвовать?
 					</a>
-				</div>
-				<ul class="header-nav__list nav-list">
-					<li class="nav-list__item">
-						<a class="nav-list__btn nav-list__btn--howto" href="#" target="_self">
-							Как&nbsp;участвовать?
-						</a>
-					</li>
-					<li class="nav-list__item">
-						<a class="nav-list__btn nav-list__btn--prize" href="#" target="_self">
-							Призы
-						</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
+				</li>
+				<li class="nav-list__item">
+					<a class="nav-list__link nav-list__link--prize" href="#" target="_self">
+						Призы
+					</a>
+				</li>
+			</ul>
+			<!--Menu btn-->
+			<div class="header-nav__toggle" id="nav-toggle">
+				<span class="header-nav__toggle-span"></span>
+				<span class="header-nav__toggle-span"></span>
+				<span class="header-nav__toggle-span"></span>
+			</div>
+		</nav>
+	</header>
 		<!--Page main part-->
-		<main class="main main--event main--final">
-			<!--Left part for desktop-->
-			<div class="main__logo main__logo--event main__logo--final">
-				<a class="main__link" href="index.html" target="_self">
-					<img class="main__img" src="img/logo.svg" alt="День самоуправления - на главную страницу" />
+	<main class="main main--event main--final">
+			<!--upper or left part-->
+			<div class="main__logo logo">
+				<a class="logo__link" href="index.html" target="_self">
+					<img class="logo__img" src="img/logo.svg" alt="День самоуправления - на главную страницу" />
 				</a>
+				<h1 class="logo__title">День самоуправления</h1>
+				<img class="logo__figure" src="img/stage-logo.png" alt="Этап 1">
+				<h2 class="logo__subtitle">Этап 3</h2>
 			</div>
 			<!--Right part for desktop and middle for mobile devices-->
 			<div class="main__content main-content main-content--final">
 				<!--Фильтр периода-->
-				<div class="main-content__controls content-controls">
+				<div class="main-content__controls content-controls content-controls--final">
 					<!--Заголовки для разных разрешений-->
 					<h2 class="content-controls__title content-controls__title--mobile content-controls__title--final">ТВ-программа на 1 июня</h2>
 					<h2 class="content-controls__title content-controls__title--desktop">ТВ-программа Nickelodeon на 1 июня</h2>
-					<div class="content-controls__switch controls-switch">
+					<div class="content-controls__switch controls-switch controls-switch--final">
 						<!--Переключатель слайдеров, только для мобильной и планшетной версий-->
 						<button class="controls-switch__btn controls-switch__btn--sun" id="my-arrow-prev" type="button"></button>
 						<div class="controls-switch__cover button-cover">
@@ -76,7 +81,7 @@
 				<form class="main-content__form content-form" action="#" method="get">
 					<div class="content-form__choose choose">
 						<!--Мобильный слайдер-->
-						<div class="choose__slider choose-slider choose-slider" id="choose-slider">
+						<div class="choose__slider choose-slider choose-slider--final" id="choose-slider">
 							<!--Слайд дневных передач-->
 							<div class="choose-slider__item choose-slider__item--day" id="day">
 								<div class="choose-slider__show">
@@ -259,80 +264,86 @@
 				<!--submit button for all the sizes-->
 				<a class="main-content__final" href="#" target="_self">Победители</a>
 			</div>
-		</main>
-		<!--Page footer-->
-		<footer class="footer">
-			<ul class="footer__rules footer-rules">
-				<li class="footer-rules__item">
-					<a class="footer-rules__link footer-rules__link--conditions" href="#" target="_blank">Правила проведения конкурсов</a>
-				</li>
-				<li class="footer-rules__item">
-					<a class="footer-rules__link footer-rules__link--policy" href="#" target="_blank">Политика конфиденциальности</a>
-				</li>
-			</ul>
-			<!--Social media block-->
-			<ul class="footer__social social-list">
-				<li class="social-list__item">
-					<a class="social-list__link social-list__link--yt" href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-				</li>
-				<li class="social-list__item">
-					<a class="social-list__link social-list__link--in" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-				</li>
-				<li class="social-list__item">
-					<a class="social-list__link social-list__link--fb" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-				</li>
-				<li class="social-list__item">
-					<a class="social-list__link social-list__link--ok" href="#" target="_blank"><i class="fab fa-odnoklassniki"></i></a>
-				</li>
-				<li class="social-list__item">
-					<a class="social-list__link social-list__link--tw" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-				</li>
-				<li class="social-list__item">
-					<a class="social-list__link social-list__link--vk" href="#" target="_blank"><i class="fab fa-vk"></i></a>
-				</li>
-			</ul>
-		</footer>
-	</div>
+			<!--Pineapple-->
+			<div class="main__tips tips tips--final">
+				<img class="tips__photo" src="img/pineapple.png" alt="Советы" />
+			</div>
+	</main>
+	<!--Page footer-->
 	<!--Попап с правилами участия-->
-	<div class="popup-rules" style="display: none;">
+	<div class="popup-rules">
 		<div class="popup-rules__wrapper">
 			<button class="popup-rules__close" type="button"></button>
-			<h3 class="popup-rules__title">Как участвовать</h3>
+			<h3 class="popup-rules__title">Как участвовать?</h3>
 			<ul class="popup-rules__list">
 				<li class="popup-rules__item">
-					<span class="popup-rules__text">1. Реши, что именно ты хочешь смотреть в эфире Nickelodeon.</span>
+					<span class="popup-rules__text">1. Заполни сетку, перетаскивая шоу в нужный временной слот</span>
 				</li>
 				<li class="popup-rules__item">
-					<span class="popup-rules__text">2. Выбери мультфильм или сериал и перетащи его в одну из пустых клеточек со временем эфира.</span>
+					<span class="popup-rules__text">2. Жми кнопку "Готово!"</span>
 				</li>
 				<li class="popup-rules__item">
-					<span class="popup-rules__text">3. Расставляй любимые шоу так, как тебе захочется, пока эфирная сетка не будет заполнена.</span>
+					<span class="popup-rules__text">3. Ура! Теперь ты можешь выиграть приз дня.</span>
 				</li>
 				<li class="popup-rules__item">
-					<span class="popup-rules__text">4. Жми кнопку &laquo;Подтвердить&raquo;... Готово!</span>
-				</li>
-				<li class="popup-rules__item">
-					<span class="popup-rules__text">5. И не забудь попробовать свои силы в творческом конкурсе.</span>
-				</li>
-				<li class="popup-rules__item">
-					<span class="popup-rules__text">6. Но не переживай, если вдруг не успел отправить свою идею мультфильма. До 20 мая ты можешь вернуться и составить программу ещё не раз!</span>
+					<span class="popup-rules__text">4. Участвуй в творческом конкурсе и выиграй набор программного директора! Расскажи, на кого из героев Nickelodeon похож твой лучший друг и почему</span>
 				</li>
 			</ul>
 		</div>
 	</div>
+	<!--Page footer-->
+	<footer class="footer">
+		<!---->
+		<div class="footer__nav">
+			<div class="footer__support">
+				<b class="footer__support-text">При поддержке...</b>
+			</div>
+
+			<div class="footer__links">
+				<ul class="footer__rules footer-rules">
+					<li class="footer-rules__item">
+						<a class="footer-rules__link footer-rules__link--conditions" href="#" target="_blank">Правила проведения конкурсов</a>
+					</li>
+					<li class="footer-rules__item">
+						<a class="footer-rules__link footer-rules__link--policy" href="#" target="_blank">Политика конфиденциальности</a>
+					</li>
+				</ul>
+				<!--Social media block-->
+				<ul class="footer__social social-list">
+					<li class="social-list__item">
+						<a class="social-list__link social-list__link--yt" href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+					</li>
+					<li class="social-list__item">
+						<a class="social-list__link social-list__link--in" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+					</li>
+					<li class="social-list__item">
+						<a class="social-list__link social-list__link--fb" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+					</li>
+					<li class="social-list__item">
+						<a class="social-list__link social-list__link--tw" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+					</li>
+					<li class="social-list__item">
+						<a class="social-list__link social-list__link--vk" href="#" target="_blank"><i class="fab fa-vk"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
 	<!--Попап с призами-->
-	<div class="popup-prize" style="display: none;">
+	<div class="popup-prize">
 		<div class="popup-prize__wrapper">
 			<button class="popup-prize__close" type="button"></button>
 			<h3 class="popup-prize__title">Призы</h3>
 			<div class="popup-prize__body">
-				<img class="popup-prize__img" src="img/prize.svg" alt="Планшет" />
-				<p class="popup-prize__description">Автору самой интересной идеи мультфильма мы подарим графический планшет!</p>
+				<img class="popup-prize__img" src="img/prizes.png" alt="Планшет" />
+				<p class="popup-prize__description">Приз дня &mdash; игрушка с Губкой Бобом и другими жителями Бикини Боттом</p>
+				<p class="popup-prize__description">Главный приз &mdash; набор программного директора Nickelodeon Россия!</p>
+				<span class="popup-prize__note">Внешний вид, цвета и модели призов могут отличаться от изображенных на сайте</span>
 			</div>
 		</div>
 	</div>
 	<!--Попап слайдера с Победителями-->
-	<div class="popup-winner">
+	<div class="popup-winner" style="display: none;">
 		<div class="popup-winner__wrapper">
 			<button class="popup-winner__close closer" type="button"></button>
 			<h2 class="popup-winner__title">Победители</h2>
@@ -434,6 +445,7 @@
 	<script src="js/jquery-ui.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 	<script src="js/script.js"></script>
+	<script src="js/slider-2.js"></script>
 </body>
 
 </html>

@@ -8,9 +8,7 @@
 
   margin-bottom: 10px;
 
-  box-shadow:0px 0px 1px 1px rgba(0,0,0,1);
-  -webkit-box-shadow:0px 0px 1px 1px rgba(0,0,0,1);
-  -moz-box-shadow:0px 0px 1px 1px rgba(0,0,0,1);
+  box-shadow: 0px 0px 0px 2px rgba(0,0,0,1);
 
   border: 6px solid #ffffff;
   background-color: #546e7a;
@@ -40,7 +38,17 @@
 
     max-width: 624px;
 
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .vote-form {
+    width: 100%;
+
+    max-width: 450px;
+
+    margin-bottom: 0.625rem;
   }
 }
 

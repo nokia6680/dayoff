@@ -9,6 +9,10 @@
     max-width: 270px;
     margin-top: 6rem;
 
+    &--final {
+      width: 270px;
+    }
+
     &__item {
       @include flex-setting(column, center, center);
       @include font-setting($secondary-font, 0.875rem, 1.2, 400, #31373c);
@@ -57,10 +61,37 @@
           transform: translateX(-50%);
         }
       }
+
+      &--3 {
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: 6.25rem;
+
+        &::before {
+          position: absolute;
+          content: '';
+
+          width: 280px;
+          height: 180px;
+
+          background-image: url('../img/vote-orange-title-bg.png');
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          background-size: contain;
+
+          top: -30px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
     }
 
     &__photo {
       max-height: 300px;
+
+      &--3 {
+        max-height: 260px;
+      }
     }
   }
 }
@@ -74,8 +105,11 @@
     margin-top: 0;
     margin-bottom: 4rem;
 
-    &__item {
+    &--final {
+      width: 270px;
+    }
 
+    &__item {
       &--1 {
         margin-bottom: 2rem;
 
@@ -95,6 +129,20 @@
           top: -4px;
         }
       }
+
+      &--3 {
+        margin-top: 4rem;
+        margin-bottom: 4.25rem;
+
+        &::before {
+          width: 280px;
+          height: 180px;
+
+          top: -30px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
     }
   }
 }
@@ -106,7 +154,7 @@
 
     max-width: 320px;
     margin-top: 0;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
 
     &__item {
       font-size: 1rem;
@@ -131,10 +179,28 @@
           top: -8px;
         }
       }
+
+      &--3 {
+        margin-top: 0rem;
+        margin-bottom: 5.25rem;
+
+        &::before {
+          width: 300px;
+          height: 200px;
+
+          top: -30px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
     }
 
     &__photo {
       max-height: 399px;
+
+      &--3 {
+        max-height: 360px;
+      }
     }
   }
 }

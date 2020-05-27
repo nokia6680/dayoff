@@ -6,6 +6,7 @@
 
   width: 100%;
   max-width: 300px;
+  margin-bottom: 0.625rem;
 
   &__wrapper {
     display: flex;
@@ -18,7 +19,6 @@
 
   &__heading {
     width: 100%;
-    flex-basis: 100%;
 
     display: flex;
     flex-direction: row;
@@ -30,21 +30,15 @@
 
     background-color: #ffffff;
 
-    padding-left: 10px;
-    padding-right: 2px;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    padding-top: 0.125rem;
+    padding-bottom: 0.125rem;
   }
 
   &__title {
-    font: {
-      size: 1em;
-      family: $semibold-font;
-      weight: 600;
-    }
-
-    color: $text-lightblack;
-    line-height: normal;
+    @include font-setting($primary-font, 1rem, 1, 700, $text-lightblack);
     text-transform: uppercase;
-
     margin: 0;
   }
 }
@@ -52,12 +46,6 @@
 @media only screen and (min-width: $mobile) {
   .content-top {
     max-width: 360px;
-
-    &__title {
-      font: {
-        size: 1.125em;
-      }
-    }
   }
 }
 
@@ -66,20 +54,23 @@
     max-width: 374px;
 
     &__title {
-      font: {
-        size: 1.25em;
-      }
+      font-size: 1.125rem;
+      padding-top: 0.188rem;
+      padding-bottom: 0.188rem;
     }
   }
 }
 
 @media only screen and (min-width: $tablet) {
   .content-top {
+    width: 100%;
     max-width: 662px;
 
     &__title {
+      padding-left: 0.25rem;
+
       font: {
-        size: 1.347em;
+        size: 1.347rem;
       }
     }
   }
@@ -87,11 +78,12 @@
 
 @media only screen and (min-width: $laptop) {
   .content-top {
-    max-width: 480px;
+    max-width: 500px;
+    margin-bottom: 0;
 
     &__title {
       font: {
-        size: 1.25em;
+        size: 1.25rem;
       }
     }
   }
@@ -103,7 +95,7 @@
 
     &__title {
       font: {
-        size: 1.211em;
+        size: 1.211rem;
       }
     }
   }
@@ -113,10 +105,10 @@
   .content-top {
     &__title {
       font: {
-        size: 1.66em;
+        size: 1.25em;
       }
 
-      padding-left: 5px;
+      padding-left: 0.75rem;
     }
   }
 }

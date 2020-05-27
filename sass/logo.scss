@@ -34,6 +34,11 @@
 
     margin: 0;
     margin-bottom: 0.625rem;
+
+    &.pink {
+      color: #ac5dde;
+      border-color: #ac5dde;
+    }
   }
 
   &__figure {
@@ -51,6 +56,10 @@
     text-transform: uppercase;
     margin: 0;
     margin-bottom: 1rem;
+
+    &.pink {
+      color: #ac5dde;
+    }
   }
 }
 

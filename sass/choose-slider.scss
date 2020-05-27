@@ -122,7 +122,39 @@
       .choose-slider__time {
         display: none;
       }
+
+      .choose-slider__name {
+        display: inline-flex;
+      }
     }
+  }
+
+  &--final {
+    .choose-slider__time {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      margin-top: auto;
+      margin-bottom: 0;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+    }
+
+    .choose-slider__name {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      margin-top: auto;
+      margin-bottom: 0;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+    }
+  }
+
+  &__name {
+    @include font-setting($primary-font, 0.625rem, 1, 700, #788f9b);
+    text-align: center;
+    text-transform: uppercase;
+
+    display: none;
   }
 }
 
@@ -169,6 +201,14 @@
         font-size: 1.25rem;
       }
     }
+
+    &--final {
+      .choose-slider__name {
+        width: 100%;
+        font-size: 0.75rem;
+        min-height: 28px;
+      }
+    }
   }
 }
 
@@ -209,8 +249,25 @@
 
       .choose-slider__time {
         font: {
-          size: 1.25em;
+          size: 2rem;
         }
+      }
+    }
+
+    &__name {
+      font-size: 1rem;
+    }
+
+    &--final {
+      .choose-slider__name {
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        font-size: 1.25rem;
+        padding-top: 0.313rem;
+        padding-bottom: 0.313rem;
+
+        min-height: 40px;
       }
     }
   }
@@ -243,6 +300,13 @@
         font-size: 1.5rem;
       }
     }
+
+    &--final {
+      .choose-slider__name {
+        font-size: 1rem;
+        min-height: 32px;
+      }
+    }
   }
 }
 
@@ -269,6 +333,26 @@
         font-size: 1.75rem;
       }
     }
+
+    &--final {
+      display: flex !important;
+      visibility: visible !important;
+      overflow: visible;
+
+      flex-direction: column !important;
+      justify-content: flex-start;
+      align-items:center;
+
+      .choose-slider__name {
+        font-size: 0.875rem;
+        min-height: 36px;
+      }
+
+      .choose-slider__item--night {
+        margin-top: -2px;
+        margin-bottom: 0.625rem;
+      }
+    }
   }
 }
 
@@ -289,6 +373,17 @@
 
       .choose-slider__time {
         font-size: 2rem;
+      }
+
+    }
+
+    &--final {
+      .choose-slider__time {
+        font-size: 2.125rem;
+      }
+      .choose-slider__name {
+        font-size: 1.125rem;
+        min-height: 42px;
       }
     }
   }
