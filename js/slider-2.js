@@ -93,14 +93,14 @@ $(document).ready(function() {
 
 /*Слайдер в попапе winner*/
 $(document).ready(function() {
-  $('.winner-slider').slick({
+  $('.popup-winner__slider').slick({
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: true,
     fade: true,
     arrows: true,
-    prevArrow: '<div class="prev-5"></div>',
-    nextArrow: '<div class="next-5"></div>'
+    prevArrow: $('.w-prev'),
+    nextArrow: $('.w-next')
   });
 });
